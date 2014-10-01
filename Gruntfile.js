@@ -331,6 +331,11 @@ module.exports = function (grunt) {
         'imagemin',
         'svgmin'
       ]
+    },
+      
+    // Create CHANGELOG.md from convetional commit messages
+    changelog: {
+      options: {}
     }
   });
 
