@@ -45,7 +45,6 @@ html, body {
   height: 4em;
   line-height: 4em;
   float: left;
-  text-align: center;
   transition: background .3s ease-in-out;
 }
 
@@ -54,7 +53,7 @@ html, body {
   vertical-align: text-bottom;
   position: relative;
   top: .1em;
-  left: -.2em;
+  padding: 0 .2em 0 .4em;
 }
 
 .nav-item:hover,
@@ -72,7 +71,7 @@ html, body {
   display: block;
   visibility: visible;
   position: absolute;
-  right: 1.5em;
+  right: .5em;
   top: 0;
   font-size: 2em;
   transition: all .3s ease-out;
