@@ -75,13 +75,11 @@ header {
   color: #fff;
   text-decoration: none;
   line-height: 4em;
+  outline: 0;
 }
 
 .nav-item i {
   font-size: 1.5em;
-  vertical-align: text-bottom;
-  top: .1em;
-  padding: 0 .2em 0 0;
 }
 
 .nav-item:hover,
