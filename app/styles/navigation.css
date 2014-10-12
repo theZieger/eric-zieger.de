@@ -2,6 +2,10 @@
 
 /* Main */
 
+header {
+  position: relative;
+}
+
 .nav-items {
   list-style: none;
   margin: 0;
@@ -36,11 +40,10 @@
 }
 
 .checkedselector .nav {
-  top: -24em;
-  height: 24em;
+  margin-top: -24em;
   overflow: hidden;
-  transition: top .3s ease-out;
-  position: absolute;
+  transition: margin-top .3s ease-out;
+  position: relative;
   width: 100%;
 }
 
@@ -49,7 +52,7 @@
   visibility: visible;
   position: absolute;
   right: .5em;
-  top: 0;
+  top: 12em;
   transition: all .3s ease-out;
   width: 1.5em;
   height: 1.5em;
@@ -61,7 +64,7 @@
 }
 
 .checkedselector .nav-checkbox:checked + .nav {
-  top: 0;
+  margin-top: 0;
 }
 
 /* Theme */
@@ -91,12 +94,10 @@
   font-size: 2em;
   line-height: 1.5em;
   text-align: center;
-  background: #fff;
-  color: #000;
+  color: #fff;
   cursor: pointer;
 }
 
 .checkedselector .nav-checkbox:checked ~ .nav-toggle {
   background: #444;
-  color: #fff;
 }

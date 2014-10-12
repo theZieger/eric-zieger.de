@@ -3,8 +3,10 @@
     width: 50%;
   }
   .checkedselector .nav {
-    top: -12em;
-    height: 12em;
+    margin-top: -12em;
+  }
+  .checkedselector .nav-toggle {
+    top: 6em;
   }
   .checkedselector .nav-checkbox:checked ~ .nav-toggle {
     top: 6em;
@@ -16,7 +18,10 @@
     width: 33.333333%;
   }
   .checkedselector .nav {
-    top: -8em;
+    margin-top: -8em;
+  }
+  .checkedselector .nav-toggle {
+    top: 4em;
   }
   .checkedselector .nav-checkbox:checked ~ .nav-toggle {
     top: 4em;
@@ -28,7 +33,10 @@
     width: 16.666666%;
   }
   .checkedselector .nav {
-    top: -4em;
+    margin-top: -4em;
+  }
+  .checkedselector .nav-toggle {
+    top: 2em;
   }
   .checkedselector .nav-checkbox:checked ~ .nav-toggle {
     top: 2em;
