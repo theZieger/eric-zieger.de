@@ -4,13 +4,20 @@ html, body {
   color: #333;
 }
 
-h1,h2,h3 {
-  margin: 0 0 1em;
-
+h1,h2 {
+  font-size: 1.5em;
+  margin:  0 0 .6666em;
 }
 
-h1 {
-  font-size: 1.5em;
+h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin:  0 0 .83em;
+}
+
+p {
+  margin: 0 0 1em;
+  line-height: 1.5em;
 }
 
 .browsehappy {
