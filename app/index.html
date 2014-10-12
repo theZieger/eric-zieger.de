@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/parallax.css">
     <link rel="stylesheet" href="styles/icons.css">
-    <link rel="stylesheet" href="styles/section-welcome.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/media-queries.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -32,45 +33,60 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="parallax">
+    <header>
+      <input type="checkbox" class="nav-checkbox" id="nav-checkbox" />
+      <nav class="nav">
+        <ul class="nav-items">
+          <li><a class="nav-item is-active" href="#"><i class="icon-house"></i> Home</a></li>
+          <li><a class="nav-item" href="#"><i class="icon-user"></i> About me</a></li>
+          <li><a class="nav-item" href="#"><i class="icon-code"></i> Projects &amp; Work</a></li>
+          <li><a class="nav-item" href="#"><i class="icon-thumbsup"></i> Work with me</a></li>
+          <li><a class="nav-item" href="#"><i class="icon-newspaper"></i> Blog</a></li>
+          <li><a class="nav-item" href="#"><i class="icon-chat"></i> Contact</a></li>
+        </ul>
+      </nav>
+      <label class="nav-toggle icon-list" for="nav-checkbox"></label>
+    </header>
 
-      <header class="parallax-base">
-        <input type="checkbox" class="nav-checkbox" id="nav-checkbox" />
-        <nav class="nav">
-          <ul class="nav-items">
-            <li><a class="nav-item is-active" href="#"><i class="icon-house"></i> Home</a></li>
-            <li><a class="nav-item" href="#"><i class="icon-user"></i> About me</a></li>
-            <li><a class="nav-item" href="#"><i class="icon-code"></i> Projects &amp; Work</a></li>
-            <li><a class="nav-item" href="#"><i class="icon-newspaper"></i> Blog</a></li>
-            <li><a class="nav-item" href="#"><i class="icon-thumbsup"></i> Work with me</a></li>
-            <li><a class="nav-item" href="#"><i class="icon-chat"></i> Contact</a></li>
-          </ul>
-        </nav>
-        <label class="nav-toggle icon-list" for="nav-checkbox"></label>
-      </header>
+    <section class="content s1">
+      <img class="content-portrait" src="images/gDm8ByBC.jpeg" alt="Eric Zieger, front-end stack developer from Leipzig, Germany" />
+      <h1 class="content-shortbio">Trainee Media Designer, front-end enthusiast, located in Leipzig, Germany.</h1>
+    </section><!-- end of welcome -->
 
-      <section class="s1 parallax-back">
-        <img class="s1-portrait" src="images/gDm8ByBC.jpeg" alt="Eric Zieger, front-end stack developer from Leipzig, Germany" />
-        <h1 class="s1-shortbio">Trainee Media Designer, front-end enthusiast, located in Leipzig, Germany.</h1>
-      </section><!-- end of .s1 -->
+    <section class="content">
+      <h2>About me</h2>
+      <p>Hi, my name is Eric Zieger. I'm a trainee Media Designer for digital and print media located in Leipzig, Germany. That means I'm participating in the design and production process of promotional materials and digital media products. I'm developing conceptr and create awesome products. Most of the time this includes websites, corporate design and mobile web experiences.</p>
+      <p>I love to write code for websites. Especially everything that is related to the front-end stack. But my job isn't just about making things pretty on the web. It requires aesthetic sensitivity and programmatic rigor. All in all I truly enjoy the act of creation and I love collaborating with smart and clever people.</p>
+      <a class="btn" href="#">more about me</a>
+    </section><!-- end of about me -->
 
-      <section class="s2 parallax-base">
-        <h2>About me</h2>
-        <p>Hi, my name is Eric Zieger. I'm a trainee Media Designer for digital and print media located in Leipzig, Germany. That means I'm participating in the design and production process of promotional materials and digital media products. I'm developing conceptr and create awesome products. Most of the time this includes websites, corporate design and mobile web experiences.</p>
-        <p>I love to write code for websites. Especially everything that is related to the front-end stack. But my job isn't just about making things pretty on the web. It requires aesthetic sensitivity and programmatic rigor. All in all I truly enjoy the act of creation and I love collaborating with smart and clever people.</p>
-      </section><!-- end of .s2 -->
+    <div class="content-divider content-divider-projects"></div>
 
-      <!-- build:js(.) scripts/vendor.js -->
-      <!-- bower:js -->
-      <script src="bower_components/modernizr/modernizr.js"></script>
-      <script src="bower_components/jquery/dist/jquery.js"></script>
-      <!-- endbower -->
-      <!-- endbuild -->
+    <section class="content">
+      <h2>Pojects &amp; Work</h2>
+      <p>On a daily basis I write code using HTML5, CSS3 as well as JavaScript (mostly jQuery). Besides that I design logos, corporate designs and mobile web experiences. Below you can find some of the work I've done in the past, featuring work of my training as Media Designer.</p>
+      <p><a class="project project-vektormaten" href="#"><img src="images/vektormaten.jpg" /></a></p>
+      <p><a class="project project-wasserohnegrenzen" href="#"><img src="images/wasser-ohne-grenzen.jpg" /></a></p>
+      <p><a class="project project-github" href="#"><i class="icon icon-github"></i> Take a look under the hood of my work by visiting my public repositories on GitHub.</a></p>
+    </section><!-- end of projects -->
 
-      <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-      <!-- endbuild -->
+    <div class="content-divider content-divider-contact"></div>
 
-    </div><!-- end of .parallax -->
+    <section class="content">
+      <h2>Contact me</h2>
+      <p>You can write me an email at mail [at] eric-zieger.de or if you like follow me on Twitter. Over there I post and retweet links to articles and stuff I think is worth to share.</p>
+    </section><!-- end of contact -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+      <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
   </body>
 </html>
