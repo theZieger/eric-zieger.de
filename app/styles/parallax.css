@@ -3,13 +3,14 @@ html, body {
 }
 
 .parallax {
-
+  perspective: 2px;
+  position: relative;
 }
 
 .parallax-base {
-
+  transform: translateZ(0px);
 }
 
 .parallax-back {
-
+  transform: translateZ(-1px) scale(1.5);
 }
