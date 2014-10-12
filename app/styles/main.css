@@ -4,6 +4,10 @@ html, body {
   color: #333;
 }
 
+h1 {
+  font-size: 2em;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
