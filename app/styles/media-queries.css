@@ -1,0 +1,36 @@
+@media (min-width: 21em) {
+  .nav-item {
+    width: 50%;
+  }
+  .checkedselector .nav {
+    top: -12em;
+    height: 12em;
+  }
+  .checkedselector .nav-checkbox:checked ~ .nav-toggle {
+    top: 6em;
+  }
+}
+
+@media (min-width: 32em) {
+  .nav-item {
+    width: 33.333333%;
+  }
+  .checkedselector .nav {
+    top: -8em;
+  }
+  .checkedselector .nav-checkbox:checked ~ .nav-toggle {
+    top: 4em;
+  }
+}
+
+@media (min-width: 64em) {
+  .nav-item {
+    width: 16.666666%;
+  }
+  .checkedselector .nav {
+    top: -4em;
+  }
+  .checkedselector .nav-checkbox:checked ~ .nav-toggle {
+    top: 2em;
+  }
+}
