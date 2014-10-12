@@ -18,7 +18,6 @@ html, body {
 }
 
 .parallax-back {
-  transform-origin: 52.5% 50%;
   transform: translateZ(-1px) scale(1.5);
   position: relative;
   z-index: 0;

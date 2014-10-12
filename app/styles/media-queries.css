@@ -11,9 +11,6 @@
   .checkedselector .nav-checkbox:checked ~ .nav-toggle {
     top: 6em;
   }
-  .parallax-back {
-    transform-origin: 52% 50%;
-  }
 }
 
 @media (min-width: 32em) {
@@ -28,9 +25,6 @@
   }
   .checkedselector .nav-checkbox:checked ~ .nav-toggle {
     top: 4em;
-  }
-  .parallax-back {
-    transform-origin: 51% 50%;
   }
   h1 {
     font-size: 2em;
@@ -49,8 +43,5 @@
   }
   .checkedselector .nav-checkbox:checked ~ .nav-toggle {
     top: 2em;
-  }
-  .parallax-back {
-    transform-origin: 50.5% 50%;
   }
 }
