@@ -16,7 +16,8 @@
 
 .s1-portrait {
   border-radius: 50%;
-  width: 19em;
+  width: 60%;
+  max-width: 19em;
   margin: 0 4em;
   border: 4px solid #fff;
 }
