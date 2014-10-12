@@ -32,6 +32,9 @@
   .parallax-back {
     transform-origin: 51% 50%;
   }
+  h1 {
+    font-size: 2em;
+  }
 }
 
 @media (min-width: 64em) {
