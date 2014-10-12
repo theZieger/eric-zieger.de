@@ -1,0 +1,34 @@
+/* Buttons */
+
+/* Main */
+
+.btn {
+  border-radius: 1em;
+  padding: .5em 1em;
+  display: inline-block;
+  margin: 0 0 1em;
+  transition: all 0.3s ease 0s;
+  box-sizing: border-box;
+  outline: 0;
+  min-width: 12em;
+}
+
+/* Theme */
+
+.btn {
+  background: #3dd1ac;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #4cb6c2;
+}
+
+.btn:active {
+  background: #4fffd3;
+}
