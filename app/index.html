@@ -5,19 +5,19 @@
     <title>eric zieger</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="author" href="humans.txt" />
     <link rel="shortcut icon" href="/favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
   </head>
@@ -26,29 +26,39 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <header>
-      <input type="checkbox" class="nav-checkbox" id="nav-checkbox" />
-      <nav class="nav">
-        <ul class="nav-items">
-          <li><a class="nav-item is-active" href="#"><i class="icon-house"></i> Home</a></li>
-          <li><a class="nav-item" href="#"><i class="icon-user"></i> About me</a></li>
-          <li><a class="nav-item" href="#"><i class="icon-code"></i> Projects &amp; Work</a></li>
-          <li><a class="nav-item" href="#"><i class="icon-newspaper"></i> Blog</a></li>
-          <li><a class="nav-item" href="#"><i class="icon-thumbsup"></i> Work with me</a></li>
-          <li><a class="nav-item" href="#"><i class="icon-chat"></i> Contact</a></li>
-        </ul>
-      </nav>
-      <label class="nav-toggle icon-list" for="nav-checkbox"></label>
-    </header>
+    <div class="parallax">
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
+      <header class="parallax-base">
+        <input type="checkbox" class="nav-checkbox" id="nav-checkbox" />
+        <nav class="nav">
+          <ul class="nav-items">
+            <li><a class="nav-item is-active" href="#"><i class="icon-house"></i> Home</a></li>
+            <li><a class="nav-item" href="#"><i class="icon-user"></i> About me</a></li>
+            <li><a class="nav-item" href="#"><i class="icon-code"></i> Projects &amp; Work</a></li>
+            <li><a class="nav-item" href="#"><i class="icon-newspaper"></i> Blog</a></li>
+            <li><a class="nav-item" href="#"><i class="icon-thumbsup"></i> Work with me</a></li>
+            <li><a class="nav-item" href="#"><i class="icon-chat"></i> Contact</a></li>
+          </ul>
+        </nav>
+        <label class="nav-toggle icon-list" for="nav-checkbox"></label>
+      </header>
+
+      <section class="welcome parallax-back">
+        <img src="" alt="Eric Zieger, front-end stack developer from Leipzig, Germany" />
+        <h1>Trainee Media Designer, front-end enthusiast, located in Leipzig, Germany.</h1>
+      </section><!-- end of .welcome -->
+
+      <!-- build:js(.) scripts/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/modernizr/modernizr.js"></script>
       <script src="bower_components/jquery/dist/jquery.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+      <!-- endbower -->
+      <!-- endbuild -->
 
-    <!-- build:js({app,.tmp}) scripts/main.js -->
-      <script src="scripts/main.js"></script>
-    <!-- endbuild -->
+      <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+      <!-- endbuild -->
+
+    </div><!-- end of .parallax -->
   </body>
 </html>

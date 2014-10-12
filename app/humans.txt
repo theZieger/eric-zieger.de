@@ -1,0 +1,17 @@
+/* TEAM */
+Your title: Eric Zieger.
+Site: http://www.eric-zieger.de
+Twitter: @the_Zieger
+Location: Leipzig, Germany
+
+/* THANKS */
+Name: Paul Irish (https://gist.github.com/paulirish/441842)
+
+/* SITE */
+Last update: 2014/10/12
+Standards: HTML5, CSS3
+Components: Modernizr, Normalize.css
+Software: Ubuntu 14.04 LTS, Brackets, Editorconfig, Yeoman, Bower, Grunt, Git, GitHub
+
+
+                    
