@@ -3,7 +3,7 @@
 /* Main */
 
 .content {
-  padding: 2em 2em;
+  padding: 3em 2em;
   max-width: 36em;
   margin: 0 auto;
 }
@@ -16,6 +16,7 @@
 
 .s1 {
   margin: 0;
+  padding: 4em 2em;
   max-width: 100%;
 }
 
@@ -31,66 +32,15 @@
   max-width: 19em;
 }
 
-.content-divider-projects,
-.content-divider-contact {
-  background: url("../images/projects-and-work.jpeg") 0 50% no-repeat #fff;
+.divider {
+  height: 400px;
+  width: 100%;
   background-size: cover;
-  height: 300px;
-  width: 100%;
 }
 
-.content-divider-contact {
-  background-image: url("../images/contact.jpeg");
+.divider-contact {
+  background: url("../images/contact.jpg") 50% 50% no-repeat transparent;
 }
-
-.content-divider {
-  position: relative;
-}
-
-.content-divider:before {
-  content: "";
-  display: block;
-  background: url("../images/pattern.png") repeat scroll 0px 0px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: 100%;
-}
-
-.project {
-  width: 50%;
-  float: left;
-  text-align: center;
-}
-
-.project img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.project-github {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-  padding: .5em;
-  background: #3dd1ac;
-  transition: background .3s ease;
-  text-align: left;
-}
-
-.project-github i {
-  font-size: 3em;
-  margin-right: .2em;
-  float: left;
-}
-
-.project-github:hover,
-.project-github:focus{
-  background: #4cb6c2;
-}
-
-.project-github:active {
-  background: #4fffd3;
-}
-
 
 /* Theme */
 

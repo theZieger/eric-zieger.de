@@ -1,17 +1,21 @@
 /* TEAM */
-Your title: Eric Zieger.
-Site: http://www.eric-zieger.de
-Twitter: @the_Zieger
-Location: Leipzig, Germany
+
+  Front-end Developer: Eric Zieger
+  Site: http://www.eric-zieger.de
+  Contact: mail [at] eric-zieger.de
+  Twitter: @the_Zieger
+  From: Leipzig, Saxony, Germany
 
 /* THANKS */
-Name: Paul Irish (https://gist.github.com/paulirish/441842)
+
+  Paul Irish (https://gist.github.com/paulirish/441842)
+  Chris Coyier (http://css-tricks.com/snippets/jquery/smooth-scrolling/)
 
 /* SITE */
-Last update: 2014/10/12
-Standards: HTML5, CSS3
-Components: Modernizr, Normalize.css
-Software: Ubuntu 14.04 LTS, Brackets, Editorconfig, Yeoman, Bower, Grunt, Git, GitHub
 
-
-                    
+  Last update: 2014/10/13
+  Language: English
+  Doctype: HTML5
+  Standards: HTML5, CSS3
+  Components: Modernizr, Normalize.css
+  Software: Ubuntu 14.04 LTS, Brackets, Editorconfig, Yeoman, Bower, Grunt, Git, GitHub

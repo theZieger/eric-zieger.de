@@ -11,8 +11,14 @@ h1,h2 {
 
 h3 {
   font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h3, h4 {
   font-weight: 700;
-  margin:  0 0 .83em;
 }
 
 p {
@@ -20,9 +26,21 @@ p {
   line-height: 1.5em;
 }
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+a {
+  color: #4cb6c2;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #3dd1ac;
+  text-decoration: underline;
+}
+
+header a:hover,
+header a:focus,
+header a:active {
+  color: #fff;
+  text-decoration: none;
 }

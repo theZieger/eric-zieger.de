@@ -11,18 +11,18 @@ function selectorSupported(selector){
       return false;
     }
   },
- 
+
   link = doc.createElement("style");
   link.type = 'text/css';
- 
+
   (head || root).insertBefore(link, (head || root).firstChild);
- 
+
   sheet = link.sheet || link.styleSheet;
- 
+
   if (!(sheet && selector)) return false;
- 
+
   support = impl.hasFeature('CSS2', '') ?
-  
+
   function(selector) {
     try {
       sheet.insertRule(selector + '{ }', 0);
@@ -36,10 +36,31 @@ function selectorSupported(selector){
     return sheet.cssText.length !== 0 && !(/unknown/i).test(sheet.cssText) && sheet.cssText.indexOf(selector) === 0;
   };
   return support(selector);
- 
+
 };
- 
- 
+
+
 Modernizr.addTest('checkedselector',function(){
   return selectorSupported(':checked');
 })
+
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+
+    // hide menu
+    $('.nav-toggle').click();
+
+    // smooth scrolling to anchor
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+
