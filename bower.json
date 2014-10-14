@@ -2,8 +2,8 @@
   "name": "eric-zieger",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.1",
     "modernizr": "~2.8.2",
-    "normalize-css": "~3.0.1"
+    "normalize-css": "~3.0.1",
+    "smooth-scroll": "~1.0.1"
   }
 }
