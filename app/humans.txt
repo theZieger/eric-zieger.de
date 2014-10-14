@@ -9,7 +9,7 @@
 /* THANKS */
 
   Paul Irish (https://gist.github.com/paulirish/441842)
-  Chris Coyier (http://css-tricks.com/snippets/jquery/smooth-scrolling/)
+  Gabriel Delépine: (https://github.com/Yappli/smooth-scroll/)
 
 /* SITE */
 
