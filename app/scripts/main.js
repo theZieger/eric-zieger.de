@@ -42,4 +42,16 @@ function selectorSupported(selector){
 
 Modernizr.addTest('checkedselector',function(){
   return selectorSupported(':checked');
-})
+});
+
+
+// on link click toggle checkbox by clicking label
+
+var links = document.querySelectorAll(".nav-item");
+var toggle = document.querySelectorAll(".nav-toggle");
+
+for(var i=0; i<links.length; i++) {
+  links[i].addEventListener('click', function(){
+    toggle[0].click();
+  }, false);
+}
