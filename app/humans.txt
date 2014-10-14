@@ -9,6 +9,7 @@
 /* THANKS */
 
   Paul Irish (https://gist.github.com/paulirish/441842)
+  Gabriel Delépine: (https://github.com/Yappli/smooth-scroll/)
 
 /* SITE */
 
