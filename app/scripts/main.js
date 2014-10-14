@@ -43,24 +43,3 @@ function selectorSupported(selector){
 Modernizr.addTest('checkedselector',function(){
   return selectorSupported(':checked');
 })
-
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-
-    // hide menu
-    $('.nav-toggle').click();
-
-    // smooth scrolling to anchor
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-
