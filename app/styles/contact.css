@@ -1,0 +1,56 @@
+/* Contact */
+
+/* Main */
+
+#contact {
+  padding-top: 100px;
+}
+
+#contact > .content {
+  background: #fff;
+  background: rgba(255,255,255,.8);
+}
+
+.no-breaks {
+  white-space: nowrap;
+}
+
+#name,
+[for=name] {
+  height: 0;
+  margin: 0;
+  display: block;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+label {
+  font-weight: 700;
+  display: block;
+  margin-bottom: .3em
+}
+
+input,
+textarea {
+  margin-bottom: 1em;
+  border-radius: 0;
+  border: 1px solid #444;
+  display: block;
+  padding: .4em;
+  min-width: 60%;
+}
+
+textarea {
+  min-height: 6.8em
+}
+
+input {
+
+}
+
+/* Theme */
+#contact {
+  background: url("../images/contact.jpg") 50% 0 no-repeat transparent;
+  background-size: 100% auto;
+}

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/media-queries.css">
     <!-- endbuild -->
@@ -54,11 +55,26 @@
       <p>In my rather limited spare time I learn japanese at the community college Leipzig, like to read a good book, keep my body in a good shape or play the drums from time to time.</p>
     </section><!-- end of about me -->
 
-    <div class="divider divider-contact"></div>
+    <section id="contact">
+      <div class="content">
+        <h2>Contact me</h2>
 
-    <section id="contact" class="content">
-      <h2>Contact me</h2>
-      <p>You can drop me a line at mail [at] eric-zieger.de or if you like follow me on Twitter. Over there I post and retweet links to articles and stuff I think is worth to share.</p>
+        <form action="contact.php" method="post">
+            <label for="name">Your name:</label>
+            <input id="name" name="name" type="text" />
+
+            <label for="email">Your email:</label>
+            <input id="email" name="email" type="email" required="true" />
+
+            <label for="subject">Email subject:</label>
+            <input id="subject" name="subject" type="text" />
+
+            <label for="content">Email content:</label>
+            <textarea id="content" name="content" required="true"></textarea>
+        </form>
+
+        <p>Or if you don't want to use the contact form above you can use your own email client and contact me via <strong class="no-breaks">mail [at] eric-zieger.de</strong>.</p>
+      </div>
     </section><!-- end of contact -->
 
     <footer>
