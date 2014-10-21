@@ -335,7 +335,10 @@ module.exports = function (grunt) {
       
     // Create CHANGELOG.md from convetional commit messages
     changelog: {
-      options: {}
+      options: {
+        from: 'eb355ad6852ab9673de87d88598b95a4c9b33597',
+        to: 'HEAD'
+      }
     }
   });
 

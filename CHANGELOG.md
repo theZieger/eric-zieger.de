@@ -1,5 +1,17 @@
 <a name="1.1.0"></a>
-## 1.1.0 (2014-10-14)
+## 1.1.0 (2014-10-21)
+
+
+#### Bug Fixes
+
+* **links:** correct links on legal page and to GitHub - fix #2 ([94a00896](https://github.com/theZieger/eric-zieger.de/commit/94a008962dda2bb8004926d8fe58ca292305014a))
+
+
+#### Features
+
+* **scroll-to:**
+  * add automatic close of menu - fix #1 ([9434ae96](https://github.com/theZieger/eric-zieger.de/commit/9434ae96e925f89f4d1ac9acd5fb94340dd2bef0))
+  * remove jquery scroll to ([3a03fa86](https://github.com/theZieger/eric-zieger.de/commit/3a03fa8615c231905e664ffc3a3fdf9341bc22ba))
 
 
 <a name="1.0.0"></a>
