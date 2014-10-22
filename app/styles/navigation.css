@@ -5,11 +5,14 @@
 header {
   position: fixed;
   width: 100%;
+  z-index: 3;
 }
 
 .checkedselector .nav {
   transition: top .3s ease-out;
-  position: relative;
+  position: absolute;
+  width: 100%;
+  left: 0;
   top: -12em;
 }
 
@@ -44,13 +47,14 @@ header {
 .nav-toggle {
   display: none;
   visibility: hidden;
+  padding: 0;
 }
 
 .checkedselector .nav-toggle {
   display: block;
   visibility: visible;
   position: absolute;
-  right: .25em;
+  right: .4em;
   top: 0;
   transition: all .3s ease-out;
   width: 1.5em;
@@ -63,17 +67,17 @@ header {
 }
 
 .checkedselector .nav-checkbox:checked ~ .nav-toggle {
-  top: 100%;
+  top: 5.3em;
 }
 
 /* Theme */
 
 .nav {
-  background: #444;
+  background: #414345;
 }
 
 .nav-item {
-  background: #444;
+  background: #414345;
   text-align: center;
   color: #fff;
   text-decoration: none;
@@ -88,18 +92,18 @@ header {
 .nav-item:hover,
 .nav-item:focus,
 .nav-item:active {
-  background: #333;
+  background: #232526;
 }
 
 .checkedselector .nav-toggle {
   font-size: 2.25em;
   line-height: 1.75em;
   text-align: center;
-  color: #222;
   cursor: pointer;
+  background: #232526;
+  color: #fff;
 }
 
 .checkedselector .nav-checkbox:checked ~ .nav-toggle {
-  background: #444;
-  color: #fff;
+  background: #414345;
 }

@@ -4,6 +4,6 @@
   "dependencies": {
     "modernizr": "~2.8.2",
     "normalize-css": "~3.0.2",
-    "smooth-scroll": "~1.0.1"
+    "smooth-scroll": "v1.3"
   }
 }
