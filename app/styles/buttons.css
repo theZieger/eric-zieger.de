@@ -4,6 +4,7 @@
 
 .btn {
   border-radius: 1em;
+  border: 0;
   padding: .5em 1em;
   display: inline-block;
   margin: 0 0 1em;
@@ -30,5 +31,5 @@
 }
 
 .btn:active {
-  background: #4fffd3;
+  background: #44f7ca;
 }

@@ -2,13 +2,19 @@
 
 /* Main */
 
-#contact {
-  padding-top: 100px;
+footer,
+.contact {
+  background: #232526;
+  background: -webkit-linear-gradient(90deg, #232526 10%, #414345 90%);
+  background: -moz-linear-gradient(90deg, #232526 10%, #414345 90%);
+  background: -ms-linear-gradient(90deg, #232526 10%, #414345 90%);
+  background: -o-linear-gradient(90deg, #232526 10%, #414345 90%);
+  background: linear-gradient(90deg, #232526 10%, #414345 90%);
 }
 
-#contact > .content {
-  background: #fff;
-  background: rgba(255,255,255,.8);
+.contact h2 {
+  color: #eee;
+  margin-bottom: 1em;
 }
 
 .no-breaks {
@@ -25,32 +31,53 @@
   overflow: hidden;
 }
 
+label,
+[type=text],
+textarea {
+  color: #fff;
+  padding: .4em 2%;
+  display: block;
+  position: relative;
+}
+
+.label {
+  z-index: 1;
+  opacity: 0;
+  margin-bottom: -2.1em;
+  transition: all .5s ease;
+}
+
+.label.is-filled {
+  opacity: 1;
+  margin-bottom: 0;
+  transition: all .5s ease;
+}
+
 label {
-  font-weight: 700;
-  display: block;
-  margin-bottom: .3em
+  color: #a9a9a9;
 }
 
-input,
+[type=text],
 textarea {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  width: 96%;
+  z-index: 2;
+  transition: border .5s ease;
   margin-bottom: 1em;
-  border-radius: 0;
-  border: 1px solid #444;
-  display: block;
-  padding: .4em;
-  min-width: 60%;
+  -moz-text-decoration-color: #fff; /* Code for Firefox */
+  text-decoration-color: #fff;
 }
 
 textarea {
-  min-height: 6.8em
+  border: 1px solid #888;
+  min-height: 8.4em;
+  resize: none;
 }
 
-input {
-
-}
-
-/* Theme */
-#contact {
-  background: url("../images/contact.jpg") 50% 0 no-repeat transparent;
-  background-size: 100% auto;
+[type=text]:focus,
+textarea:focus {
+  border-color: #eee;
+  outline: 0;
 }

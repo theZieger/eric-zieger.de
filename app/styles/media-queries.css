@@ -5,7 +5,13 @@
   .checkedselector .nav {
     top: -4em;
   }
+  .checkedselector .nav-checkbox:checked ~ .nav-toggle {
+    top: 1.77em;
+  }
   h1 {
     font-size: 2em;
+  }
+  .contact h2 {
+    margin-bottom: 2em;
   }
 }
