@@ -40,7 +40,7 @@ function selectorSupported(selector){
 };
 
 
-Modernizr.addTest('checkedselector',function(){
+Modernizr.addTest('checkedselector',function() {
   return selectorSupported(':checked');
 });
 
@@ -51,7 +51,24 @@ var links = document.querySelectorAll(".nav-item");
 var toggle = document.querySelectorAll(".nav-toggle");
 
 for(var i=0; i<links.length; i++) {
-  links[i].addEventListener('click', function(){
+  links[i].addEventListener('click', function() {
     toggle[0].click();
   }, false);
 }
+
+// on keyup on input toogle label class
+
+var inputs = document.querySelectorAll("input");
+
+for(var i=0; i<inputs.length; i++) {
+  inputs[i].addEventListener('keyup', function() {
+    if (this.value !== '') {
+      if (!this.classList.contains('is-filled')) {
+        this.previousElementSibling.classList.add('is-filled');
+      }
+    } else {
+      this.previousElementSibling.classList.remove('is-filled');
+    }
+  }, false);
+}
+
