@@ -1,3 +1,19 @@
+<a name="1.2.0"></a>
+## 1.2.0 (2014-10-28)
+
+
+#### Bug Fixes
+
+* **changelog:** set changelog task from/to options ([a3ffecbd](https://github.com/theZieger/eric-zieger.de/commit/a3ffecbd8ae52f0eb4e896cc3075a56d53f0e5c4))
+
+
+#### Features
+
+* **meta:**
+  * change legal-disclosure pages meta tags ([3bb77630](https://github.com/theZieger/eric-zieger.de/commit/3bb776301c9ac79fac6083a4a103907ae0328d19))
+  * add title, description and label text ([3c215346](https://github.com/theZieger/eric-zieger.de/commit/3c215346db2aa2bb0a51dfda7c5bbc3dc0e5d767))
+
+
 <a name="1.1.0"></a>
 ## 1.1.0 (2014-10-21)
 
@@ -45,4 +61,3 @@
   * add simple responsive behaviour for h1 ([db15a1c4](https://github.com/theZieger/eric-zieger.de/commit/db15a1c4c7aa2a162209cb31d38f2cfe82aac4f3))
   * change default headline margin ([526a250a](https://github.com/theZieger/eric-zieger.de/commit/526a250a850604507f39198c077384d3f70f50b1))
   * change h1 font-size ([9ed1443a](https://github.com/theZieger/eric-zieger.de/commit/9ed1443acb67b54ee88e0953ed6041f73de74dea))
-
