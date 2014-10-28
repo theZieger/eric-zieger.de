@@ -44,6 +44,7 @@ header {
 .nav-toggle {
   display: none;
   visibility: hidden;
+  overflow: hidden;
 }
 
 .checkedselector .nav-toggle {
@@ -91,12 +92,19 @@ header {
   background: #333;
 }
 
+.nav-toggle {
+  color: transparent;
+}
+
 .checkedselector .nav-toggle {
   font-size: 2.25em;
   line-height: 1.75em;
   text-align: center;
-  color: #222;
   cursor: pointer;
+}
+
+.checkedselector .nav-toggle:before {
+  color: #222;
 }
 
 .checkedselector .nav-checkbox:checked ~ .nav-toggle {
