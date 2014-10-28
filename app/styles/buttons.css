@@ -1,9 +1,7 @@
 /* Buttons */
 
-/* Main */
-
 .btn {
-  border-radius: 1em;
+  border-radius: 1.2em;
   border: 0;
   padding: .5em 1em;
   display: inline-block;
@@ -12,11 +10,6 @@
   box-sizing: border-box;
   outline: 0;
   min-width: 12em;
-}
-
-/* Theme */
-
-.btn {
   background: #3dd1ac;
   text-decoration: none;
   text-align: center;
@@ -28,6 +21,8 @@
 .btn:hover,
 .btn:focus {
   background: #4cb6c2;
+  color: #fff;
+  text-decoration: none;
 }
 
 .btn:active {

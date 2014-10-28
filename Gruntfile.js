@@ -285,12 +285,20 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
+            '{,*/}*.php',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
           dest: '<%= config.dist %>/.htaccess'
         }]
+      },
+      composer: {
+        expand: true,
+        dot: true,
+        cwd: 'vendor/eoghanobrien/php-simple-mail',
+        dest: '<%= config.dist %>/vendor/',
+        src: 'class.simple_mail.php'
       },
       styles: {
         expand: true,
@@ -332,7 +340,7 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
-      
+
     // Create CHANGELOG.md from convetional commit messages
     changelog: {
       options: {}
@@ -388,6 +396,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
+    'copy:composer',
     'modernizr',
     'rev',
     'usemin',

@@ -9,7 +9,8 @@
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -17,8 +18,6 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-
-	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -26,24 +25,31 @@
 .icon-mail:before {
 	content: "\e60b";
 }
+
 .icon-feather:before {
 	content: "\e60c";
 }
+
 .icon-user:before {
 	content: "\e600";
 }
+
 .icon-chat:before {
 	content: "\e603";
 }
+
 .icon-house:before {
 	content: "\e604";
 }
+
 .icon-list:before {
 	content: "\e601";
 }
+
 .icon-github:before {
 	content: "\e607";
 }
+
 .icon-twitter:before {
 	content: "\e608";
 }
