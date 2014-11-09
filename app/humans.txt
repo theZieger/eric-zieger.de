@@ -8,12 +8,12 @@
 
 /* THANKS */
 
-  Paul Irish (https://gist.github.com/paulirish/441842)
+  Paul Irish: (https://gist.github.com/paulirish/441842 , http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ )
   Gabriel Delépine: (https://github.com/Yappli/smooth-scroll/)
 
 /* SITE */
 
-  Last update: 2014/10/13
+  Last update: 2014/11/09
   Language: English
   Doctype: HTML5
   Standards: HTML5, CSS3

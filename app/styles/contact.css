@@ -1,0 +1,140 @@
+/* Contact */
+
+/* Main */
+
+footer,
+.contact {
+  background: #232526;
+  background: -webkit-linear-gradient(90deg, #232526 10%, #414345 90%);
+  background: -moz-linear-gradient(90deg, #232526 10%, #414345 90%);
+  background: -ms-linear-gradient(90deg, #232526 10%, #414345 90%);
+  background: -o-linear-gradient(90deg, #232526 10%, #414345 90%);
+  background: linear-gradient(90deg, #232526 10%, #414345 90%);
+}
+
+.contact h2 {
+  color: #eee;
+  margin-bottom: 1em;
+}
+
+.no-breaks {
+  white-space: nowrap;
+}
+
+#name,
+[for=name] {
+  height: 0;
+  margin: 0;
+  display: block;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+label,
+[type=text],
+textarea {
+  color: #fff;
+  padding: .4em 2%;
+  display: block;
+  position: relative;
+}
+
+.label {
+  z-index: 1;
+  opacity: 0;
+  margin-bottom: -2.1em;
+  transition: all .5s ease;
+}
+
+.label.is-filled {
+  opacity: 1;
+  margin-bottom: 0;
+  transition: all .5s ease;
+}
+
+label {
+  color: #a9a9a9;
+}
+
+[type=text],
+textarea {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  width: 96%;
+  z-index: 2;
+  transition: border .5s ease;
+  margin-bottom: 1em;
+  -moz-text-decoration-color: #fff; /* Code for Firefox */
+  text-decoration-color: #fff;
+}
+
+textarea {
+  border: 1px solid #888;
+  min-height: 8.4em;
+  resize: none;
+}
+
+[type=text]:focus,
+textarea:focus {
+  border-color: #eee;
+  outline: 0;
+}
+
+.msg-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #4caf50;
+}
+
+.msg-error {
+  background-color: #f44336;
+}
+
+.msg-warning {
+  background-color: #ffeb3b;
+}
+
+.msg-box:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 1px;
+  margin-left: -10px;
+}
+
+.msg-box h2 {
+  margin: 0 1em;
+  color: #fff;
+  font-size: 2em;
+  line-height: 1.5em;
+  display: inline-block;
+}
+
+.msg-box a {
+  color: #333
+}
+
+.msg-box [class^="icon-"] {
+  margin-right: 5px;
+  font-size: 1.2em;
+  position: relative;
+  top: .15em;
+}
+
+.msg-box .icon-checkmark {
+  color: #1b5e20;
+}
+
+.msg-box .icon-warning {
+  color: #a00;
+}
+
+.msg-box .icon-question {
+  color: #f9a825;
+}

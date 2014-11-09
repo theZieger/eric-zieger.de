@@ -1,0 +1,5 @@
+{
+  "require": {
+    "eoghanobrien/php-simple-mail": "~1.4.0"
+  }
+}

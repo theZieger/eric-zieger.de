@@ -1,15 +1,16 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?w472hv');
-	src:url('../fonts/icomoon.eot?#iefixw472hv') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?w472hv') format('woff'),
-		url('../fonts/icomoon.ttf?w472hv') format('truetype'),
-		url('../fonts/icomoon.svg?w472hv#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?oey85m');
+	src:url('../fonts/icomoon.eot?#iefixoey85m') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?oey85m') format('woff'),
+		url('../fonts/icomoon.ttf?oey85m') format('truetype'),
+		url('../fonts/icomoon.svg?oey85m#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -17,8 +18,6 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-
-	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -38,6 +37,15 @@
 .icon-house:before {
 	content: "\e604";
 }
+.icon-checkmark:before {
+	content: "\e602";
+}
+.icon-question:before {
+	content: "\e605";
+}
+.icon-warning:before {
+	content: "\e606";
+}
 .icon-list:before {
 	content: "\e601";
 }
@@ -46,4 +54,40 @@
 }
 .icon-twitter:before {
 	content: "\e608";
+}
+
+/* IE7 and older */
+
+.ie7 .icon-mail {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60b;');
+}
+.ie7 .icon-feather {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe60c;');
+}
+.ie7 .icon-user {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe600;');
+}
+.ie7 .icon-chat {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe603;');
+}
+.ie7 .icon-house {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe604;');
+}
+.ie7 .icon-checkmark {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe602;');
+}
+.ie7 .icon-question {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe605;');
+}
+.ie7 .icon-warning {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe606;');
+}
+.ie7 .icon-list {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe601;');
+}
+.ie7 .icon-github {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe607;');
+}
+.ie7 .icon-twitter {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe608;');
 }

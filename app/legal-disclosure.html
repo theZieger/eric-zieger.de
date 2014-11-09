@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="styles/navigation.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/buttons.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/media-queries.css">
     <!-- endbuild -->
@@ -31,15 +33,17 @@
 
     <!--[if gte IE 9]><style type="text/css">.s1{filter:none;}</style><![endif]-->
   </head>
-  <body id="home">
+
+  <!--[if lt IE 8 ]><body class="ie7" id="home" lang="en"> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--><body id="home" lang="de"><!--<![endif]-->
 
     <header>
       <input type="checkbox" class="nav-checkbox" id="nav-checkbox" />
       <nav class="nav">
         <ul class="nav-items">
-          <li><a class="nav-item" href="index.html"><i class="icon-house"></i> Home</a></li>
-          <li><a class="nav-item" href="index.html#about-me"><i class="icon-user"></i> About me</a></li>
-          <li><a class="nav-item" href="index.html#contact"><i class="icon-chat"></i> Contact</a></li>
+          <li><a class="nav-item" href="index.php"><i class="icon-house"></i> Home</a></li>
+          <li><a class="nav-item" href="index.php#about-me"><i class="icon-user"></i> About me</a></li>
+          <li><a class="nav-item" href="index.php#contact"><i class="icon-chat"></i> Contact</a></li>
         </ul>
       </nav>
       <label class="nav-toggle icon-list" for="nav-checkbox">toggle menu</label>
@@ -74,13 +78,12 @@
 
     <footer>
       <div class="content">
-        <p>Copyright &copy; 2014. Made with &hearts; by Eric Zieger. | <a href="legal-disclosure.html">Legal</a></p>
-        <p>This site is tagged as v1.1.0 over on GitHub. Which by no way means that the current result you are looking at right now will be the same for the years to come. No, I decided to deploy this site everytime I have a new feature or bug fix pushed to my master branch. You could call it something like continuous delivery. </p>
-        <p>
-          <a target="_blank" href="https://twitter.com/the_Zieger" class="icon icon-twitter">Twitter</a>
-          <a target="_blank" href="https://github.com/theZieger" class="icon icon-github">GitHub</a>
-          <a href="mailto:mail@eric-zieger.de" class="icon icon-mail">GitHub</a>
-        </p>
+        <p>Copyright &copy; 2014. Made with &hearts; by Eric Zieger. | <a href="legal-imprint.html">Legal Disclosure</a></p>
+        <ul>
+          <li><a target="_blank" href="https://twitter.com/the_Zieger" class="icon icon-twitter">Twitter</a></li>
+          <li><a target="_blank" href="https://github.com/theZieger" class="icon icon-github">GitHub</a></li>
+          <li><a href="mailto:mail@eric-zieger.de" class="icon icon-mail">GitHub</a></li>
+        </ul>
       </div>
     </footer>
 

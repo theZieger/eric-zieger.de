@@ -1,7 +1,8 @@
 html, body {
   background: #fff;
   font-family: 'Raleway', sans-serif;
-  color: #333;
+  color: #232526;
+  line-height: 1.4em;
 }
 
 h1,h2 {
@@ -43,4 +44,14 @@ header a:focus,
 header a:active {
   color: #fff;
   text-decoration: none;
+}
+
+::-moz-selection {
+  background: #3dd1ac;
+  text-shadow: none;
+}
+
+::selection {
+  background: #3dd1ac;
+  text-shadow: none;
 }
