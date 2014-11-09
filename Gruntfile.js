@@ -57,7 +57,7 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= config.app %>/{,*/}*.html',
+          '<%= config.app %>/{,*/}*.{html,php}',
           '.tmp/styles/{,*/}*.css',
           '<%= config.app %>/images/{,*/}*'
         ]
@@ -164,7 +164,7 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/index.html']
+        src: ['<%= config.app %>/index.php']
       }
     },
 
@@ -173,7 +173,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
+            '<%= config.dist %>/scripts/main.js',
             '<%= config.dist %>/styles/{,*/}*.css',
             '<%= config.dist %>/images/{,*/}*.*',
             '<%= config.dist %>/styles/fonts/{,*/}*.*',
@@ -190,7 +190,7 @@ module.exports = function (grunt) {
       options: {
         dest: '<%= config.dist %>'
       },
-      html: '<%= config.app %>/index.html'
+      html: '<%= config.app %>/index.php'
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
@@ -198,7 +198,7 @@ module.exports = function (grunt) {
       options: {
         assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
       },
-      html: ['<%= config.dist %>/{,*/}*.html'],
+      html: ['<%= config.dist %>/{,*/}*.html', '<%= config.dist %>/{,*/}*.php'],
       css: ['<%= config.dist %>/styles/{,*/}*.css']
     },
 
@@ -241,7 +241,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.dist %>',
-          src: '{,*/}*.html',
+          src: ['{,*/}*.html', 'index.php'],
           dest: '<%= config.dist %>'
         }]
       }
@@ -284,9 +284,9 @@ module.exports = function (grunt) {
           src: [
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
-            '{,*/}*.html',
-            '{,*/}*.php',
-            'styles/fonts/{,*/}*.*'
+            '{,*/}*.{html,php}',
+            'styles/fonts/{,*/}*.*',
+            'scripts/ie7.js'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',
@@ -399,8 +399,8 @@ module.exports = function (grunt) {
     'copy:composer',
     'modernizr',
     'rev',
-    'usemin',
-    'htmlmin'
+    'usemin'
+    //'htmlmin'
   ]);
 
   grunt.registerTask('default', [

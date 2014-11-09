@@ -11,7 +11,7 @@ if (empty($_POST['name'])) {
     $sender = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
   } else {
-    header('location: index.html#contact?error_email');
+    header('location: index.php?error_email');
   }
 
   // get subject
@@ -20,7 +20,7 @@ if (empty($_POST['name'])) {
     $subject = filter_var(trim($_POST['subject']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
   } else {
-    header('location: index.html#contact?error_subject');
+    header('location: /?error_subject');
   }
 
   // get content
@@ -29,7 +29,7 @@ if (empty($_POST['name'])) {
     $content = filter_var(trim($_POST['content']), FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
   } else {
-    header('location: index.html#contact?error_content');
+    header('location: index.php?error_content');
   }
 
   $mail = new SimpleMail();
@@ -44,12 +44,12 @@ if (empty($_POST['name'])) {
   $send = $mail->send();
 
   if ($send) {
-    header('location: index.html#contact?success');
+    header('location: index.php?success');
   } else {
-    header('location: index.html#contact?error');
+    header('location: index.php?error');
   }
 
 
 } else {
-  header('location: index.html#contact?honeypot');
+  header('location: index.php?honeypot');
 }

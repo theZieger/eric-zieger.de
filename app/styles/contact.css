@@ -81,3 +81,60 @@ textarea:focus {
   border-color: #eee;
   outline: 0;
 }
+
+.msg-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #4caf50;
+}
+
+.msg-error {
+  background-color: #f44336;
+}
+
+.msg-warning {
+  background-color: #ffeb3b;
+}
+
+.msg-box:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  width: 1px;
+  margin-left: -10px;
+}
+
+.msg-box h2 {
+  margin: 0 1em;
+  color: #fff;
+  font-size: 2em;
+  line-height: 1.5em;
+  display: inline-block;
+}
+
+.msg-box a {
+  color: #333
+}
+
+.msg-box [class^="icon-"] {
+  margin-right: 5px;
+  font-size: 1.2em;
+  position: relative;
+  top: .15em;
+}
+
+.msg-box .icon-checkmark {
+  color: #1b5e20;
+}
+
+.msg-box .icon-warning {
+  color: #a00;
+}
+
+.msg-box .icon-question {
+  color: #f9a825;
+}
