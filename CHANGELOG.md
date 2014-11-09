@@ -1,3 +1,22 @@
+<a name="1.3.0"></a>
+## 1.3.0 (2014-11-09)
+
+
+#### Bug Fixes
+
+* **navigation:** unfinished scrolling and styling ([d52b2a54](https://github.com/theZieger/eric-zieger.de/commit/d52b2a5444385cb56b92df9c89587d05fea63edf))
+
+
+#### Features
+
+* **contact:**
+  * add success/error msg, icons, php contact script, etc ([98e182ac](https://github.com/theZieger/eric-zieger.de/commit/98e182ac9758753e2a13465f996057de3e8b884e))
+  * composer, Grunt and styles ([209a1547](https://github.com/theZieger/eric-zieger.de/commit/209a1547b1150c49822adf48f6130e794409dc35))
+  * add toggle label script ([0ca4a997](https://github.com/theZieger/eric-zieger.de/commit/0ca4a9973a34bf34a2b5f74ecf793e615547a47f))
+  * add final styling ([f953a658](https://github.com/theZieger/eric-zieger.de/commit/f953a6583c8f0f1e95b9d15594037f2de0d64c17))
+  * add form and basic styling ([d3ab9c2d](https://github.com/theZieger/eric-zieger.de/commit/d3ab9c2d67e033424ee81b1ff2a8c2fad59038cb))
+
+
 <a name="1.2.0"></a>
 ## 1.2.0 (2014-10-28)
 
