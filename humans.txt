@@ -1,0 +1,16 @@
+/* TEAM */
+
+  Front-end Developer: Eric Zieger
+  Site: http://www.eric-zieger.de
+  Contact: mail [at] eric-zieger.de
+  Twitter: @the_Zieger
+  From: Leipzig, Saxony, Germany
+
+/* SITE */
+
+  Last update: 2016/01/24
+  Language: German
+  Doctype: HTML5
+  Standards: HTML5, CSS3
+  Components: Normalize.css
+  Software: Ubuntu 15.10, Sublime, Editorconfig, Git, NPM
