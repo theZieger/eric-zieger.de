@@ -12,7 +12,7 @@
       /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
       body,h1{margin:0}.btn,.p-name{text-decoration:none}.btn,p,small{line-height:1.5}.btn,.btn svg,.logo,h1,img,li{display:inline-block}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}footer,header{display:block}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:500}h1{font-size:2em;line-height:64px;text-transform:lowercase;color:#fff}svg:not(:root){overflow:hidden}
       /*! eric-zieger.de CSS */
-      .p-name,h1{color:#fff}.btn,.p-name{text-decoration:none}.btn,p,small{line-height:1.5}.btn,.btn svg,.logo,h1,img,li{display:inline-block}h1{margin:0;line-height:64px;text-transform:lowercase}.p-name,h1,strong{font-family:raleway500,sans-serif;font-weight:500}.p-name{border-bottom:1px solid #fff;transition:all .3s ease}.p-name:focus,.p-name:hover{color:#fa4048;border-bottom-color:#fa4048}.logo{margin-right:1.5rem}.logo,h1{vertical-align:middle}.btn svg{vertical-align:text-top;margin-right:.5rem}ul{margin:0;list-style:none;padding:2rem 0 5rem}li{margin-right:2rem;min-height:4.75rem}.btn{padding:.5rem 1rem;min-width:7.5rem;border:1px solid #fff;margin:.5rem 0;border-radius:0 5px 5px}.btn:focus,.btn:hover{border-color:#fa4048;outline:0;box-shadow:none;border-bottom-width:4px}.content{background-color:#005963;background-image:url(src/images/bg.jpg);background-repeat:no-repeat;background-size:cover;background-position:bottom}.container{max-width:960px;margin:0 auto;padding:0 1rem}header{border-bottom:1px solid #80aeb4;margin-bottom:5rem}footer,header{padding:1.5rem}.btn,p{font-family:raleway200,sans-serif;color:#fff;font-size:1.5rem}.section,footer{text-align:center}small{font-family:monospace;font-size:1.3rem;color:#333}img{border-radius:50%;border:2px solid #fff;margin-bottom:2rem}
+      .logo,.p-name,h1{vertical-align:middle}.btn,.p-name{text-decoration:none}.btn,.p-name,h1,p{color:#fff}.btn,p,small{line-height:1.5}h1{margin:0;line-height:64px;text-transform:lowercase}.p-name,h1,strong{font-family:raleway500,sans-serif;font-weight:500}.p-name{border-bottom:1px solid #fff;transition:all .3s ease;display:inline-block;position:relative;overflow:hidden;padding:0 5px;margin:0 -3px}.p-name span{position:relative;z-index:2}.p-name:after{display:block;content:"";transition:bottom .15s ease-in;transition:bottom .35s cubic-bezier(.24,1.87,.25,-.93);width:100%;padding:0 5px;background:#fa4048;position:absolute;bottom:-2.25rem;height:2.25rem;left:0}.btn,.btn svg,.logo,h1,img,li{display:inline-block}.p-name:hover:after{bottom:-1px}.logo{margin-right:1rem}.btn svg{vertical-align:text-top;margin-right:.5rem}ul{margin:0;list-style:none;padding:2rem 0 5rem}li{margin-right:2rem;min-height:4.75rem}.btn{padding:.5rem 1rem;min-width:7.5rem;border:1px solid #fff;margin:.5rem 0;border-radius:0 5px 5px}.btn:focus,.btn:hover{border-color:#fa4048;outline:0;box-shadow:none;border-bottom-width:4px}.content{background-color:#005963;background-image:url(src/images/bg.jpg);background-repeat:no-repeat;background-size:cover;background-position:bottom}.container{max-width:960px;margin:0 auto;padding:0 1rem}header{border-bottom:1px solid #80aeb4;margin-bottom:5rem}footer,header{padding:1rem}.btn,p{font-family:raleway200,sans-serif;font-size:1.5rem}.section,footer{text-align:center}small{font-family:monospace;font-size:1.3rem;color:#333}img{border-radius:50%;border:2px solid #fff;margin-bottom:2rem}
     </style>
   </head>
   <body>
@@ -39,49 +39,49 @@
         <div class="section">
           <div class="h-card">
             <img class="u-photo" src="src/images/eric-zieger.jpg" alt="Ein Portrait von Eric Zieger">
-            <p>
-              Hi, mein Name ist <a class="p-name u-url" href="http://eric-zieger.de/">Eric Zieger</a> und ich bin Junior <strong>Front-End Entwickler</strong>, beyond tellerrand volunteer und <strong>Mediengestalter Digital und Print</strong> für Gestaltung und Technik aus Leipzig, Deutschland.
+            <p class="p-note">
+              Hi, mein Name ist <a class="p-name u-url" rel="me" href="http://eric-zieger.de/"><span>Eric Zieger</span></a> und ich bin Junior <strong>Front-End Entwickler</strong>, beyond tellerrand volunteer und <strong>Mediengestalter Digital und Print</strong> für Gestaltung und Technik aus Leipzig, Deutschland.
             </p>
+            <ul>
+              <li>
+                <a rel="me" class="btn" href="https://twitter.com/the_Zieger">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title2" role="img">
+                    <title id="title2">Das Twitter Logo</title>
+                    <path fill="#FFFFFF" d="M24 5.306c-0.881 0.394-1.833 0.656-2.827 0.773 1.017-0.609 1.795-1.575 2.166-2.723-0.952 0.563-2.006 0.975-3.127 1.195-0.9-0.956-2.18-1.552-3.595-1.552-2.719 0-4.922 2.203-4.922 4.922 0 0.384 0.042 0.759 0.127 1.12-4.092-0.206-7.72-2.166-10.148-5.147-0.422 0.727-0.666 1.575-0.666 2.475 0 1.706 0.867 3.216 2.189 4.097-0.806-0.023-1.566-0.248-2.231-0.614 0 0.019 0 0.042 0 0.061 0 2.386 1.697 4.378 3.952 4.828-0.412 0.112-0.848 0.173-1.298 0.173-0.319 0-0.623-0.033-0.928-0.089 0.628 1.955 2.447 3.38 4.598 3.422-1.688 1.322-3.806 2.109-6.117 2.109-0.398 0-0.788-0.023-1.177-0.070 2.184 1.402 4.772 2.212 7.552 2.212 9.056 0 14.011-7.505 14.011-14.011 0-0.216-0.005-0.427-0.014-0.637 0.961-0.689 1.795-1.556 2.456-2.545z"></path>
+                  </svg>
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a rel="me" class="btn" href="https://github.com/theZieger">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title3" role="img">
+                    <title id="title3">Das Github Logo</title>
+                    <path fill="#FFFFFF" d="M12 0.296c-6.627 0-12 5.372-12 12 0 5.302 3.438 9.8 8.206 11.387 0.6 0.111 0.82-0.26 0.82-0.577 0-0.286-0.011-1.231-0.016-2.234-3.339 0.726-4.043-1.416-4.043-1.416-0.546-1.387-1.332-1.756-1.332-1.756-1.089-0.745 0.082-0.729 0.082-0.729 1.205 0.085 1.839 1.237 1.839 1.237 1.070 1.834 2.807 1.304 3.492 0.997 0.108-0.775 0.418-1.305 0.762-1.605-2.666-0.303-5.467-1.332-5.467-5.93 0-1.31 0.469-2.381 1.237-3.221-0.125-0.302-0.536-1.523 0.116-3.176 0 0 1.008-0.322 3.301 1.23 0.957-0.266 1.984-0.399 3.004-0.404 1.020 0.005 2.047 0.138 3.006 0.404 2.291-1.553 3.297-1.23 3.297-1.23 0.653 1.653 0.243 2.873 0.118 3.176 0.769 0.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921 0.43 0.372 0.814 1.103 0.814 2.222 0 1.606-0.014 2.898-0.014 3.293 0 0.319 0.216 0.694 0.824 0.576 4.765-1.588 8.199-6.085 8.199-11.385 0-6.628-5.373-12-12-12z"></path>
+                  </svg>
+                  Github
+                </a>
+              </li>
+              <li>
+                <a class="btn" href="https://www.xing.com/profile/Eric_Zieger">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title4" role="img">
+                    <title id="title4">Das Xing Logo</title>
+                    <path fill="#FFFFFF" d="M3.647 4.739c-0.206 0-0.384 0.075-0.473 0.216-0.089 0.15-0.075 0.338 0.019 0.53l2.339 4.050c0.005 0.009 0.005 0.014 0 0.019l-3.675 6.497c-0.094 0.192-0.089 0.384 0 0.53 0.089 0.141 0.244 0.234 0.45 0.234h3.459c0.516 0 0.769-0.352 0.942-0.67 0 0 3.595-6.361 3.736-6.609-0.014-0.023-2.381-4.148-2.381-4.148-0.173-0.305-0.431-0.647-0.966-0.647h-3.45z"></path>
+                    <path fill="#FFFFFF" d="M18.188 0c-0.516 0-0.741 0.323-0.928 0.661 0 0-7.458 13.223-7.702 13.659 0.014 0.023 4.917 9.023 4.917 9.023 0.173 0.305 0.436 0.661 0.966 0.661h3.459c0.206 0 0.37-0.080 0.459-0.22 0.094-0.15 0.089-0.342-0.009-0.534l-4.875-8.92c-0.005-0.009-0.005-0.014 0-0.023l7.664-13.552c0.094-0.192 0.098-0.384 0.009-0.534-0.089-0.141-0.253-0.22-0.459-0.22h-3.502z"></path>
+                  </svg>
+                  Xing
+                </a>
+              </li>
+              <li>
+                <a rel="me" class="btn u-email" href="mailto:mail@eric-zieger.de?subject=Kontakt">
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title5" role="img">
+                    <title id="title5">Ein Briefumschlag</title>
+                    <path fill="#FFFFFF" d="M21.75 3h-19.5c-1.237 0-2.25 1.012-2.25 2.25v15c0 1.237 1.013 2.25 2.25 2.25h19.5c1.237 0 2.25-1.013 2.25-2.25v-15c0-1.238-1.013-2.25-2.25-2.25zM9.345 12.899l-6.345 4.943v-11.757l6.345 6.814zM4.134 6h15.732l-7.866 5.906-7.866-5.906zM9.593 13.165l2.407 2.585 2.407-2.585 4.935 6.335h-14.684l4.935-6.335zM14.655 12.899l6.345-6.814v11.757l-6.345-4.943z"></path>
+                  </svg>
+                  E-Mail
+                </a>
+              </li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              <a rel="me" class="btn" href="https://twitter.com/the_Zieger">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title2" role="img">
-                  <title id="title2">Das Twitter Logo</title>
-                  <path fill="#FFFFFF" d="M24 5.306c-0.881 0.394-1.833 0.656-2.827 0.773 1.017-0.609 1.795-1.575 2.166-2.723-0.952 0.563-2.006 0.975-3.127 1.195-0.9-0.956-2.18-1.552-3.595-1.552-2.719 0-4.922 2.203-4.922 4.922 0 0.384 0.042 0.759 0.127 1.12-4.092-0.206-7.72-2.166-10.148-5.147-0.422 0.727-0.666 1.575-0.666 2.475 0 1.706 0.867 3.216 2.189 4.097-0.806-0.023-1.566-0.248-2.231-0.614 0 0.019 0 0.042 0 0.061 0 2.386 1.697 4.378 3.952 4.828-0.412 0.112-0.848 0.173-1.298 0.173-0.319 0-0.623-0.033-0.928-0.089 0.628 1.955 2.447 3.38 4.598 3.422-1.688 1.322-3.806 2.109-6.117 2.109-0.398 0-0.788-0.023-1.177-0.070 2.184 1.402 4.772 2.212 7.552 2.212 9.056 0 14.011-7.505 14.011-14.011 0-0.216-0.005-0.427-0.014-0.637 0.961-0.689 1.795-1.556 2.456-2.545z"></path>
-                </svg>
-                Twitter
-              </a>
-            </li>
-            <li>
-              <a rel="me" class="btn" href="https://github.com/theZieger">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title3" role="img">
-                  <title id="title3">Das Github Logo</title>
-                  <path fill="#FFFFFF" d="M12 0.296c-6.627 0-12 5.372-12 12 0 5.302 3.438 9.8 8.206 11.387 0.6 0.111 0.82-0.26 0.82-0.577 0-0.286-0.011-1.231-0.016-2.234-3.339 0.726-4.043-1.416-4.043-1.416-0.546-1.387-1.332-1.756-1.332-1.756-1.089-0.745 0.082-0.729 0.082-0.729 1.205 0.085 1.839 1.237 1.839 1.237 1.070 1.834 2.807 1.304 3.492 0.997 0.108-0.775 0.418-1.305 0.762-1.605-2.666-0.303-5.467-1.332-5.467-5.93 0-1.31 0.469-2.381 1.237-3.221-0.125-0.302-0.536-1.523 0.116-3.176 0 0 1.008-0.322 3.301 1.23 0.957-0.266 1.984-0.399 3.004-0.404 1.020 0.005 2.047 0.138 3.006 0.404 2.291-1.553 3.297-1.23 3.297-1.23 0.653 1.653 0.243 2.873 0.118 3.176 0.769 0.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921 0.43 0.372 0.814 1.103 0.814 2.222 0 1.606-0.014 2.898-0.014 3.293 0 0.319 0.216 0.694 0.824 0.576 4.765-1.588 8.199-6.085 8.199-11.385 0-6.628-5.373-12-12-12z"></path>
-                </svg>
-                Github
-              </a>
-            </li>
-            <li>
-              <a class="btn" href="https://www.xing.com/profile/Eric_Zieger">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title4" role="img">
-                  <title id="title4">Das Xing Logo</title>
-                  <path fill="#FFFFFF" d="M3.647 4.739c-0.206 0-0.384 0.075-0.473 0.216-0.089 0.15-0.075 0.338 0.019 0.53l2.339 4.050c0.005 0.009 0.005 0.014 0 0.019l-3.675 6.497c-0.094 0.192-0.089 0.384 0 0.53 0.089 0.141 0.244 0.234 0.45 0.234h3.459c0.516 0 0.769-0.352 0.942-0.67 0 0 3.595-6.361 3.736-6.609-0.014-0.023-2.381-4.148-2.381-4.148-0.173-0.305-0.431-0.647-0.966-0.647h-3.45z"></path>
-                  <path fill="#FFFFFF" d="M18.188 0c-0.516 0-0.741 0.323-0.928 0.661 0 0-7.458 13.223-7.702 13.659 0.014 0.023 4.917 9.023 4.917 9.023 0.173 0.305 0.436 0.661 0.966 0.661h3.459c0.206 0 0.37-0.080 0.459-0.22 0.094-0.15 0.089-0.342-0.009-0.534l-4.875-8.92c-0.005-0.009-0.005-0.014 0-0.023l7.664-13.552c0.094-0.192 0.098-0.384 0.009-0.534-0.089-0.141-0.253-0.22-0.459-0.22h-3.502z"></path>
-                </svg>
-                Xing
-              </a>
-            </li>
-            <li>
-              <a rel="me" class="btn" href="mailto:mail@eric-zieger.de?subject=Kontakt">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title5" role="img">
-                  <title id="title5">Ein Briefumschlag</title>
-                  <path fill="#FFFFFF" d="M21.75 3h-19.5c-1.237 0-2.25 1.012-2.25 2.25v15c0 1.237 1.013 2.25 2.25 2.25h19.5c1.237 0 2.25-1.013 2.25-2.25v-15c0-1.238-1.013-2.25-2.25-2.25zM9.345 12.899l-6.345 4.943v-11.757l6.345 6.814zM4.134 6h15.732l-7.866 5.906-7.866-5.906zM9.593 13.165l2.407 2.585 2.407-2.585 4.935 6.335h-14.684l4.935-6.335zM14.655 12.899l6.345-6.814v11.757l-6.345-4.943z"></path>
-                </svg>
-                E-Mail
-              </a>
-            </li>
-          </ul>
         </div>
       </div><!--.container-->
     </div><!--.content-->
