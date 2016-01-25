@@ -4,10 +4,13 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 /*! eric-zieger.de CSS */
 h1 {
   margin: 0;
-  font-weight: 500;
   line-height: 64px;
   text-transform: lowercase;
   color: #fff;
+}
+h1,
+strong {
+  font-family: 'raleway500', sans-serif;
 }
 .logo {
   margin-right: 1.5rem;
@@ -69,16 +72,14 @@ footer,
 header {
   padding: 1.5rem;
 }
-h1,
 .btn,
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'raleway200', sans-serif;
   line-height: 1.5;
 }
 .btn,
 p {
   color: #fff;
-  font-weight: 200;
   font-size: 1.5rem;
 }
 .section,
@@ -90,7 +91,6 @@ small {
   font-size: 1.3rem;
   line-height: 1.5;
   color: #333;
-  font-weight: 500;
 }
 img {
   border-radius: 50%;

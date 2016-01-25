@@ -1,10 +1,6 @@
 # Apache Server Configs v2.8.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 
-# (!) Using `.htaccess` files slows down Apache, therefore, if you have access
-# to the main server config file (usually called `httpd.conf`), you should add
-# this logic there: http://httpd.apache.org/docs/current/howto/htaccess.html.
-
 # ##############################################################################
 # # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
 # ##############################################################################
@@ -13,18 +9,6 @@
 # | Cross-origin requests                                                      |
 # ------------------------------------------------------------------------------
 
-# Allow cross-origin requests.
-
-# http://enable-cors.org/
-# http://www.w3.org/TR/cors/
-# https://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
-
-# <IfModule mod_headers.c>
-#     Header set Access-Control-Allow-Origin "*"
-# </IfModule>
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # By default allow cross-origin access to web fonts.
 
 <IfModule mod_headers.c>
@@ -32,22 +16,6 @@
         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
 </IfModule>
-
-# ------------------------------------------------------------------------------
-# | Cross-origin resource timing                                               |
-# ------------------------------------------------------------------------------
-
-# Allow cross-origin access to the timing information for all resources.
-
-# If a resource isn't served with a `Timing-Allow-Origin` header that would
-# allow its timing information to be shared with the current document, some of
-# the attributes of the `PerformanceResourceTiming` object will be set to zero.
-
-# http://www.w3.org/TR/resource-timing/
-
-# <IfModule mod_headers.c>
-#     Header set Timing-Allow-Origin: "*"
-# </IfModule>
 
 # ------------------------------------------------------------------------------
 # | CORS-enabled images                                                        |
@@ -86,15 +54,6 @@
 # http://www.webmasterworld.com/apache/3808792.htm
 
 Options -MultiViews
-
-# ------------------------------------------------------------------------------
-# | Custom error messages / pages                                              |
-# ------------------------------------------------------------------------------
-
-# Customize what Apache returns to the client in case of an error.
-# http://httpd.apache.org/docs/current/mod/core.html#errordocument
-
-# ErrorDocument 404 /404.html
 
 # ##############################################################################
 # # INTERNET EXPLORER                                                          #
@@ -304,7 +263,7 @@ AddDefaultCharset utf-8
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Option 1: rewrite www.example.com → example.com
+# rewrite www.example.com → example.com
 
 <IfModule mod_rewrite.c>
     RewriteCond %{HTTPS} !=on
