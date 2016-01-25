@@ -9,10 +9,10 @@
     <link rel="author" href="humans.txt" />
     <link rel="shortcut icon" href="src/images/favicon.ico">
     <style type="text/css">
-    /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-    html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}footer,header{display:block}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:500}h1{font-size:2em;margin:.67em 0}small{font-size:80%}img{border:0}svg:not(:root){overflow:hidden}
-    /*! eric-zieger.de CSS */
-    .btn,h1,p{color:#fff}.btn,p,small{line-height:1.5}.btn,.btn svg,.logo,h1,img,li{display:inline-block}h1{margin:0;line-height:64px;text-transform:lowercase}h1,strong{font-family:raleway500,sans-serif}.logo{margin-right:1.5rem}.logo,h1{vertical-align:middle}.btn svg{vertical-align:text-top;margin-right:.5rem}ul{margin:0;list-style:none;padding:2rem 0 5rem}li{margin-right:2rem;min-height:4.75rem}.btn{padding:.5rem 1rem;min-width:7.5rem;text-decoration:none;border:1px solid #fff;margin:.5rem 0;border-radius:0 5px 5px}.btn:focus,.btn:hover{border-color:#fa4048;outline:0;box-shadow:none;border-bottom-width:4px}.content{background-color:#005963;background-image:url(src/images/bg.jpg);background-repeat:no-repeat;background-size:cover;background-position:bottom}.container{max-width:960px;margin:0 auto;padding:0 1rem}header{border-bottom:1px solid #80aeb4;margin-bottom:5rem}footer,header{padding:1.5rem}.btn,p{font-family:raleway200,sans-serif;font-size:1.5rem}.section,footer{text-align:center}small{font-family:monospace;font-size:1.3rem;color:#333}img{border-radius:50%;border:2px solid #fff;margin-bottom:2rem}
+      /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+      body,h1{margin:0}.btn,.p-name{text-decoration:none}.btn,p,small{line-height:1.5}.btn,.btn svg,.logo,h1,img,li{display:inline-block}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}footer,header{display:block}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:500}h1{font-size:2em;line-height:64px;text-transform:lowercase;color:#fff}svg:not(:root){overflow:hidden}
+      /*! eric-zieger.de CSS */
+      .p-name,h1{color:#fff}.btn,.p-name{text-decoration:none}.btn,p,small{line-height:1.5}.btn,.btn svg,.logo,h1,img,li{display:inline-block}h1{margin:0;line-height:64px;text-transform:lowercase}.p-name,h1,strong{font-family:raleway500,sans-serif;font-weight:500}.p-name{border-bottom:1px solid #fff;transition:all .3s ease}.p-name:focus,.p-name:hover{color:#fa4048;border-bottom-color:#fa4048}.logo{margin-right:1.5rem}.logo,h1{vertical-align:middle}.btn svg{vertical-align:text-top;margin-right:.5rem}ul{margin:0;list-style:none;padding:2rem 0 5rem}li{margin-right:2rem;min-height:4.75rem}.btn{padding:.5rem 1rem;min-width:7.5rem;border:1px solid #fff;margin:.5rem 0;border-radius:0 5px 5px}.btn:focus,.btn:hover{border-color:#fa4048;outline:0;box-shadow:none;border-bottom-width:4px}.content{background-color:#005963;background-image:url(src/images/bg.jpg);background-repeat:no-repeat;background-size:cover;background-position:bottom}.container{max-width:960px;margin:0 auto;padding:0 1rem}header{border-bottom:1px solid #80aeb4;margin-bottom:5rem}footer,header{padding:1.5rem}.btn,p{font-family:raleway200,sans-serif;color:#fff;font-size:1.5rem}.section,footer{text-align:center}small{font-family:monospace;font-size:1.3rem;color:#333}img{border-radius:50%;border:2px solid #fff;margin-bottom:2rem}
     </style>
   </head>
   <body>
@@ -37,10 +37,12 @@
           <h1>Eric Zieger</h1>
         </header>
         <div class="section">
-          <img src="src/images/eric-zieger.jpg" alt="Ein Portrait von Eric Zieger">
-          <p>
-            Junior <strong>Front-End Entwickler</strong>, beyond tellerrand volunteer und <strong>Mediengestalter Digital und Print</strong> für Gestaltung und Technik aus Leipzig, Deutschland.
-          </p>
+          <div class="h-card">
+            <img class="u-photo" src="src/images/eric-zieger.jpg" alt="Ein Portrait von Eric Zieger">
+            <p>
+              Hi, mein Name ist <a class="p-name u-url" href="http://eric-zieger.de/">Eric Zieger</a> und ich bin Junior <strong>Front-End Entwickler</strong>, beyond tellerrand volunteer und <strong>Mediengestalter Digital und Print</strong> für Gestaltung und Technik aus Leipzig, Deutschland.
+            </p>
+          </div>
           <ul>
             <li>
               <a rel="me" class="btn" href="https://twitter.com/the_Zieger">
@@ -61,7 +63,7 @@
               </a>
             </li>
             <li>
-              <a rel="me" class="btn" href="https://www.xing.com/profile/Eric_Zieger">
+              <a class="btn" href="https://www.xing.com/profile/Eric_Zieger">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="title4" role="img">
                   <title id="title4">Das Xing Logo</title>
                   <path fill="#FFFFFF" d="M3.647 4.739c-0.206 0-0.384 0.075-0.473 0.216-0.089 0.15-0.075 0.338 0.019 0.53l2.339 4.050c0.005 0.009 0.005 0.014 0 0.019l-3.675 6.497c-0.094 0.192-0.089 0.384 0 0.53 0.089 0.141 0.244 0.234 0.45 0.234h3.459c0.516 0 0.769-0.352 0.942-0.67 0 0 3.595-6.361 3.736-6.609-0.014-0.023-2.381-4.148-2.381-4.148-0.173-0.305-0.431-0.647-0.966-0.647h-3.45z"></path>

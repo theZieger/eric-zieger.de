@@ -1,5 +1,5 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}footer,header{display:block}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:700}h1{font-size:2em;margin:.67em 0}small{font-size:80%}img{border:0}svg:not(:root){overflow:hidden}
+body,h1{margin:0}.btn,.p-name{text-decoration:none}.btn,p,small{line-height:1.5}.btn,.btn svg,.logo,h1,img,li{display:inline-block}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}footer,header{display:block}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:500}h1{font-size:2em;line-height:64px;text-transform:lowercase;color:#fff}svg:not(:root){overflow:hidden}
 
 /*! eric-zieger.de CSS */
 h1 {
@@ -8,9 +8,21 @@ h1 {
   text-transform: lowercase;
   color: #fff;
 }
+.p-name,
 h1,
 strong {
   font-family: 'raleway500', sans-serif;
+  font-weight: 500;
+}
+.p-name {
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  transition: all .3s ease;
+}
+.p-name:hover,.p-name:focus {
+  color: #fa4048;
+  border-bottom-color: #fa4048;
 }
 .logo {
   margin-right: 1.5rem;
