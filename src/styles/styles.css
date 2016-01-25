@@ -43,6 +43,7 @@ strong {
   height: 2.25rem;
   left: 0;
 }
+.p-name:focus:after,
 .p-name:hover:after {
   bottom: -1px;
 }
@@ -79,11 +80,16 @@ li {
   margin: .5rem 0;
   border-radius: 0 5px 5px 5px;
 }
+.p-name:focus,
+.p-name:hover,
+.btn:hover,
+.btn:focus {
+  outline: 0;
+  box-shadow: none;
+}
 .btn:hover,
 .btn:focus {
   border-color: #fa4048;
-  outline: 0;
-  box-shadow: none;
   border-bottom-width: 4px;
 }
 .content {
