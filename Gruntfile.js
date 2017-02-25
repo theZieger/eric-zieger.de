@@ -1,13 +1,12 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    ftp: grunt.file.readJSON('../ftp-server.json'),
     pkg: grunt.file.readJSON('package.json'),
     cssmin: {
       options: {
         level: 2
       },
-      dist: {
+      bundle: {
         files: [{
           'dist/src/css/bundle.css': [
             'node_modules/normalize.css/normalize.css',
@@ -16,6 +15,23 @@ module.exports = function(grunt) {
         },{
           'dist/src/css/fonts.css': 'src/css/fonts.css'
         }]
+      },
+      dist: {
+        files: {
+          'dist/src/css/bundle.css': 'dist/src/css/bundle.css'
+        }
+      }
+    },
+    criticalcss: {
+      dist: {
+        options: {
+          url: 'http://pinkfluffyunicorn.com/eric-zieger.de/dist/',
+          filename: 'dist/src/css/bundle.css',
+          outputfile: 'dist/src/css/bundle.css',
+          ignoreConsole: true,
+          width: '1600',
+          height: '1200'
+        }
       }
     },
     htmlbuild: {
@@ -48,7 +64,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-html-build');
+  grunt.loadNpmTasks('grunt-criticalcss');
 
-  grunt.registerTask('build', ['cssmin', 'htmlbuild']);
+  grunt.registerTask('build', ['cssmin:bundle', 'criticalcss', 'cssmin:dist', 'htmlbuild']);
   grunt.registerTask('default', ['build']);
 };
