@@ -58,14 +58,41 @@ module.exports = function(grunt) {
             from: 'Leipzig, Deutschland'
           }
         }
-      } 
+      }
+    },
+    uglify: {
+      options: {
+        compress: {
+          dead_code: true,
+          drop_debugger: true,
+          properties: true,
+          conditionals: true,
+          booleans: true,
+          if_return: true,
+          collapse_vars: true,
+          warnings: true,
+          drop_console: true,
+          passes: 2
+        },
+        quoteStyle: 1,
+        report: 'gzip'
+      },
+      dist: {
+        options: {
+          wrap: 'srvWrkr'
+        },
+        files: {
+          'dist/service-worker.js': 'src/service-worker.js'
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-criticalcss');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('build', ['cssmin:bundle', 'criticalcss', 'cssmin:dist', 'htmlbuild']);
+  grunt.registerTask('build', ['cssmin:bundle', 'criticalcss', 'cssmin:dist', 'htmlbuild', 'uglify']);
   grunt.registerTask('default', ['build']);
 };
