@@ -1,14 +1,14 @@
 /* TEAM */
 
   Developer: Eric Zieger
-  Site: http://www.eric-zieger.de
+  Site: https://eric-zieger.de
   Contact: mail [at] eric-zieger.de
   Twitter: @the_Zieger
   From: Leipzig, Saxony, Germany
 
 /* SITE */
 
-  Last update: 2017/02/24
+  Last update: 2017/02/25
   Language: German
   Doctype: HTML5
   Standards: HTML5, CSS3

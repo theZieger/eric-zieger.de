@@ -5,12 +5,14 @@ h1 {
   text-transform: lowercase;
   color: #fff;
 }
+
 .p-name,
 h1,
 strong {
   font-family: 'raleway500', sans-serif;
   font-weight: 500;
 }
+
 .p-name {
   text-decoration: none;
   border-bottom: 1px solid #fff;
@@ -23,10 +25,12 @@ strong {
   margin: 0 -3px;
   vertical-align: middle;
 }
+
 .p-name span {
   position: relative;
   z-index: 2;
 }
+
 .p-name:after {
   display: block;
   content: "";
@@ -40,34 +44,41 @@ strong {
   height: 2.25rem;
   left: 0;
 }
+
 .p-name:focus:after,
 .p-name:hover:after {
   bottom: -1px;
 }
+
 .logo {
   margin-right: 1rem;
 }
+
 h1,
 .logo {
   display: inline-block;
   vertical-align: middle;
 }
+
 .btn svg {
   vertical-align: text-top;
   display: inline-block;
   margin-right: .5rem;
 }
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
   padding: 2rem 0 5rem;
 }
+
 li {
   display: inline-block;
   margin-right: 2rem;
   min-height: 4.75rem;
 }
+
 .btn {
   padding: .5rem 1rem;
   min-width: 7.5rem;
@@ -77,6 +88,7 @@ li {
   margin: .5rem 0;
   border-radius: 0 5px 5px 5px;
 }
+
 .p-name:focus,
 .p-name:hover,
 .btn:hover,
@@ -84,11 +96,13 @@ li {
   outline: 0;
   box-shadow: none;
 }
+
 .btn:hover,
 .btn:focus {
   border-color: #fa4048;
   border-bottom-width: 4px;
 }
+
 .content {
   background-color: #005963;
   background-image: url('src/images/bg.jpg');
@@ -96,39 +110,43 @@ li {
   background-size: cover;
   background-position: bottom;
 }
+
 .container {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1rem;
 }
+
 header {
   border-bottom: 1px solid #80aeb4;
   margin-bottom: 5rem;
 }
+
 footer,
 header {
   padding: 1rem;
 }
+
 .btn,
 p {
   font-family: 'raleway200', sans-serif;
   line-height: 1.5;
-}
-.btn,
-p {
   color: #fff;
   font-size: 1.5rem;
 }
+
 .section,
 footer {
   text-align: center;
 }
+
 small {
   font-family: monospace;
   font-size: 1.3rem;
   line-height: 1.5;
   color: #333;
 }
+
 img {
   border-radius: 50%;
   border: 2px solid #fff;
