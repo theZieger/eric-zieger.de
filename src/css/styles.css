@@ -1,11 +1,17 @@
 /*! eric-zieger.de CSS */
+body {
+  font-family: 'raleway200';
+  color: #fff;
+  line-height: 1.5;
+}
+
 h1 {
   margin: 0;
   line-height: 64px;
   text-transform: lowercase;
-  color: #fff;
 }
 
+small,
 .p-name,
 h1,
 strong {
@@ -13,10 +19,13 @@ strong {
   font-weight: 500;
 }
 
+a {
+  color: #fff;
+}
+
 .p-name {
   text-decoration: none;
   border-bottom: 1px solid #fff;
-  color: #fff;
   transition: all .3s ease;
   display: inline-block;
   position: relative;
@@ -66,16 +75,15 @@ h1,
   margin-right: .5rem;
 }
 
-ul {
+.h-card ul {
   margin: 0;
-  padding: 0;
   list-style: none;
   padding: 2rem 0 5rem;
 }
 
-li {
+.h-card li {
   display: inline-block;
-  margin-right: 2rem;
+  margin: 0 1rem;
   min-height: 4.75rem;
 }
 
@@ -103,8 +111,8 @@ li {
   border-bottom-width: 4px;
 }
 
-.content {
-  background-color: #005963;
+.elevator-pitch {
+  background-color: #062254;
   background-image: url('src/images/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -118,7 +126,7 @@ li {
 }
 
 header {
-  border-bottom: 1px solid #80aeb4;
+  border-bottom: 1px solid #fff;
   margin-bottom: 5rem;
 }
 
@@ -129,9 +137,6 @@ header {
 
 .btn,
 p {
-  font-family: 'raleway200', sans-serif;
-  line-height: 1.5;
-  color: #fff;
   font-size: 1.5rem;
 }
 
@@ -140,11 +145,12 @@ footer {
   text-align: center;
 }
 
+footer {
+  background: #062254;
+}
+
 small {
-  font-family: monospace;
-  font-size: 1.3rem;
-  line-height: 1.5;
-  color: #333;
+  font-size: 1rem;
 }
 
 img {
@@ -152,4 +158,71 @@ img {
   border: 2px solid #fff;
   display: inline-block;
   margin-bottom: 2rem;
+  max-width: 100%;
+}
+
+.experience {
+  padding: 3rem 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  color: #333;
+  font-size: .8rem;
+}
+
+ol {
+  margin: 0;
+  padding: 0 0 0 5vw;
+  list-style: none;
+  width: 450vw;
+}
+
+ol:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ol > li {
+  float: left;
+  width: 85vw;
+  margin-right: 5vw;
+  background: #ccc;
+  position: relative;
+  padding: .5rem 1rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+li ul {
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding-left: 1.3rem;
+  font-size: 1rem;
+}
+
+.experience strong {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/*
+.time {
+  font-size: 1rem;
+  display: inline-block;
+  transform: rotate(-90deg) translateX(-100%);
+  transform-origin: 0 0;
+  padding: .5rem 1rem;
+  background: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
+@media (min-width: 500px) {
+  .experience {
+    display: none;
+    visibility: hidden;
+  }
 }

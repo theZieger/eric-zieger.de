@@ -30,7 +30,15 @@ module.exports = function(grunt) {
           outputfile: 'dist/src/css/bundle.css',
           ignoreConsole: true,
           width: '1600',
-          height: '1200'
+          height: '3200',
+          forceInclude: [
+            '.p-name:focus:after',
+            '.p-name:hover:after',
+            '.btn:focus',
+            '.btn:hover',
+            '.p-name:hover',
+            '.p-name:focus'
+          ]
         }
       }
     },
