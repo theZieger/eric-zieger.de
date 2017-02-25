@@ -1,0 +1,24 @@
+{
+  "name": "eric-zieger.de",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theZieger/eric-zieger.de.git"
+  },
+  "author": "Eric Zieger",
+  "bugs": {
+    "url": "https://github.com/theZieger/eric-zieger.de/issues"
+  },
+  "homepage": "https:eric-zieger.de",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-criticalcss": "^2.1.0",
+    "normalize.css": "^5.0.0"
+  }
+}
