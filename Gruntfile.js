@@ -22,26 +22,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    criticalcss: {
-      dist: {
-        options: {
-          url: 'http://pinkfluffyunicorn.com/eric-zieger.de/dist/',
-          filename: 'dist/src/css/bundle.css',
-          outputfile: 'dist/src/css/bundle.css',
-          ignoreConsole: true,
-          width: '1600',
-          height: '3200',
-          forceInclude: [
-            '.p-name:focus:after',
-            '.p-name:hover:after',
-            '.btn:focus',
-            '.btn:hover',
-            '.p-name:hover',
-            '.p-name:focus'
-          ]
-        }
-      }
-    },
     htmlbuild: {
       dist: {
         src: 'src/index.html',
@@ -101,6 +81,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-criticalcss');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('build', ['cssmin:bundle', 'criticalcss', 'cssmin:dist', 'htmlbuild', 'uglify']);
+  grunt.registerTask('build', ['cssmin:bundle', 'cssmin:dist', 'htmlbuild', 'uglify']);
   grunt.registerTask('default', ['build']);
 };
