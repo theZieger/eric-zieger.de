@@ -11,6 +11,7 @@ h1 {
   text-transform: lowercase;
 }
 
+li ul,
 small,
 .p-name,
 h1,
@@ -47,7 +48,7 @@ a {
   transition: bottom 0.35s cubic-bezier(.24,1.87,.25,-0.93);
   width: 100%;
   padding: 0 5px;
-  background: #fa4048;
+  background: #f44336 ;
   position: absolute;
   bottom: -2.25rem;
   height: 2.25rem;
@@ -107,12 +108,12 @@ h1,
 
 .btn:hover,
 .btn:focus {
-  border-color: #fa4048;
+  border-color: #f44336 ;
   border-bottom-width: 4px;
 }
 
 .elevator-pitch {
-  background-color: #062254;
+  background-color: #1a237e;
   background-image: url('src/images/bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,7 +131,6 @@ header {
   margin-bottom: 5rem;
 }
 
-footer,
 header {
   padding: 1rem;
 }
@@ -146,7 +146,9 @@ footer {
 }
 
 footer {
-  background: #062254;
+  color: #111;
+  padding: 2rem 1rem;
+  background: #e8eaf6;
 }
 
 small {
@@ -165,7 +167,6 @@ img {
   padding: 3rem 0;
   overflow-x: scroll;
   overflow-y: hidden;
-  color: #333;
   font-size: .8rem;
 }
 
@@ -174,6 +175,18 @@ ol {
   padding: 0 0 0 5vw;
   list-style: none;
   width: 450vw;
+  position: relative;
+}
+
+ol:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 2.8rem;
+  left: 5vw;
+  border-bottom: 4px dotted #1a237e;
 }
 
 ol:after {
@@ -186,18 +199,19 @@ ol > li {
   float: left;
   width: 85vw;
   margin-right: 5vw;
-  background: #ccc;
+  background: #3f51b5;
   position: relative;
-  padding: .5rem 1rem;
+  padding: 1rem;
   position: relative;
   box-sizing: border-box;
 }
 
 li ul {
   margin-top: 1rem;
-  font-size: 1rem;
+  font-size: .9rem;
   padding-left: 1.3rem;
   font-size: 1rem;
+  list-style: disc;
 }
 
 .experience strong {
@@ -207,22 +221,60 @@ li ul {
   line-height: 1.2;
 }
 
-/*
-.time {
-  font-size: 1rem;
-  display: inline-block;
-  transform: rotate(-90deg) translateX(-100%);
-  transform-origin: 0 0;
-  padding: .5rem 1rem;
-  background: #eee;
-  position: absolute;
-  top: 0;
-  left: 0;
+@media (min-width : 460px) {
+  ol {
+    width: 350vw;
+  }
+
+  ol > li {
+    width: 65vw;
+  }
 }
-*/
-@media (min-width: 500px) {
-  .experience {
-    display: none;
-    visibility: hidden;
+
+@media (min-width : 768px) {
+  ol {
+    width: 275vw;
+    padding: 0 5vw 0 10vw;
+  }
+
+  ol:before {
+    left: 10vw;
+  }
+
+  ol > li {
+    width: 50vw;
+  }
+}
+
+@media (min-width : 1024px) {
+  ol {
+    width: 200vw;
+    padding: 0 10vw 0 15vw;
+  }
+
+  ol:before {
+    left: 15vw;
+  }
+
+  ol > li {
+    width: 35vw;
+  }
+
+  li ul {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width : 1680px) {
+  ol {
+    width: 150vw;
+  }
+
+  ol > li {
+    width: 25vw;
+  }
+
+  li ul {
+    font-size: 1rem;
   }
 }
