@@ -1,280 +1,150 @@
 /*! eric-zieger.de CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+ list-style: none;
+}
+
 body {
-  font-family: 'raleway200';
-  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  color: #555;
   line-height: 1.5;
+  font-size: 1.1em;
+  background: #fefefe;
+  padding: 0 20px;
+}
+
+h1, h2, strong {
+  font-weight: 500;
+  color: #222;
 }
 
 h1 {
-  margin: 0;
-  line-height: 64px;
-  text-transform: lowercase;
+  margin: .4em 0 .2em;
+  font-size: 2rem;
 }
 
-li ul,
-small,
-.p-name,
-h1,
-strong {
-  font-family: 'raleway500', sans-serif;
-  font-weight: 500;
+h2 {
+  margin: .4em 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+header, main, footer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+}
+
+footer small {
+  display: block;
+  font-size: .9rem;
+  margin-top: 5vh;
+}
+
+header img {
+  border-radius: 50%;
+  width: 80px;
 }
 
 a {
-  color: #fff;
+  color: #f02828;
 }
 
-.p-name {
-  text-decoration: none;
-  border-bottom: 1px solid #fff;
-  transition: all .3s ease;
-  display: inline-block;
+.content {
+  margin: 10vh 0 10vh 60px;
   position: relative;
-  overflow: hidden;
-  padding: 0 5px;
-  margin: 0 -3px;
-  vertical-align: middle;
 }
 
-.p-name span {
+.card {
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: .9rem;
+  background-color: #fff;
   position: relative;
   z-index: 2;
 }
 
-.p-name:after {
+.card-title {
   display: block;
-  content: "";
-  transition: bottom .15s ease-in;
-  transition: bottom 0.35s cubic-bezier(.24,1.87,.25,-0.93);
-  width: 100%;
-  padding: 0 5px;
-  background: #f44336 ;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin-bottom: .5em;
+  font-weight: 500;
+}
+
+.card .inline-list {
+  margin-top: 1rem;
+}
+
+.inline-list li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 5px 0
+}
+
+svg {
+  margin: 0 5px;
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  position: relative;
+  top: .1em;
+}
+
+.content > svg {
+  width: 30px;
+  height: 30px;
   position: absolute;
-  bottom: -2.25rem;
-  height: 2.25rem;
-  left: 0;
-}
-
-.p-name:focus:after,
-.p-name:hover:after {
-  bottom: -1px;
-}
-
-.logo {
-  margin-right: 1rem;
-}
-
-h1,
-.logo {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.btn svg {
-  vertical-align: text-top;
-  display: inline-block;
-  margin-right: .5rem;
-}
-
-.h-card ul {
+  top: 0px;
   margin: 0;
-  list-style: none;
-  padding: 2rem 0 5rem;
+  opacity: 0.2;
+  left: -50px;
 }
 
-.h-card li {
+.language {
   display: inline-block;
-  margin: 0 1rem;
-  min-height: 4.75rem;
-}
-
-.btn {
-  padding: .5rem 1rem;
-  min-width: 7.5rem;
-  display: inline-block;
-  text-decoration: none;
-  border: 1px solid #fff;
-  margin: .5rem 0;
-  border-radius: 0 5px 5px 5px;
-}
-
-.p-name:focus,
-.p-name:hover,
-.btn:hover,
-.btn:focus {
-  outline: 0;
-  box-shadow: none;
-}
-
-.btn:hover,
-.btn:focus {
-  border-color: #f44336 ;
-  border-bottom-width: 4px;
-}
-
-.elevator-pitch {
-  background-color: #1a237e;
-  background-image: url('src/images/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-header {
-  border-bottom: 1px solid #fff;
-  margin-bottom: 5rem;
-}
-
-header {
-  padding: 1rem;
-}
-
-.btn,
-p {
-  font-size: 1.5rem;
-}
-
-.section,
-footer {
-  text-align: center;
-}
-
-footer {
-  color: #111;
-  padding: 2rem 1rem;
-  background: #e8eaf6;
-}
-
-small {
-  font-size: 1rem;
-}
-
-img {
   border-radius: 50%;
-  border: 2px solid #fff;
-  display: inline-block;
-  margin-bottom: 2rem;
-  max-width: 100%;
+  width: .8rem;
+  height: .8rem;
+  position: relative;
+  top: 1px;
+}
+
+.language-js {
+  background-color: #f1e05a;
 }
 
 .experience {
-  padding: 3rem 0;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  font-size: .8rem;
-}
-
-ol {
-  margin: 0;
-  padding: 0 0 0 5vw;
-  list-style: none;
-  width: 450vw;
   position: relative;
 }
 
-ol:before {
+.experience:before {
   content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
   position: absolute;
-  top: 2.8rem;
+  height: 96%;
+  width: 1px;
+  border-left: 2px dotted #555;
+  top: 2%;
   left: 5vw;
-  border-bottom: 4px dotted #1a237e;
-}
-
-ol:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-ol > li {
-  float: left;
-  width: 85vw;
-  margin-right: 5vw;
-  background: #3f51b5;
-  position: relative;
-  padding: 1rem;
-  position: relative;
-  box-sizing: border-box;
-}
-
-li ul {
-  margin-top: 1rem;
-  font-size: .9rem;
-  padding-left: 1.3rem;
-  font-size: 1rem;
-  list-style: disc;
-}
-
-.experience strong {
-  display: inline-block;
-  width: 100%;
-  font-size: 1.2rem;
-  line-height: 1.2;
-}
-
-@media (min-width : 460px) {
-  ol {
-    width: 350vw;
-  }
-
-  ol > li {
-    width: 65vw;
-  }
-}
-
-@media (min-width : 768px) {
-  ol {
-    width: 275vw;
-    padding: 0 5vw 0 10vw;
-  }
-
-  ol:before {
-    left: 10vw;
-  }
-
-  ol > li {
-    width: 50vw;
-  }
-}
-
-@media (min-width : 1024px) {
-  ol {
-    width: 200vw;
-    padding: 0 10vw 0 15vw;
-  }
-
-  ol:before {
-    left: 15vw;
-  }
-
-  ol > li {
-    width: 35vw;
-  }
-
-  li ul {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width : 1680px) {
-  ol {
-    width: 150vw;
-  }
-
-  ol > li {
-    width: 25vw;
-  }
-
-  li ul {
-    font-size: 1rem;
-  }
 }

@@ -6,19 +6,9 @@ module.exports = function(grunt) {
       options: {
         level: 2
       },
-      bundle: {
-        files: [{
-          'dist/src/css/bundle.css': [
-            'node_modules/normalize.css/normalize.css',
-            'src/css/styles.css'
-          ]
-        },{
-          'dist/src/css/fonts.css': 'src/css/fonts.css'
-        }]
-      },
       dist: {
         files: {
-          'dist/src/css/bundle.css': 'dist/src/css/bundle.css'
+          'dist/src/css/styles.css': 'src/css/styles.css'
         }
       }
     },
@@ -28,22 +18,20 @@ module.exports = function(grunt) {
         dest: 'dist/index.html',
         options: {
           styles: {
-            styles: 'dist/src/css/bundle.css',
-            fonts: 'dist/src/css/fonts.css'
+            styles: 'dist/src/css/styles.css'
           },
           sections: {
             svg: {
               email: 'src/images/email.svg',
               github: 'src/images/github.svg',
-              logo: 'src/images/logo.svg',
               steam: 'src/images/steam.svg',
               twitter: 'src/images/twitter.svg',
-              xing: 'src/images/xing.svg'
+              xing: 'src/images/xing.svg',
+              experience: 'src/images/trophy.svg',
+              about: 'src/images/pen.svg',
+              star: 'src/images/star.svg',
+              fork: 'src/images/fork.svg'
             }
-          },
-          data: {
-            currentPosition: 'Front-End Entwickler',
-            from: 'Leipzig, Deutschland'
           }
         }
       }
@@ -78,9 +66,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-html-build');
-  grunt.loadNpmTasks('grunt-criticalcss');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('build', ['cssmin:bundle', 'cssmin:dist', 'htmlbuild', 'uglify']);
+  grunt.registerTask('build', ['cssmin:dist', 'htmlbuild', 'uglify']);
   grunt.registerTask('default', ['build']);
 };

@@ -8,9 +8,8 @@
 
 /* SITE */
 
-  Last update: 2017/03/02
+  Last update: 2017/08/04
   Language: German
   Doctype: HTML5
   Standards: HTML5, CSS3
-  Components: Normalize.css
-  Software: Ubuntu 16.10, Sublime, Editorconfig, Git, NPM, Service Worker API
+  Software: Ubuntu 17.04, Sublime, Editorconfig, Git, NPM, Service Worker API, SVG, Grunt
