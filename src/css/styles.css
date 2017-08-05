@@ -11,7 +11,8 @@ ul, ol {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'robotoregular', sans-serif;
+  font-weight: normal;
   color: #555;
   line-height: 1.5;
   font-size: 1.1em;
@@ -19,20 +20,29 @@ body {
   padding: 0 20px;
 }
 
-h1, h2, strong {
-  font-weight: 500;
+.bluebg {
+  background-color: #05aff0;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+h1, strong {
+  font-family: 'robotomedium', sans-serif;
+  font-weight: normal;
   color: #222;
 }
 
 h1 {
+  color: #fff;
   margin: .4em 0 .2em;
   font-size: 2rem;
 }
 
 h2 {
+  color: #222;
   margin: .4em 0;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: normal;
 }
 
 header, main, footer {
@@ -48,6 +58,7 @@ footer {
 
 header {
   border-bottom: 1px solid #ddd;
+  color: #fff;
 }
 
 footer {
@@ -60,13 +71,13 @@ footer small {
   margin-top: 5vh;
 }
 
-header img {
+img {
   border-radius: 50%;
-  width: 80px;
+  border: 2px solid #fff;
 }
 
 a {
-  color: #f02828;
+  color: #05aff0;
 }
 
 .content {
@@ -79,18 +90,16 @@ a {
   border: 1px solid #ddd;
   padding: 10px;
   margin: 20px 0;
-  font-size: .9rem;
   background-color: #fff;
   position: relative;
   z-index: 2;
 }
 
 .card-title {
-  display: block;
-  font-size: 1.2rem;
-  line-height: 1.25;
+  display: inline-block;
   margin-bottom: .5em;
-  font-weight: 500;
+  font-family: 'robotomedium', sans-serif;
+  font-weight: normal;
 }
 
 .card .inline-list {
@@ -99,7 +108,7 @@ a {
 
 .inline-list li {
   display: inline-block;
-  margin-right: 20px;
+  margin: 0 10px;
   padding: 5px 0
 }
 
@@ -147,4 +156,8 @@ svg {
   border-left: 2px dotted #555;
   top: 2%;
   left: 5vw;
+}
+
+.npm-link svg {
+  width: 2.5em;
 }

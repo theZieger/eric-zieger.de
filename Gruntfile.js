@@ -7,9 +7,11 @@ module.exports = function(grunt) {
         level: 2
       },
       dist: {
-        files: {
+        files: [{
           'dist/src/css/styles.css': 'src/css/styles.css'
-        }
+        },{
+          'dist/src/css/fonts.css': 'src/css/fonts.css'
+        }]
       }
     },
     htmlbuild: {
@@ -18,7 +20,8 @@ module.exports = function(grunt) {
         dest: 'dist/index.html',
         options: {
           styles: {
-            styles: 'dist/src/css/styles.css'
+            styles: 'dist/src/css/styles.css',
+            fonts: 'dist/src/css/fonts.css'
           },
           sections: {
             svg: {
@@ -30,7 +33,8 @@ module.exports = function(grunt) {
               experience: 'src/images/trophy.svg',
               about: 'src/images/pen.svg',
               star: 'src/images/star.svg',
-              fork: 'src/images/fork.svg'
+              fork: 'src/images/fork.svg',
+              npm: 'src/images/npm.svg'
             }
           }
         }

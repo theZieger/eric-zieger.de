@@ -9,14 +9,15 @@
     <link rel="shortcut icon" href="src/images/favicon.ico">
     <!-- build:style inline styles -->
     <!-- /build -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <img class="u-photo" src="src/images/eric-zieger.jpg" alt="Ein Portrait von Eric Zieger">
-      <h1>Eric Zieger</h1>
-      <p>Front-End Entwickler bei Invia Travel Germany GmbH</p>
-    </header>
+    <div class="bluebg">
+      <header>
+        <img class="u-photo" src="src/images/eric-zieger.jpg" alt="Ein Portrait von Eric Zieger">
+        <h1>Eric Zieger</h1>
+        <p>Front-End Entwickler bei Invia Travel Germany GmbH</p>
+      </header>
+    </div>
     <main>
       <div class="content">
         <h2>Über mich</h2>
@@ -35,7 +36,7 @@
 
         <ul lang="en">
           <li class="card">
-            <a class="card-title" href="https://github.com/theZieger/utilitiesjs/">utilitiesjs</a>
+            <div><a class="card-title" href="https://github.com/theZieger/utilitiesjs/">utilitiesjs</a></div>
             Utility functions for front-end JavaScript development.
             <ul class="inline-list">
               <li>
@@ -51,10 +52,16 @@
                 <!-- /build -->
                 1
               </li>
+              <li>
+                <a class="npm-link" href="https://www.npmjs.com/package/utilitiesjs">
+                  <!-- build:section svg.npm -->
+                  <!-- /build -->
+                </a>
+              </li>
             </ul>
           </li>
           <li class="card">
-            <a class="card-title" href="https://github.com/theZieger/cookiejs.js/">cookiejs.js</a>
+            <div><a class="card-title" href="https://github.com/theZieger/cookiejs.js/">cookiejs.js</a></div>
             Set, get and remove cookies
             <ul class="inline-list">
               <li>
@@ -70,10 +77,16 @@
                 <!-- /build -->
                 1
               </li>
+              <li>
+                <a class="npm-link" href="https://www.npmjs.com/package/cookiejs.js">
+                  <!-- build:section svg.npm -->
+                  <!-- /build -->
+                </a>
+              </li>
             </ul>
           </li>
           <li class="card">
-            <a class="card-title" href="https://github.com/theZieger/utilitiesjs/">eventemitterjs</a>
+            <div><a class="card-title" href="https://github.com/theZieger/eventemitterjs/">eventemitterjs</a></div>
             EventEmitter.js - a basic JavaScript event handler
             <ul class="inline-list">
               <li>
@@ -89,6 +102,12 @@
                 <!-- /build -->
                 0
               </li>
+              <li>
+                <a class="npm-link" href="https://www.npmjs.com/package/eventemitterjs">
+                  <!-- build:section svg.npm -->
+                  <!-- /build -->
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -103,27 +122,27 @@
         <ol class="experience">
           <li class="card">
             01/2017 &ndash; heute
-            <strong class="card-title">Front-End Entwickler</strong>
+            <div><strong class="card-title">Front-End Entwickler</strong></div>
             Invia Travel Germany GmbH
           </li>
           <li class="card">
             07/2015 &ndash; 12/2016
-            <strong class="card-title">Junior Front-End Entwickler</strong>
+            <div><strong class="card-title">Junior Front-End Entwickler</strong></div>
             ab-in-den-urlaub Betriebsgesellschaft mbH
           </li>
           <li class="card">
             08/2013 &ndash; 07/2015
-            <strong class="card-title">Auszubildender Mediengestalter Digital und Print</strong>
+            <div><strong class="card-title">Auszubildender Mediengestalter Digital und Print</strong></div>
             Unister Factory GmbH
           </li>
           <li class="card">
             08/2012 &ndash; 07/2013
-            <strong class="card-title">Auszubildender Mediengestalter Digital und Print</strong>
+            <div><strong class="card-title">Auszubildender Mediengestalter Digital und Print</strong></div>
             FRANK SCHRÖDER | Agentur für Kommunikation
           </li>
           <li class="card">
             06/2012 &ndash; 07/2012
-            <strong class="card-title">Praktikant &ndash; Webdesign und Entwicklung</strong>
+            <div><strong class="card-title">Praktikant &ndash; Webdesign und Entwicklung</strong></div>
             FRANK SCHRÖDER | Agentur für Kommunikation
           </li>
         </ol>
@@ -169,6 +188,8 @@
       </ul>
       <small>Eric Zieger, Stauffenbergstraße 12, 04157 Leipzig</small>
     </footer>
+    <!-- build:style inline fonts -->
+    <!-- /build -->
     <script>
       window.navigator && navigator.serviceWorker && navigator.serviceWorker.register('./service-worker.js');
     </script>
