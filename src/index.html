@@ -12,30 +12,42 @@
   </head>
   <body>
     <div class="bluebg">
+      <nav>
+        <ul class="inline-list">
+          <li><a href="#about">Über mich</a></li>
+          <li><a href="#oss-projects">Open Source Projekte</a></li>
+          <li><a href="#work-experience">Berufliche Erfahrung</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
       <header>
-        <img height="80" width="80" class="u-photo" src="src/images/eric-zieger.jpg" alt="Ein Portrait von Eric Zieger">
+        <img height="80" width="80" class="u-photo" src="data:image/jpeg;base64,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" alt="Ein Portrait von Eric Zieger">
         <h1>Eric Zieger</h1>
-        <p>Front-End Entwickler bei Invia Travel Germany GmbH</p>
+        <p>Front-End Entwickler bei <b>Invia Travel Germany GmbH</b></p>
       </header>
     </div>
     <main>
-      <div class="content">
+      <div class="content" id="about">
         <h2>Über mich</h2>
 
         <!-- build:section svg.about -->
         <!-- /build -->
 
-        <p>Ich bin <strong>Front-End Entwickler</strong>, beyond tellerrand volunteer und <strong>Mediengestalter Digital und Print</strong> für Gestaltung und Technik aus Leipzig, Deutschland.</p>
+        <p>
+          Ich bin <strong>Front-End Entwickler</strong>, beyond tellerrand
+          volunteer und <strong>Mediengestalter Digital und Print</strong>
+          für Gestaltung und Technik aus Leipzig, Deutschland.
+        </p>
       </div>
 
-      <div class="content">
-        <h2>Private Projekte</h2>
+      <div class="content" id="oss-projects">
+        <h2>Open Source Projekte</h2>
 
         <!-- build:section svg.github -->
         <!-- /build -->
 
         <ul lang="en">
-          <li class="card">
+          <li id="utilitiesjs" class="card">
             <div><a class="card-title" href="https://github.com/theZieger/utilitiesjs/">utilitiesjs</a></div>
             Utility functions for front-end JavaScript development.
             <ul class="inline-list">
@@ -45,12 +57,12 @@
               <li>
                 <!-- build:section svg.star -->
                 <!-- /build -->
-                1
+                <span class="js-stars">1</span>
               </li>
               <li>
                 <!-- build:section svg.fork -->
                 <!-- /build -->
-                1
+                <span class="js-forks">1</span>
               </li>
               <li>
                 <a class="npm-link" href="https://www.npmjs.com/package/utilitiesjs">
@@ -61,7 +73,7 @@
               </li>
             </ul>
           </li>
-          <li class="card">
+          <li id="cookiejsjs" class="card">
             <div><a class="card-title" href="https://github.com/theZieger/cookiejs.js/">cookiejs.js</a></div>
             Set, get and remove cookies
             <ul class="inline-list">
@@ -71,12 +83,12 @@
               <li>
                 <!-- build:section svg.star -->
                 <!-- /build -->
-                1
+                <span class="js-stars">1</span>
               </li>
               <li>
                 <!-- build:section svg.fork -->
                 <!-- /build -->
-                1
+                <span class="js-forks">1</span>
               </li>
               <li>
                 <a class="npm-link" href="https://www.npmjs.com/package/cookiejs.js">
@@ -87,7 +99,7 @@
               </li>
             </ul>
           </li>
-          <li class="card">
+          <li id="eventemitterjs" class="card">
             <div><a class="card-title" href="https://github.com/theZieger/eventemitterjs/">eventemitterjs</a></div>
             EventEmitter.js - a basic JavaScript event handler
             <ul class="inline-list">
@@ -97,12 +109,12 @@
               <li>
                 <!-- build:section svg.star -->
                 <!-- /build -->
-                0
+                <span class="js-stars">0</span>
               </li>
               <li>
                 <!-- build:section svg.fork -->
                 <!-- /build -->
-                0
+                <span class="js-forks">0</span>
               </li>
               <li>
                 <a class="npm-link" href="https://www.npmjs.com/package/eventemitterjs">
@@ -116,8 +128,8 @@
         </ul>
       </div>
 
-      <div class="content">
-        <h2>Erfahrung</h2>
+      <div class="content" id="work-experience">
+        <h2>Berufliche Erfahrung</h2>
 
         <!-- build:section svg.experience -->
         <!-- /build -->
@@ -151,7 +163,7 @@
         </ol>
       </div>
     </main>
-    <footer>
+    <footer id="contact">
       <ul class="inline-list">
         <li>
           <!-- build:section svg.twitter -->
@@ -191,5 +203,6 @@
       </ul>
       <small>Eric Zieger, Stauffenbergstraße 12, 04157 Leipzig</small>
     </footer>
+    <script src="src/js/app.js" defer async></script>
   </body>
 </html>

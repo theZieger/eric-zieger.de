@@ -37,12 +37,37 @@ module.exports = function(grunt) {
           }
         }
       }
+    },
+    uglify: {
+      options: {
+        compress: {
+          dead_code: true,
+          drop_debugger: true,
+          properties: true,
+          conditionals: true,
+          booleans: true,
+          if_return: true,
+          collapse_vars: true,
+          warnings: true,
+          drop_console: true,
+          passes: 2
+        },
+        quoteStyle: 1,
+        report: 'gzip'
+      },
+      dist: {
+        files: {
+          'dist/src/js/app.js': 'src/js/*.js'
+        }
+      }
     }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-html-build');
 
-  grunt.registerTask('build', ['cssmin:dist', 'htmlbuild']);
+  grunt.registerTask('build', ['cssmin:dist', 'uglify:dist', 'htmlbuild']);
   grunt.registerTask('default', ['build']);
 };
