@@ -7,32 +7,40 @@
     <meta name="viewport" content="width=device-width">
     <link rel="author" href="humans.txt" />
     <link rel="shortcut icon" href="src/images/favicon.ico">
-    <!-- build:style inline styles -->
+    <!-- build:style styles -->
     <!-- /build -->
   </head>
   <body>
-    <div class="bluebg">
-      <nav>
-        <ul class="inline-list">
-          <li><a href="#about">Über mich</a></li>
-          <li><a href="#oss-projects">Open Source Projekte</a></li>
-          <li><a href="#work-experience">Berufliche Erfahrung</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </nav>
-      <header>
-        <img height="80" width="80" class="u-photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCABQAFADASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABAMFBgcIAgEA/8QANhAAAgEDAwEGAwUIAwAAAAAAAQIDAAQRBQYhEgcTMUFRYRQicQgjgaGxFRcyQlKCkcFicuH/xAAaAQACAwEBAAAAAAAAAAAAAAACBQADBAEG/8QAIhEAAgICAgICAwAAAAAAAAAAAQIAAxESBCExQQVRIjKB/9oADAMBAAIRAxEAPwCTFeKXt4favAvU4o63jxS/McYxPYouKJji8sV1GlVV2u7+1C31RtqbVMovo1D311EvUYVIyEX/AJY5z5UddZsbUSuxxWuxlwW0OcU6W8IA8KxDqWo77090uU3Br9tMcFUN1IpI+mcYx+VXF9mvth1zcG5l2humRbqWWNjaXfQFk6kGSj4GDwCQePDzzWqzhsi7A5EoXkqxwRiaIjirvuxRCpxzXxQVjMtBgbx0jJFRzrSLrQ4zD2lf265IOKcIVoW2Xij4hxXJae4plY4mkY4VQWJ9hTL9nXY1hJp19v3V7CJ9W165luFEg6u4h6yFUZ8yBnPuKfJI+8t5I/6kI/KlrLdY25sjTu4soZVhgjhYPcLEA4ADAA8nnI8KsQnUge4OAXGY7b12ltzWIwLvTLeYovSPkAwKzV2pdnU21dZi3lsqT4e601xctA3zZ6eSR+GePMVd24u07TdO0sTS2l98RK3d92LWTpDdIfAkI6D8pB4Y1V+6d6m5troX1iFJDqY4bhZXU48GXIOefCuVtchyk1GullKvL+2nqsO4NsaZrkAAjv7WO4Cg56epQcfh4U4stQb7PBb9zmgQycSwxPG655QiRsA/2kVPHonADECLex0fMHdaSYUQ44pFhXBJIFbjwo6IUDbnijozQS/MJhGTRKy2Gp7aGpafPb3Fq8soAltW6uoSsGUcqf4w3l/qh4ad7J1mtGsmfu3Y/dyDGQfbPn50JOBLanAYAyAdsNvZw7Z0+LrRLxJzNGBET95jHgPLp+X6Y5pgu1tUtbK8uvhhK4DfJDh+OeSSfSp12iaZfT2RVbuVkxw3cpn9Kg+2bjTLbcuhaZfzdLPcCNZZWyXkwzpH6DJH6CgYk/iPcaHRK9z6ll9klulv2faW6rIvxEZuD3idLfOSRkeXGKlDMKQaX3pJ5vereh4iJ2NjFj5MXdhSJYetDvN70n31TMmkh1ueKNjNN0DcUpe39vp2m3OoXb9FvbRNLI3oqjJ/SixmQNHK5vbTT7OS8vrmK2t4h1PJK4VVHuTVJ737cYZNy6fDti376z065FxLPKCpuOGUoo8lKswyRnkcDHNRdoO/9a3hfPcahOY7OMkwWkZxHGPL6t6k/wDlRy2lMRQnLOTlgPSnHH+PVRmzszBdy2P6dTYev7s0rcu0Trml7kW2sUjJuhK4DW48wwIz1Z49/Ksn7/3S+uaqiae0yWNs5NuWOHkY+Mje58vQUyyvcSvPIZCInbpCA+IB4zXFtGGYOQMdWF/2aOjgJU+3n6llvPeyvTx9y2Ozjt43dt6OOz1p/wBu2CYT79sToPaTz/uz9RWi9idou296QM2j3jfERqGltZl6JUHrjwI9wSKw8i9Moh8Mhif88fpRenale6Xew6lplzNazxvmOSNulh9MfpXb+AlgyvRlVXKZTg9ib7efNc97mqo7EO0t972NxY6lEkWq2SK0jJws6HjrA8iD4jw5GPQWSsnvSC1GrYq3mNqyHXYRgifmor24TSx9k+uNCT1GONWI/pMqBvyzUiiekdyacmt7Z1LSHwRd2zxDPkxBwfwODWlCFcGZmGykTFwbqYDGRnP1ohSWPQh/7N6/Sh2imtbma2njaOaJjG6sMFGBwQffiluvoXCjnyr0o7ikiEXDJHYBVjQN1cPznnjHpXGOhIkB8DSEjs5jQ/ynNds3zLn3qQcT27OLuNx/MpWk1lHw6Dz8B/iubx8opB5HIoPvfAD1OPapnBhAdSS7B3Pd7V3dZavaS9ARwsynweJiOpT+H5gGtrW9zFPBHPBIskUihkdTkMDyCD6VgIn08SeK132AXsl12U6QZZu9eLvIs5yQFkYAH6DH5Ul+WrGBZ/Iy4DnJSf/Z" alt="Ein Portrait von Eric Zieger">
+    <div class="bg">
+      <header role="banner">
+        <div class="portrait">
+          <img height="80" width="80" class="u-photo" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCABQAFADASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAABAMFBgcIAgEA/8QANhAAAgEDAwEGAwUIAwAAAAAAAQIDAAQRBQYhEgcTMUFRYRQicQgjgaGxFRcyQlKCkcFicuH/xAAaAQACAwEBAAAAAAAAAAAAAAACBQADBAEG/8QAIhEAAgICAgICAwAAAAAAAAAAAQIAAxESBCExQQVRIjKB/9oADAMBAAIRAxEAPwCTFeKXt4favAvU4o63jxS/McYxPYouKJji8sV1GlVV2u7+1C31RtqbVMovo1D311EvUYVIyEX/AJY5z5UddZsbUSuxxWuxlwW0OcU6W8IA8KxDqWo77090uU3Br9tMcFUN1IpI+mcYx+VXF9mvth1zcG5l2humRbqWWNjaXfQFk6kGSj4GDwCQePDzzWqzhsi7A5EoXkqxwRiaIjirvuxRCpxzXxQVjMtBgbx0jJFRzrSLrQ4zD2lf265IOKcIVoW2Xij4hxXJae4plY4mkY4VQWJ9hTL9nXY1hJp19v3V7CJ9W165luFEg6u4h6yFUZ8yBnPuKfJI+8t5I/6kI/KlrLdY25sjTu4soZVhgjhYPcLEA4ADAA8nnI8KsQnUge4OAXGY7b12ltzWIwLvTLeYovSPkAwKzV2pdnU21dZi3lsqT4e601xctA3zZ6eSR+GePMVd24u07TdO0sTS2l98RK3d92LWTpDdIfAkI6D8pB4Y1V+6d6m5troX1iFJDqY4bhZXU48GXIOefCuVtchyk1GullKvL+2nqsO4NsaZrkAAjv7WO4Cg56epQcfh4U4stQb7PBb9zmgQycSwxPG655QiRsA/2kVPHonADECLex0fMHdaSYUQ44pFhXBJIFbjwo6IUDbnijozQS/MJhGTRKy2Gp7aGpafPb3Fq8soAltW6uoSsGUcqf4w3l/qh4ad7J1mtGsmfu3Y/dyDGQfbPn50JOBLanAYAyAdsNvZw7Z0+LrRLxJzNGBET95jHgPLp+X6Y5pgu1tUtbK8uvhhK4DfJDh+OeSSfSp12iaZfT2RVbuVkxw3cpn9Kg+2bjTLbcuhaZfzdLPcCNZZWyXkwzpH6DJH6CgYk/iPcaHRK9z6ll9klulv2faW6rIvxEZuD3idLfOSRkeXGKlDMKQaX3pJ5vereh4iJ2NjFj5MXdhSJYetDvN70n31TMmkh1ueKNjNN0DcUpe39vp2m3OoXb9FvbRNLI3oqjJ/SixmQNHK5vbTT7OS8vrmK2t4h1PJK4VVHuTVJ737cYZNy6fDti376z065FxLPKCpuOGUoo8lKswyRnkcDHNRdoO/9a3hfPcahOY7OMkwWkZxHGPL6t6k/wDlRy2lMRQnLOTlgPSnHH+PVRmzszBdy2P6dTYev7s0rcu0Trml7kW2sUjJuhK4DW48wwIz1Z49/Ksn7/3S+uaqiae0yWNs5NuWOHkY+Mje58vQUyyvcSvPIZCInbpCA+IB4zXFtGGYOQMdWF/2aOjgJU+3n6llvPeyvTx9y2Ozjt43dt6OOz1p/wBu2CYT79sToPaTz/uz9RWi9idou296QM2j3jfERqGltZl6JUHrjwI9wSKw8i9Moh8Mhif88fpRenale6Xew6lplzNazxvmOSNulh9MfpXb+AlgyvRlVXKZTg9ib7efNc97mqo7EO0t972NxY6lEkWq2SK0jJws6HjrA8iD4jw5GPQWSsnvSC1GrYq3mNqyHXYRgifmor24TSx9k+uNCT1GONWI/pMqBvyzUiiekdyacmt7Z1LSHwRd2zxDPkxBwfwODWlCFcGZmGykTFwbqYDGRnP1ohSWPQh/7N6/Sh2imtbma2njaOaJjG6sMFGBwQffiluvoXCjnyr0o7ikiEXDJHYBVjQN1cPznnjHpXGOhIkB8DSEjs5jQ/ynNds3zLn3qQcT27OLuNx/MpWk1lHw6Dz8B/iubx8opB5HIoPvfAD1OPapnBhAdSS7B3Pd7V3dZavaS9ARwsynweJiOpT+H5gGtrW9zFPBHPBIskUihkdTkMDyCD6VgIn08SeK132AXsl12U6QZZu9eLvIs5yQFkYAH6DH5Ul+WrGBZ/Iy4DnJSf/Z" alt="Ein Portrait von Eric Zieger">
+        </div>
         <h1>Eric Zieger</h1>
         <p>Front-End Entwickler bei <b>Invia Travel Germany GmbH</b></p>
+        <nav role="navigation">
+          <ul class="inline-list">
+            <li>
+              <a href="#about">Über mich</a>
+            </li>
+            <li>
+              <a href="#oss-projects">Open Source Projekte</a>
+            </li>
+            <li>
+              <a href="#work-experience">Berufliche Erfahrung</a>
+            </li>
+            <li>
+              <a href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
       </header>
     </div>
     <main>
       <div class="content" id="about">
         <h2>Über mich</h2>
-
         <!-- build:section svg.about -->
         <!-- /build -->
-
         <p>
           Ich bin <strong>Front-End Entwickler</strong>, beyond tellerrand
           volunteer und <strong>Mediengestalter Digital und Print</strong>
@@ -51,9 +59,7 @@
             <div><a class="card-title" href="https://github.com/theZieger/utilitiesjs/">utilitiesjs</a></div>
             Utility functions for front-end JavaScript development.
             <ul class="inline-list">
-              <li>
-                <span class="language language-js"></span> JavaScript
-              </li>
+              <li class="language language-js">JavaScript</li>
               <li>
                 <!-- build:section svg.star -->
                 <!-- /build -->
@@ -77,9 +83,7 @@
             <div><a class="card-title" href="https://github.com/theZieger/cookiejs.js/">cookiejs.js</a></div>
             Set, get and remove cookies
             <ul class="inline-list">
-              <li>
-                <span class="language language-js"></span> JavaScript
-              </li>
+              <li class="language language-js">JavaScript</li>
               <li>
                 <!-- build:section svg.star -->
                 <!-- /build -->
@@ -103,9 +107,7 @@
             <div><a class="card-title" href="https://github.com/theZieger/eventemitterjs/">eventemitterjs</a></div>
             EventEmitter.js - a basic JavaScript event handler
             <ul class="inline-list">
-              <li>
-                <span class="language language-js"></span> JavaScript
-              </li>
+              <li class="language language-js">JavaScript</li>
               <li>
                 <!-- build:section svg.star -->
                 <!-- /build -->
@@ -163,26 +165,27 @@
         </ol>
       </div>
     </main>
-    <footer id="contact">
+    <footer id="contact" role="contentinfo">
+      <h2>Kontakt</h2>
       <ul class="inline-list">
         <li>
           <!-- build:section svg.twitter -->
           <!-- /build -->
-          <a href="https://twitter.com/thezieger" target="_blank" rel="noopener">
+          <a href="https://twitter.com/thezieger" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
         </li>
         <li>
           <!-- build:section svg.github -->
           <!-- /build -->
-          <a href="https://github.com/theZieger" target="_blank" rel="noopener">
+          <a href="https://github.com/theZieger" target="_blank" rel="noopener noreferrer">
             Github
           </a>
         </li>
         <li>
           <!-- build:section svg.xing -->
           <!-- /build -->
-          <a href="https://www.xing.com/profile/Eric_Zieger" target="_blank" rel="noopener">
+          <a href="https://www.xing.com/profile/Eric_Zieger" target="_blank" rel="noopener noreferrer">
             Xing
           </a>
         </li>
@@ -196,7 +199,7 @@
         <li>
           <!-- build:section svg.steam -->
           <!-- /build -->
-          <a class="btn" href="https://steamcommunity.com/id/kotai47/" target="_blank" rel="noopener">
+          <a class="btn" href="https://steamcommunity.com/id/kotai47/" target="_blank" rel="noopener noreferrer">
             Steam
           </a>
         </li>

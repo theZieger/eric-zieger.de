@@ -7,33 +7,41 @@
     <meta name="viewport" content="width=device-width">
     <link rel="author" href="humans.txt" />
     <link rel="shortcut icon" href="src/images/favicon.ico">
-<style >*{margin:0;padding:0;box-sizing:border-box}ol,ul{list-style:none}body{font-family:Arial,sans-serif;color:#444;line-height:1.5;font-size:1.1em;background:#fefefe;padding:0 20px}.bluebg{background-color:#0b4974;margin-left:-20px;margin-right:-20px;padding:0 20px}h1,strong{font-weight:700;color:#111}h1{color:#fff;margin:.4em 0 .2em;font-size:2rem}h2{color:#111;margin:.4em 0;font-size:1.3rem;font-weight:400}footer,header,main,nav{display:block;max-width:600px;margin:0 auto}footer,header{text-align:center;padding:10vh 0}header{color:#fff}footer{border-top:1px solid #ddd}footer small{display:block;font-size:.9rem;margin-top:5vh}img{border-radius:50%;border:2px solid #fff}a{color:#0b4974}p+p{margin-top:1rem}nav ul{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-evenly}nav li{display:flex}nav a{color:#fff;font-size:1rem}:focus{outline:#80b3ff solid 3px;outline-offset:3px}.content{margin:10vh 0 10vh 60px;position:relative}.card{border-radius:3px;border:1px solid #ddd;padding:10px;margin:20px 0;background-color:#fff;position:relative;z-index:2}.card-title{display:inline-block;font-weight:400}.card .inline-list{margin-top:1rem}.inline-list li{display:inline-block;margin-right:10px;padding:5px 0}svg{height:1em;width:1em;display:inline-block;position:relative;top:.1em}.content>svg{width:30px;height:30px;position:absolute;top:0;margin:0;opacity:.2;left:-50px}.language{display:inline-block;border-radius:50%;width:.8rem;height:.8rem;position:relative;top:1px}.language-js{background-color:#f1e05a}.experience{position:relative}.experience:before{content:"";position:absolute;height:96%;width:1px;border-left:2px dotted #555;top:2%;left:5vw}.npm-link svg{width:2.5em}.vh{position:absolute!important;clip:rect(1px,1px,1px,1px);padding:0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden}</style>
+<link type="text/css" rel="stylesheet" href="src/css/styles.css" />
   </head>
   <body>
-    <div class="bluebg">
-      <nav>
-        <ul class="inline-list">
-          <li><a href="#about">Über mich</a></li>
-          <li><a href="#oss-projects">Open Source Projekte</a></li>
-          <li><a href="#work-experience">Berufliche Erfahrung</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </nav>
-      <header>
-        <img height="80" width="80" class="u-photo" src="data:image/jpeg;base64,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" alt="Ein Portrait von Eric Zieger">
+    <div class="bg">
+      <header role="banner">
+        <div class="portrait">
+          <img height="80" width="80" class="u-photo" src="data:image/jpeg;base64,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" alt="Ein Portrait von Eric Zieger">
+        </div>
         <h1>Eric Zieger</h1>
         <p>Front-End Entwickler bei <b>Invia Travel Germany GmbH</b></p>
+        <nav role="navigation">
+          <ul class="inline-list">
+            <li>
+              <a href="#about">Über mich</a>
+            </li>
+            <li>
+              <a href="#oss-projects">Open Source Projekte</a>
+            </li>
+            <li>
+              <a href="#work-experience">Berufliche Erfahrung</a>
+            </li>
+            <li>
+              <a href="#contact">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
       </header>
     </div>
     <main>
       <div class="content" id="about">
         <h2>Über mich</h2>
-
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
   <path fill="#111111" d="M31.818 9.122l-8.939-8.939c-0.292-0.292-0.676-0.226-0.855 0.146l-1.199 2.497 8.35 8.35 2.497-1.199c0.372-0.178 0.438-0.563 0.146-0.855z"></path>
   <path fill="#111111" d="M19.231 4.231l-8.231 0.686c-0.547 0.068-1.002 0.184-1.159 0.899-0 0.001-0 0.001-0.001 0.002-2.232 10.721-9.84 21.183-9.84 21.183l1.793 1.793 8.5-8.5c-0.187-0.392-0.293-0.83-0.293-1.293 0-1.657 1.343-3 3-3s3 1.343 3 3-1.343 3-3 3c-0.463 0-0.902-0.105-1.293-0.293l-8.5 8.5 1.793 1.793c0 0 10.462-7.608 21.183-9.84 0.001-0 0.001-0 0.002-0.001 0.714-0.157 0.831-0.612 0.898-1.159l0.686-8.231-8.538-8.539z"></path>
 </svg>
-
 
         <p>
           Ich bin <strong>Front-End Entwickler</strong>, beyond tellerrand
@@ -55,16 +63,14 @@
             <div><a class="card-title" href="https://github.com/theZieger/utilitiesjs/">utilitiesjs</a></div>
             Utility functions for front-end JavaScript development.
             <ul class="inline-list">
+              <li class="language language-js">JavaScript</li>
               <li>
-                <span class="language language-js"></span> JavaScript
-              </li>
-              <li>
-<svg width="256" height="256" class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fill="#111111" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+<svg width="256" height="256" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fill="#111111" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
 
                 <span class="js-stars">1</span>
               </li>
               <li>
-<svg width="256" height="256" class="octicon octicon-repo-forked" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
+<svg width="256" height="256" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
   <path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path>
 </svg>
 
@@ -82,16 +88,14 @@
             <div><a class="card-title" href="https://github.com/theZieger/cookiejs.js/">cookiejs.js</a></div>
             Set, get and remove cookies
             <ul class="inline-list">
+              <li class="language language-js">JavaScript</li>
               <li>
-                <span class="language language-js"></span> JavaScript
-              </li>
-              <li>
-<svg width="256" height="256" class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fill="#111111" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+<svg width="256" height="256" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fill="#111111" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
 
                 <span class="js-stars">1</span>
               </li>
               <li>
-<svg width="256" height="256" class="octicon octicon-repo-forked" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
+<svg width="256" height="256" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
   <path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path>
 </svg>
 
@@ -109,16 +113,14 @@
             <div><a class="card-title" href="https://github.com/theZieger/eventemitterjs/">eventemitterjs</a></div>
             EventEmitter.js - a basic JavaScript event handler
             <ul class="inline-list">
+              <li class="language language-js">JavaScript</li>
               <li>
-                <span class="language language-js"></span> JavaScript
-              </li>
-              <li>
-<svg width="256" height="256" class="octicon octicon-star" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fill="#111111" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
+<svg width="256" height="256" viewBox="0 0 14 16" version="1.1" aria-hidden="true"><path fill="#111111" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"></path></svg>
 
                 <span class="js-stars">0</span>
               </li>
               <li>
-<svg width="256" height="256" class="octicon octicon-repo-forked" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
+<svg width="256" height="256" viewBox="0 0 10 16" version="1.1" aria-hidden="true">
   <path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path>
 </svg>
 
@@ -172,14 +174,15 @@
         </ol>
       </div>
     </main>
-    <footer id="contact">
+    <footer id="contact" role="contentinfo">
+      <h2>Kontakt</h2>
       <ul class="inline-list">
         <li>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
     <path fill="#111111" d="M24 5.306c-0.881 0.394-1.833 0.656-2.827 0.773 1.017-0.609 1.795-1.575 2.166-2.723-0.952 0.563-2.006 0.975-3.127 1.195-0.9-0.956-2.18-1.552-3.595-1.552-2.719 0-4.922 2.203-4.922 4.922 0 0.384 0.042 0.759 0.127 1.12-4.092-0.206-7.72-2.166-10.148-5.147-0.422 0.727-0.666 1.575-0.666 2.475 0 1.706 0.867 3.216 2.189 4.097-0.806-0.023-1.566-0.248-2.231-0.614 0 0.019 0 0.042 0 0.061 0 2.386 1.697 4.378 3.952 4.828-0.412 0.112-0.848 0.173-1.298 0.173-0.319 0-0.623-0.033-0.928-0.089 0.628 1.955 2.447 3.38 4.598 3.422-1.688 1.322-3.806 2.109-6.117 2.109-0.398 0-0.788-0.023-1.177-0.070 2.184 1.402 4.772 2.212 7.552 2.212 9.056 0 14.011-7.505 14.011-14.011 0-0.216-0.005-0.427-0.014-0.637 0.961-0.689 1.795-1.556 2.456-2.545z"></path>
 </svg>
 
-          <a href="https://twitter.com/thezieger" target="_blank" rel="noopener">
+          <a href="https://twitter.com/thezieger" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
         </li>
@@ -188,7 +191,7 @@
     <path fill="#111111" d="M12 0.296c-6.627 0-12 5.372-12 12 0 5.302 3.438 9.8 8.206 11.387 0.6 0.111 0.82-0.26 0.82-0.577 0-0.286-0.011-1.231-0.016-2.234-3.339 0.726-4.043-1.416-4.043-1.416-0.546-1.387-1.332-1.756-1.332-1.756-1.089-0.745 0.082-0.729 0.082-0.729 1.205 0.085 1.839 1.237 1.839 1.237 1.070 1.834 2.807 1.304 3.492 0.997 0.108-0.775 0.418-1.305 0.762-1.605-2.666-0.303-5.467-1.332-5.467-5.93 0-1.31 0.469-2.381 1.237-3.221-0.125-0.302-0.536-1.523 0.116-3.176 0 0 1.008-0.322 3.301 1.23 0.957-0.266 1.984-0.399 3.004-0.404 1.020 0.005 2.047 0.138 3.006 0.404 2.291-1.553 3.297-1.23 3.297-1.23 0.653 1.653 0.243 2.873 0.118 3.176 0.769 0.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921 0.43 0.372 0.814 1.103 0.814 2.222 0 1.606-0.014 2.898-0.014 3.293 0 0.319 0.216 0.694 0.824 0.576 4.765-1.588 8.199-6.085 8.199-11.385 0-6.628-5.373-12-12-12z"></path>
 </svg>
 
-          <a href="https://github.com/theZieger" target="_blank" rel="noopener">
+          <a href="https://github.com/theZieger" target="_blank" rel="noopener noreferrer">
             Github
           </a>
         </li>
@@ -198,7 +201,7 @@
     <path fill="#111111" d="M18.188 0c-0.516 0-0.741 0.323-0.928 0.661 0 0-7.458 13.223-7.702 13.659 0.014 0.023 4.917 9.023 4.917 9.023 0.173 0.305 0.436 0.661 0.966 0.661h3.459c0.206 0 0.37-0.080 0.459-0.22 0.094-0.15 0.089-0.342-0.009-0.534l-4.875-8.92c-0.005-0.009-0.005-0.014 0-0.023l7.664-13.552c0.094-0.192 0.098-0.384 0.009-0.534-0.089-0.141-0.253-0.22-0.459-0.22h-3.502z"></path>
 </svg>
 
-          <a href="https://www.xing.com/profile/Eric_Zieger" target="_blank" rel="noopener">
+          <a href="https://www.xing.com/profile/Eric_Zieger" target="_blank" rel="noopener noreferrer">
             Xing
           </a>
         </li>
@@ -216,7 +219,7 @@
     <path fill="#111111" d="M16.5 6.75c0-1.243 1.007-2.25 2.25-2.25s2.25 1.007 2.25 2.25c0 1.243-1.007 2.25-2.25 2.25s-2.25-1.007-2.25-2.25zM22.462 3.038c-2.050-2.050-5.374-2.050-7.425 0-0.834 0.834-1.329 1.878-1.484 2.962v0l-4.798 7.271c-0.645 0.033-1.284 0.197-1.874 0.493l-3.701-2.893c-0.857-0.67-2.094-0.518-2.764 0.339s-0.518 2.094 0.339 2.764l3.655 2.857c-0.397 1.565 0.016 3.294 1.241 4.519 1.849 1.849 4.848 1.849 6.697 0 1.136-1.136 1.574-2.705 1.314-4.176l5.837-5.226c1.084-0.156 2.128-0.65 2.962-1.484 2.050-2.050 2.050-5.374 0-7.425zM9 21.157c-1.744 0-3.157-1.413-3.157-3.157 0-0.017 0.001-0.033 0.001-0.050l1.568 1.226c0.36 0.281 0.787 0.418 1.211 0.418 0.585 0 1.164-0.26 1.552-0.756 0.67-0.857 0.518-2.094-0.339-2.764l-1.488-1.163c0.21-0.044 0.428-0.068 0.651-0.068 1.744 0 3.157 1.413 3.157 3.157s-1.413 3.157-3.157 3.157zM18.75 10.5c-2.071 0-3.75-1.679-3.75-3.75s1.679-3.75 3.75-3.75 3.75 1.679 3.75 3.75-1.679 3.75-3.75 3.75z"></path>
 </svg>
 
-          <a class="btn" href="https://steamcommunity.com/id/kotai47/" target="_blank" rel="noopener">
+          <a class="btn" href="https://steamcommunity.com/id/kotai47/" target="_blank" rel="noopener noreferrer">
             Steam
           </a>
         </li>

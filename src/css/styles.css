@@ -17,11 +17,17 @@ body {
   padding: 0 20px;
 }
 
-.bluebg {
-  background-color: #0b4974;
-  margin-left: -20px;
-  margin-right: -20px;
+.bg {
+  background: #8617db;
+  background: linear-gradient(to top,#8617db 0%,#5c35d5 100%);
+  margin: 0 -20px;
   padding: 0 20px;
+}
+
+.bg :focus {
+  outline: none;
+  background: #fff;
+  color: #111;
 }
 
 h1, strong {
@@ -42,7 +48,7 @@ h2 {
   font-weight: normal;
 }
 
-header, main, footer, nav {
+header, main, footer {
   display: block;
   max-width: 600px;
   margin: 0 auto;
@@ -51,14 +57,15 @@ header, main, footer, nav {
 header,
 footer {
   text-align: center;
-  padding: 10vh 0;
 }
 
 header {
   color: #fff;
+  padding-top: 10vh;
 }
 
 footer {
+  padding: 10vh 0;
   border-top: 1px solid #ddd;
 }
 
@@ -71,6 +78,9 @@ footer small {
 img {
   border-radius: 50%;
   border: 2px solid #fff;
+  position: relative;
+  z-index: 10;
+  display: block;
 }
 
 a {
@@ -82,23 +92,22 @@ p + p {
 }
 
 nav ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  margin-top: 10vh;
 }
 
 nav li {
-  display: flex;
+  margin: 0;
 }
 
 nav a {
   color: #fff;
   font-size: 1rem;
+  display: inline-block;
+  padding: 5px;
 }
 
 :focus {
-  outline: 3px solid #80b3ff;
+  outline: 2px solid #80b3ff;
   outline-offset: 3px;
 }
 
@@ -141,25 +150,27 @@ svg {
 }
 
 .content > svg {
+  opacity: .2;
   width: 30px;
   height: 30px;
   position: absolute;
   top: 0px;
   margin: 0;
-  opacity: 0.2;
   left: -50px;
 }
 
-.language {
+.language:before {
+  content: "";
   display: inline-block;
   border-radius: 50%;
-  width: .8rem;
-  height: .8rem;
+  width: .9rem;
+  height: .9rem;
   position: relative;
   top: 1px;
+  margin-right: .25rem;
 }
 
-.language-js {
+.language-js:before {
   background-color: #f1e05a;
 }
 
@@ -189,4 +200,45 @@ svg {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
+}
+
+.portrait {
+  position: relative;
+  display: inline-block;
+}
+
+.portrait:before,
+.portrait:after {
+  content: "";
+  display: block;
+  opacity: .4;
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  animation: rotate infinite linear;
+}
+
+.portrait:before {
+  animation-duration: 6000ms;
+}
+
+.portrait:after {
+  animation-duration: 4500ms;
+}
+
+@keyframes rotate {
+  0% { width: 117%; height: 95%; transform: translate(-50%, -50%) rotate(0deg); }
+  50% { width: 90%; height: 117%; transform: translate(-50%, -50%) rotate(180deg); }
+  100% { width: 117%; height: 90%; transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .portrait:after,
+  .portrait:before {
+    display: none;
+  }
 }
