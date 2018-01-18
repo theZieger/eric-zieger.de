@@ -25,6 +25,9 @@ module.exports = function (grunt) {
             styles: 'dist/src/css/styles.css',
             fonts: 'dist/src/css/fonts.css'
           },
+          scripts: {
+            app: 'dist/src/js/app.js'
+          },
           sections: {
             svg: {
               email: 'src/images/email.svg',
