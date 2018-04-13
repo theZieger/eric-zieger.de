@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/l/font?kit=1Ptgg87LROyAm0Kx6iQIC-MsQLbZjRJer_LaRA&skey=3e16a04254d4c9b3&v=v9) format('woff2');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,137 +15,93 @@ ul, ol {
  list-style: none;
 }
 
+html {
+  font-size: calc(1.1em + 0.6vw);
+}
+
 body {
   font-family: Arial, sans-serif;
-  color: #444;
-  line-height: 1.5;
-  font-size: 1.1em;
-  background: #fefefe;
-  padding: 0 20px;
+  color: #222;
+  line-height: 1.45;
+  background: #f8f8f8;
+  padding: 0 5vw;
+  overflow-x: hidden;
 }
 
-.bg {
-  background: #8617db;
-  background: linear-gradient(to top,#8617db 0%,#5c35d5 100%);
-  margin: 0 -20px;
-  padding: 0 20px;
+b {
+  font-weight: 400;
 }
 
-.bg :focus {
-  outline: none;
-  background: #fff;
-  color: #111;
-}
-
-h1, strong {
+strong {
   font-weight: bold;
-  color: #111;
 }
 
 h1 {
-  color: #fff;
-  margin: .4em 0 .2em;
-  font-size: 2rem;
-}
-
-h2 {
-  color: #111;
-  margin: .4em 0;
-  font-size: 1.3rem;
-  font-weight: normal;
-}
-
-header, main, footer {
-  display: block;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-header,
-footer {
+  font-weight: 400;
+  margin: -.22em 0 .666em;
+  font-size: 20vw;
+  font-family: Anton, Arial, sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
   text-align: center;
 }
 
-header {
-  color: #fff;
-  padding-top: 10vh;
+.blue {
+  color: #1a16e3;
 }
 
-footer {
-  padding: 10vh 0;
-  border-top: 1px solid #ddd;
+.short-bio {
+  max-width: 1200px;
+  padding-left: 2vw;
 }
 
-footer small {
+.short-bio:after {
+  content:"";
   display: block;
-  font-size: .9rem;
-  margin-top: 5vh;
+  clear: both;
 }
 
 img {
   border-radius: 50%;
-  border: 2px solid #fff;
+  float: left;
+  margin-right: 4.5vw;
+  shape-outside: circle(50%);
+  width: 30vw;
+  height: 30vw;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+h2 {
+  font-family: Anton, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: .05em;
   position: relative;
-  z-index: 10;
+  line-height: 1.1;
+  top: calc(-10vw - 1.1em);
+  font-size: 10vw;
+  margin-bottom: -1em;
+  text-transform: uppercase;
+}
+
+footer {
+  text-align: center;
+  padding: 10vh 0;
+}
+
+footer small {
   display: block;
+  font-size: .8rem;
+  margin-top: 5vh;
 }
 
 a {
-  color: #0b4974;
-}
-
-p + p {
-  margin-top: 1rem;
-}
-
-nav ul {
-  margin-top: 10vh;
-}
-
-nav li {
-  margin: 0;
-}
-
-nav a {
-  color: #fff;
-  font-size: 1rem;
-  display: inline-block;
-  padding: 5px;
+  color: #1a16e3;
 }
 
 :focus {
-  outline: 2px solid #80b3ff;
+  outline: 2px solid #1a16e3;
   outline-offset: 3px;
-}
-
-.content {
-  margin: 10vh 0 10vh 60px;
-  position: relative;
-}
-
-.card {
-  border-radius: 3px;
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 20px 0;
-  background-color: #fff;
-  position: relative;
-  z-index: 2;
-}
-
-.card-title {
-  display: inline-block;
-  font-weight: normal;
-}
-
-.card .inline-list {
-  margin-top: 1rem;
-}
-
-.inline-list li {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 5px 0
 }
 
 svg {
@@ -147,49 +110,6 @@ svg {
   display: inline-block;
   position: relative;
   top: .1em;
-}
-
-.content > svg {
-  opacity: .2;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 0px;
-  margin: 0;
-  left: -50px;
-}
-
-.language:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: .9rem;
-  height: .9rem;
-  position: relative;
-  top: 1px;
-  margin-right: .25rem;
-}
-
-.language-js:before {
-  background-color: #f1e05a;
-}
-
-.experience {
-  position: relative;
-}
-
-.experience:before {
-  content: "";
-  position: absolute;
-  height: 96%;
-  width: 1px;
-  border-left: 2px dotted #555;
-  top: 2%;
-  left: 5vw;
-}
-
-.npm-link svg {
-  width: 2.5em;
 }
 
 .vh {
@@ -202,43 +122,97 @@ svg {
   overflow: hidden;
 }
 
-.portrait {
-  position: relative;
+.inline-list li {
   display: inline-block;
+  margin-right: 10px;
+  padding: 5px 0
 }
 
-.portrait:before,
-.portrait:after {
+main {
+  position: relative;
+  margin: 30vw -5vw 20vw;
+  padding: 10vw 5vw;
+  background-color: #1a16e3;
+  background: linear-gradient(to bottom, #1a16e3 0%,#6b16e2 100%);
+  color: #fff;
+}
+
+main:after,
+main:before {
   content: "";
   display: block;
-  opacity: .4;
   position: absolute;
-  background: #fff;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  animation: rotate infinite linear;
+  height: 0;
+  width: 0;
+  left: 0;
+  border: 50vw solid transparent;
 }
 
-.portrait:before {
-  animation-duration: 6000ms;
+main:before {
+  bottom: 100%;
+  bottom: calc(100% - 1px);
+  border-width: 1.5rem 100vw 0 0;
+  border-right-color: #1a16e3;
+  border-bottom-color: #1a16e3;
 }
 
-.portrait:after {
-  animation-duration: 4500ms;
+main:after {
+  top: 100%;
+  top: calc(100% - 1px);
+  border-width: 0 0 1.5rem 100vw;
+  border-left-color: #6b16e2;
+  border-top-color: #6b16e2;
 }
 
-@keyframes rotate {
-  0% { width: 117%; height: 95%; transform: translate(-50%, -50%) rotate(0deg); }
-  50% { width: 90%; height: 117%; transform: translate(-50%, -50%) rotate(180deg); }
-  100% { width: 117%; height: 90%; transform: translate(-50%, -50%) rotate(360deg); }
+.exp {
+  position: relative;
 }
 
-@media screen and (prefers-reduced-motion: reduce) {
-  .portrait:after,
-  .portrait:before {
-    display: none;
-  }
+.exp:before,
+.exp:after {
+  font-family: monospace, sans-serif;
+  font-size: 8vw;
+  position: absolute;
+  opacity: .1;
+}
+
+.exp:before {
+  content: "<Code />";
+  transform: rotate(27deg);
+  top: 5%;
+  right: 10vw;
+}
+
+.exp:after {
+  transform: rotate(-17deg);
+  content: "{...design}";
+  top: 75%;
+  right: 2vw;
+}
+
+.exp li {
+  padding: 2vw;
+  font-size: .9rem;
+  border-left: 10px solid transparent;
+}
+
+.exp li:first-child {
+  border-left-color: #6b16e2;
+}
+
+.exp strong {
+  display: block;
+  font-size: 1rem;
+}
+
+svg {
+  fill: #6b16e2;
+  width: 6vw;
+  height: 6vw;
+  margin: 2vw;
+  transition: transform .2s ease;
+}
+
+footer a:hover svg {
+  transform: scale(1.2);
 }
