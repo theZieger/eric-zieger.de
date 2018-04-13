@@ -4,12 +4,12 @@
   Site: https://eric-zieger.de
   Contact: mail [at] eric-zieger.de
   Twitter: @thezieger
-  From: Leipzig, Saxony, Germany
+  From: Leipzig, Germany
 
 /* SITE */
 
-  Last update: 2018/01/18
+  Last update: 2018/04/13
   Language: German
   Doctype: HTML5
   Standards: HTML5, CSS3
-  Software: Ubuntu 17.04, Sublime, Editorconfig, Git, NPM, Service Worker API, SVG, Grunt
+  Software: Ubuntu 17.04, VS-Code, Editorconfig, Git, NPM, SVG, Grunt

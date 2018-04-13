@@ -1,6 +1,6 @@
 {
   "name": "eric-zieger.de",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "My personal website.",
   "main": "dist/index.html",
   "scripts": {
