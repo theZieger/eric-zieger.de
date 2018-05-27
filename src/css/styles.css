@@ -1,18 +1,12 @@
-@font-face {
-  font-family: 'Anton';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/l/font?kit=1Ptgg87LROyAm0Kx6iQIC-MsQLbZjRJer_LaRA&skey=3e16a04254d4c9b3&v=v9) format('woff2');
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-ul, ol {
- list-style: none;
+ul,
+ol {
+  list-style: none;
 }
 
 html {
@@ -37,10 +31,10 @@ strong {
 }
 
 h1 {
-  font-weight: 400;
-  margin: -.22em 0 .666em;
-  font-size: 20vw;
-  font-family: Anton, Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.666em;
+  font-size: 13vw;
+  font-family: Arial, sans-serif;
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
@@ -56,7 +50,7 @@ h1 {
 }
 
 .short-bio:after {
-  content:"";
+  content: "";
   display: block;
   clear: both;
 }
@@ -73,9 +67,8 @@ img {
 }
 
 h2 {
-  font-family: Anton, Arial, sans-serif;
-  font-weight: 400;
-  letter-spacing: .05em;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
   position: relative;
   line-height: 1.1;
   top: calc(-10vw - 1.1em);
@@ -91,7 +84,7 @@ footer {
 
 footer small {
   display: block;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin-top: 5vh;
 }
 
@@ -109,7 +102,7 @@ svg {
   width: 1em;
   display: inline-block;
   position: relative;
-  top: .1em;
+  top: 0.1em;
 }
 
 .vh {
@@ -125,7 +118,7 @@ svg {
 .inline-list li {
   display: inline-block;
   margin-right: 10px;
-  padding: 5px 0
+  padding: 5px 0;
 }
 
 main {
@@ -133,7 +126,7 @@ main {
   margin: 30vw -5vw 20vw;
   padding: 10vw 5vw;
   background-color: #1a16e3;
-  background: linear-gradient(to bottom, #1a16e3 0%,#6b16e2 100%);
+  background: linear-gradient(to bottom, #1a16e3 0%, #6b16e2 100%);
   color: #fff;
 }
 
@@ -151,7 +144,7 @@ main:before {
 main:before {
   bottom: 100%;
   bottom: calc(100% - 1px);
-  border-width: 1.5rem 100vw 0 0;
+  border-width: 1.25rem 100vw 0 0;
   border-right-color: #1a16e3;
   border-bottom-color: #1a16e3;
 }
@@ -159,7 +152,7 @@ main:before {
 main:after {
   top: 100%;
   top: calc(100% - 1px);
-  border-width: 0 0 1.5rem 100vw;
+  border-width: 0 0 1.25rem 100vw;
   border-left-color: #6b16e2;
   border-top-color: #6b16e2;
 }
@@ -173,7 +166,7 @@ main:after {
   font-family: monospace, sans-serif;
   font-size: 8vw;
   position: absolute;
-  opacity: .1;
+  opacity: 0.1;
 }
 
 .exp:before {
@@ -192,7 +185,7 @@ main:after {
 
 .exp li {
   padding: 2vw;
-  font-size: .9rem;
+  font-size: 0.9rem;
   border-left: 10px solid transparent;
 }
 
@@ -210,7 +203,7 @@ svg {
   width: 6vw;
   height: 6vw;
   margin: 2vw;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
 
 footer a:hover svg {

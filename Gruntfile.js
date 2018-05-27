@@ -1,7 +1,6 @@
-module.exports = function (grunt) {
-
+module.exports = function(grunt) {
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON("package.json"),
     cssmin: {
       options: {
         level: {
@@ -11,35 +10,42 @@ module.exports = function (grunt) {
         }
       },
       dist: {
-        files: [{
-          'dist/src/css/styles.css': 'src/css/styles.css'
-        }]
+        files: [
+          {
+            "dist/src/css/styles.css": "src/css/styles.css",
+            "dist/src/css/dsgvo.css": "src/css/dsgvo.css"
+          }
+        ]
       }
     },
     htmlbuild: {
       dist: {
-        src: 'src/index.html',
-        dest: 'dist/index.html',
+        files: [
+          {
+            "dist/index.html": "src/index.html",
+            "dist/datenschutz.html": "src/datenschutz.html"
+          }
+        ],
         options: {
           styles: {
-            styles: 'dist/src/css/styles.css',
-            fonts: 'dist/src/css/fonts.css'
+            styles: "dist/src/css/styles.css",
+            dsgvo: "dist/src/css/dsgvo.css"
           },
           scripts: {
-            app: 'dist/src/js/app.js'
+            app: "dist/src/js/app.js"
           },
           sections: {
             svg: {
-              email: 'src/images/email.svg',
-              github: 'src/images/github.svg',
-              steam: 'src/images/steam.svg',
-              twitter: 'src/images/twitter.svg',
-              xing: 'src/images/xing.svg',
-              experience: 'src/images/trophy.svg',
-              about: 'src/images/pen.svg',
-              star: 'src/images/star.svg',
-              fork: 'src/images/fork.svg',
-              npm: 'src/images/npm.svg'
+              email: "src/images/email.svg",
+              github: "src/images/github.svg",
+              steam: "src/images/steam.svg",
+              twitter: "src/images/twitter.svg",
+              xing: "src/images/xing.svg",
+              experience: "src/images/trophy.svg",
+              about: "src/images/pen.svg",
+              star: "src/images/star.svg",
+              fork: "src/images/fork.svg",
+              npm: "src/images/npm.svg"
             }
           }
         }
@@ -60,21 +66,20 @@ module.exports = function (grunt) {
           passes: 2
         },
         quoteStyle: 1,
-        report: 'gzip'
+        report: "gzip"
       },
       dist: {
         files: {
-          'dist/src/js/app.js': 'src/js/*.js'
+          "dist/src/js/app.js": "src/js/*.js"
         }
       }
     }
-
   });
 
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-html-build');
+  grunt.loadNpmTasks("grunt-contrib-cssmin");
+  grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-html-build");
 
-  grunt.registerTask('build', ['cssmin:dist', 'uglify:dist', 'htmlbuild']);
-  grunt.registerTask('default', ['build']);
+  grunt.registerTask("build", ["cssmin:dist", "uglify:dist", "htmlbuild"]);
+  grunt.registerTask("default", ["build"]);
 };
