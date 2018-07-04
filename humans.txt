@@ -8,8 +8,7 @@
 
 /* SITE */
 
-  Last update: 2018/05/27
+  Last update: 2018/07/04
   Language: German
   Doctype: HTML5
   Standards: HTML5, CSS3
-  Software: Ubuntu 17.10, VS-Code, Editorconfig, Git, NPM, SVG, Grunt
