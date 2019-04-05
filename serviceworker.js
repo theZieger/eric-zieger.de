@@ -1,4 +1,4 @@
-const CACHE = 'erics-cache';
+const CACHE = 'erics-cache-1.0.1';
 
 self.addEventListener('install', function(event) {
     self.skipWaiting();
@@ -6,10 +6,10 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(CACHE).then(function(cache) {
             return cache.addAll([
-                '/',
                 'index.html',
                 'eric-zieger.jpg',
-                'favicon.ico'
+                'favicon.ico',
+                'site.webmanifest'
             ]);
         })
     );
