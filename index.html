@@ -160,6 +160,17 @@
       if ("serviceWorker" in navigator && !navigator.serviceWorker.controller) {
         navigator.serviceWorker.register("serviceworker.js", { scope: "./" });
       }
+      if ("fetch" in window) {
+        fetch(
+          "https://webmention.io/api/mentions.jf2?target=https://eric-zieger.de"
+        )
+          .then(function(r) {
+            return r.json();
+          })
+          .then(function(r) {
+            console.log(r);
+          });
+      }
     </script>
   </body>
 </html>
