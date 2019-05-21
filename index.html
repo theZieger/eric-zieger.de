@@ -90,19 +90,22 @@
         text-decoration: none;
         outline: #09d7e4 dotted 2px;
       }
-      footer > div:last-child {
+      .badge {
         font-size: 0.5rem;
         color: #ccc;
       }
-      footer > div:last-child img {
+      .badge img {
         width: 1rem;
         height: 1rem;
         vertical-align: middle;
         margin-right: 0.25rem;
         border: 2px solid #000;
       }
-      footer > div:last-child img ~ img {
+      .badge img ~ img {
         margin-left: -0.9rem;
+      }
+      .badge a {
+        margin: 0;
       }
     </style>
   </head>
@@ -207,11 +210,13 @@
             }
             var badge = document.createElement("div");
             badge.setAttribute("aria-hidden", "true");
+            badge.className = "badge";
             badge.innerHTML =
               images +
               " Diese Seite wurde bereits <strong>" +
               r.children.length +
-              "</strong> Mal erwähnt.";
+              "</strong> Mal erwähnt. Powered by <a href=\"webmentions.io\" target=\"_blank\"
+        rel=\"noopener noreferrer\">webmentions.io</a>";
 
             document.getElementById("footer").appendChild(badge);
           });
