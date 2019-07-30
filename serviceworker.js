@@ -1,4 +1,4 @@
-const CACHE = 'erics-cache-1.0.2';
+const CACHE = 'erics-cache-1.0.3';
 
 self.addEventListener('install', function(event) {
     self.skipWaiting();
