@@ -28,7 +28,7 @@ self.addEventListener('fetch', function(event) {
             function() {
                 // DevTools opening will trigger these o-i-c requests, which this SW can't handle.
                 // There's probaly more going on here, but I'd rather just ignore this problem. :)
-                if (event.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') return;
+                if (event.request.cache === 'only-if-cached' && event.request.mode !== 'same-origin') return;
                 
                 return fetch(event.request).then(function(response) {
                     event.waitUntil(
