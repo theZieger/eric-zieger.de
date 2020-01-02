@@ -124,6 +124,7 @@
       </h1>
       <div>
         <img
+          loading="lazy"
           src="eric-zieger.jpg"
           class="u-photo"
           alt="Ein Portrait von Eric Zieger"
@@ -199,10 +200,11 @@
                 if (
                   r.children[i] &&
                   r.children[i].author &&
-                  r.children[i].author.photo
+                  r.children[i].author.photo &&
+                  r.children[i].author.name
                 ) {
                   images +=
-                    '<img src="' +
+                    '<img loading="lazy" src="' +
                     r.children[i].author.photo +
                     '" alt=" ' +
                     r.children[i].author.name +
