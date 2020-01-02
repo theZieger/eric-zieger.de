@@ -91,10 +91,6 @@
         text-decoration: none;
         outline: #f72328 dotted 2px;
       }
-      .badge {
-        font-size: 0.5rem;
-        color: #ccc;
-      }
       .badge img {
         vertical-align: middle;
         margin-right: 0.25rem;
@@ -212,14 +208,13 @@
                 }
               }
             }
-            var badge = document.createElement("div");
-            badge.setAttribute("aria-hidden", "true");
+            var badge = document.createElement("p");
             badge.className = "badge";
             badge.innerHTML =
               images +
               " Diese Seite wurde bereits <strong>" +
               r.children.length +
-              '</strong> Mal erwähnt. Powered by <a href="https://webmention.io" target="_blank" rel="noopener noreferrer">webmention.io</a>';
+              '</strong> Mal erwähnt. <br/>Powered by <a href="https://webmention.io" target="_blank" rel="noopener noreferrer">webmention.io</a>';
 
             document.getElementById("footer").appendChild(badge);
           });
