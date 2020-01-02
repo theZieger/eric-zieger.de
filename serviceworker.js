@@ -1,4 +1,4 @@
-const CACHE = 'erics-cache-5.7.0';
+const CACHE = 'erics-cache-5.7.1';
 
 self.addEventListener('install', function(event) {
     self.skipWaiting();
@@ -26,6 +26,10 @@ self.addEventListener('fetch', function(event) {
                 return response;
             },
             function() {
+                // DevTools opening will trigger these o-i-c requests, which this SW can't handle.
+                // There's probaly more going on here, but I'd rather just ignore this problem. :)
+                if (event.request.cache === 'only-if-cached' && e.request.mode !== 'same-origin') return;
+                
                 return fetch(event.request).then(function(response) {
                     event.waitUntil(
                         updateCache(event.request, response.clone())
