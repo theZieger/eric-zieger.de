@@ -1,0 +1,166 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  font: calc(1em + 0.25vw) / 1.3 sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+header {
+  background: #242430;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav {
+  max-width: 55rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header a {
+  display: block;
+}
+
+.u-url {
+  text-decoration: none;
+}
+
+a {
+  color: #fff;
+}
+
+:focus,
+a:hover {
+  color: #f72328;
+}
+
+.p-name {
+  display: block;
+}
+
+.elevator {
+  background: #242430;
+  color: #eee;
+  clip-path: polygon(
+    -1% 100%,
+    -1% -1%,
+    100% -1%,
+    100% 100%,
+    87% 95%,
+    75% 100%,
+    60% 95%,
+    50% 100%,
+    40% 95%,
+    25% 100%,
+    11% 95%
+  );
+}
+.inner {
+  max-width: 55rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.u-photo {
+  margin-right: 1rem;
+  float: left;
+  margin-top: -.35em;
+  border: 2px solid #9c9cb4;
+}
+
+h2 {
+  display: inline-block;
+  border-bottom: 3px solid;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.25rem;
+  margin: 1em 0 2em;
+  color: #f72328;
+}
+
+.p-note {
+  margin: 0 0 2.6em 0;
+  font-size: calc(1em + 1vw);
+}
+
+footer {
+  padding: 0 0 2rem 0;
+  text-align: center;
+  display: block;
+  color: #242430;
+}
+
+footer a {
+  font-weight: 700;
+  color: #242430;
+}
+
+img {
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
+}
+
+:focus {
+  text-decoration: none;
+  outline: #f72328 dotted 2px;
+}
+
+.badge img {
+  vertical-align: middle;
+  margin-right: 0.25rem;
+  border: 2px solid #000;
+}
+
+.badge img ~ img {
+  margin-left: -0.9rem;
+}
+
+.badge a {
+  margin: 0;
+  padding: 0;
+}
+footer> * {
+  margin: 1rem 0;
+}
+
+footer [rel*="me"] {
+  border-radius: 50%;
+  background: #242430;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  margin: 1rem 0.5rem;
+  outline: 0;
+  display: inline-block;
+  padding: 1rem;
+}
+
+footer [rel*="me"]:hover,
+footer [rel*="me"]:focus {
+  color: #f72328;
+}
