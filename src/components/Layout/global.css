@@ -1,0 +1,89 @@
+:root {
+  --bg-site: #f6f6f6;
+  --token-pop: #10da75;
+  --token-dark: #242430;
+  --token-darker: #121217;
+  --color-on-dark: #eee;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font: 1.125em / 1.5 sans-serif;
+  color: var(--token-darker);
+}
+
+body {
+  margin: 0;
+  background: var(--token-darker);
+  background: linear-gradient(
+    50deg,
+    var(--token-darker) 15%,
+    var(--token-dark) 85%
+  );
+}
+
+.full {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+main {
+  flex-grow: 1;
+  display: block;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+a {
+  color: var(--color-link, inherit);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 2px;
+  position: relative;
+  overflow: hidden;
+  vertical-align: bottom;
+  background-image: linear-gradient(
+    180deg,
+    transparent 60%,
+    var(--bg-link-focus, rgba(16, 218, 117, 0.75)) 0
+  );
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.125s linear;
+}
+
+a:focus,
+a:hover {
+  outline: none;
+  background-size: 100% 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+header,
+footer {
+  padding: 1.5rem 1rem;
+}
+
+section {
+  padding: 3rem 1rem;
+}
+
+header > *,
+footer > *,
+section > * {
+  max-width: 32rem;
+  margin: 0 auto;
+}

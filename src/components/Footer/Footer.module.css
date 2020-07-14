@@ -1,0 +1,44 @@
+.footer {
+  background: #fff;
+  border-top: 1px solid rgba(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  fill: currentColor;
+}
+
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1rem;
+  margin: 0 0 0.5em;
+}
+
+.column {
+  min-width: 12rem;
+  flex: 1 1;
+  padding: 0 1rem 1rem;
+  min-width: 20ch;
+  margin-left: -1rem;
+}
+
+.link {
+  margin-bottom: 8px;
+  background-size: 100% 200%;
+  border-bottom: 2px solid var(--token-pop);
+}
+
+.link:hover {
+  background-size: 100% 100%;
+}

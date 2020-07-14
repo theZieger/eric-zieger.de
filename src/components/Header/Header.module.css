@@ -1,0 +1,14 @@
+.header {
+  background: var(--token-dark);
+  position: relative;
+  z-index: 1;
+
+  --color-link: var(--token-pop);
+  --bg-link-focus: rgba(255, 255, 255, 0.15);
+}
+
+.homeLink {
+  text-transform: lowercase;
+  font-family: serif;
+  font-size: 1.25rem;
+}
