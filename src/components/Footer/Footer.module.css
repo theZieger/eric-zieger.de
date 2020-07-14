@@ -36,9 +36,11 @@
 .link {
   margin-bottom: 8px;
   background-size: 100% 200%;
+  line-height: 1.3;
   border-bottom: 2px solid var(--token-pop);
 }
 
+.link:focus,
 .link:hover {
   background-size: 100% 100%;
 }

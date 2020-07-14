@@ -5,7 +5,7 @@ import styles from "./Header.module.css"
 
 const Header = () => (
   <header className={styles.header} role="banner">
-    <nav className={styles.inner}>
+    <nav>
       <Link className={styles.homeLink + " u-url"} rel="me" to="/">
         Eric Zieger
       </Link>

@@ -1,15 +1,66 @@
-.thoughts {
-    margin: 2rem auto;
-    max-width: 66rem;
-    padding: 1rem;
+.blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  transform-origin: 50% 50%;
+}
+
+.blob ~ * {
+  position: relative;
+  z-index: 1;
+}
+
+.headline {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 3.5rem;
 }
 
 .title {
-    margin: 0 0 .5rem;
-    text-align: center;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.2rem;
 }
 
-.list {
-    display: flex;
-    flex-wrap: wrap;
+.meta {
+  font-family: monospace;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  flex: 1;
+  min-width: calc(320px - 4rem);
+  max-width: 45ch;
+  margin: 0.5rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
+}
+
+.card a {
+  border-bottom: 2px solid var(--token-pop);
+  background-size: 100% 200%;
+}
+
+.card a:focus,
+.card a:hover {
+  background-size: 100% 100%;
+}
+
+.grid {
+  display: flex;
+  max-width: 1400px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 0.5rem;
 }

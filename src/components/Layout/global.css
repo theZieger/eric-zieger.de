@@ -14,7 +14,8 @@ html {
 
 body {
   margin: 0;
-  background: var(--token-darker);
+  background: var(--bg-site);
+  background: var(--bg-darker);
   background: linear-gradient(
     50deg,
     var(--token-darker) 15%,

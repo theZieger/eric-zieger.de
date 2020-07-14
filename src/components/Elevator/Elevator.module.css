@@ -1,10 +1,18 @@
 .elevator {
   color: var(--color-on-dark, inherit);
-  /* clip-path: polygon(-1% 100%, -1% -1%, 100% -1%, 100% 100%, 100% calc(100% - 3vh)); */
+  
+  clip-path: polygon(
+    -1% 100%,
+    -1% -1%,
+    100% -1%,
+    100% 100%,
+    100% calc(100% - 3vh)
+  );
   --color-link: var(--token-pop);
   --bg-link-focus: rgba(255, 255, 255, 0.15);
 }
 
 .title {
+  margin: 0 0 0.75em;
   text-align: center;
 }
