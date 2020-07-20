@@ -1,14 +1,14 @@
 import React from "react"
 import Div100vh from "react-div-100vh"
-import SEO from "../SEO"
 import Header from "../Header"
 import Footer from "../Footer"
+import SEO from "../SEO"
 import "./global.css"
 
-const Layout = ({ children, lang }) => {
+const Layout = ({ children }) => {
   return (
-    <Div100vh className="full">
-      <SEO lang={lang} />
+    <Div100vh className="full h-card">
+      <SEO />
       <Header />
       <main>{children}</main>
       <Footer />

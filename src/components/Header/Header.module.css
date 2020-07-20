@@ -3,7 +3,7 @@
   position: relative;
   z-index: 1;
 
-  --color-link: var(--token-pop);
+  --color-link: var(--token-brand);
   --bg-link-focus: rgba(255, 255, 255, 0.15);
 }
 
@@ -11,4 +11,9 @@
   text-transform: lowercase;
   font-family: serif;
   font-size: 1.25rem;
+}
+
+.logo {
+  vertical-align: bottom;
+  margin-right: 0.25rem;
 }

@@ -6,11 +6,11 @@ export default () => {
   return (
     <section className={styles.elevator}>
       <div>
-        <h2 className={styles.title}>
+        <h1 className={styles.title}>
           Hey, I'm Eric! <span aria-hidden="true">✌️</span>
-        </h2>
+        </h1>
         <p className="p-note">
-          I'm a <strong className="p-job-title">Frontend Developer</strong> from
+          I'm a <strong>Frontend Developer</strong> from
           Leipzig, Germany<span aria-hidden="true"> 🇩🇪</span>. And I'm in love
           with declarative and component-driven frontends, CSS, design-systems,
           and accessibility. I currently work on the open cloud platform for

@@ -2,20 +2,20 @@ module.exports = {
   siteMetadata: {
     title: `Eric Zieger (@thezieger) - Frontend Developer`,
     description: `Frontend Developer and Media Designer from Leipzig, Deutschland.`,
-    author: `@thezieger`,
+    author: {
+      name: `Eric`,
+      handle: `@thezieger`,
+    },
+    social: {
+      twitter: `https://twitter.com/thezieger`,
+    },
   },
   plugins: [
     `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages",
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -25,10 +25,51 @@ module.exports = {
         background_color: `#121217`,
         theme_color: `#121217`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`,
+        icon: `content/assets/icon.png`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/writing`,
+        name: `writing`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 576,
+              quality: 70,
+              backgroundColor: "#10da75",
+              withWebp: { quality: 70 },
+              tracedSVG: true,
+              srcSetBreakpoints: [284, 324, 375, 532],
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                link: "link",
+              },
+            },
+          },
+        ],
+      },
+    },
   ],
 }

@@ -1,26 +1,23 @@
 :root {
   --bg-site: #f6f6f6;
-  --token-pop: #10da75;
   --token-dark: #242430;
   --token-darker: #121217;
   --color-on-dark: #eee;
+  --token-brand: #10da75;
+  --token-accent: rgb(218, 16, 16);
+  --token-accent-light: rgba(218, 16, 16, 0.33);
+  --token-accent-lighter: rgba(218, 16, 16, 0.1);
 }
 
 html {
   -webkit-text-size-adjust: 100%;
-  font: 1.125em / 1.5 sans-serif;
+  font: 1.125em / 1.45 sans-serif;
   color: var(--token-darker);
 }
 
 body {
   margin: 0;
   background: var(--bg-site);
-  background: var(--bg-darker);
-  background: linear-gradient(
-    50deg,
-    var(--token-darker) 15%,
-    var(--token-dark) 85%
-  );
 }
 
 .full {
@@ -70,21 +67,52 @@ ul {
 }
 
 p {
-  margin: 0.5em 0;
+  margin: 1.45em 0;
 }
 
-header,
-footer {
+.layout-block {
   padding: 1.5rem 1rem;
 }
 
+article,
 section {
   padding: 3rem 1rem;
 }
 
-header > *,
-footer > *,
+.layout-block > *,
+article > *,
 section > * {
   max-width: 32rem;
   margin: 0 auto;
+}
+
+section article {
+  padding: 0;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.link {
+  line-height: 1.3;
+  border-bottom: 2px solid var(--token-brand);
+  background-size: 100% 200%;
+}
+
+.link:hover,
+.link:focus {
+  background-size: 100% 100%;
+}
+
+.credit {
+  font-size: 14px;
+  margin-top: -1em;
+  font-family: serif;
+  text-align: right;
 }

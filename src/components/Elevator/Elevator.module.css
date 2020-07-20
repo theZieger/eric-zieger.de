@@ -8,8 +8,14 @@
     100% 100%,
     100% calc(100% - 3vh)
   );
-  --color-link: var(--token-pop);
+  --color-link: var(--token-brand);
   --bg-link-focus: rgba(255, 255, 255, 0.15);
+  background: var(--bg-darker);
+  background: linear-gradient(
+    50deg,
+    var(--token-darker) 15%,
+    var(--token-dark) 85%
+  );
 }
 
 .title {

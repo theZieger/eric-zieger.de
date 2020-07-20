@@ -4,9 +4,10 @@ import { Link } from "gatsby"
 import styles from "./Header.module.css"
 
 const Header = () => (
-  <header className={styles.header} role="banner">
+  <header className={"layout-block " + styles.header} role="banner">
     <nav>
-      <Link className={styles.homeLink + " u-url"} rel="me" to="/">
+      <img className={styles.logo} src="/favicon-32x32.png" alt="" />
+      <Link className={styles.homeLink} to="/">
         Eric Zieger
       </Link>
     </nav>
