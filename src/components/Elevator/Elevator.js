@@ -10,11 +10,11 @@ export default () => {
           Hey, I'm Eric! <span aria-hidden="true">✌️</span>
         </h1>
         <p className="p-note">
-          I'm a <strong>Frontend Developer</strong> from
-          Leipzig, Germany<span aria-hidden="true"> 🇩🇪</span>. And I'm in love
-          with declarative and component-driven frontends, CSS, design-systems,
-          and accessibility. I currently work on the open cloud platform for
-          energy supply companies at{" "}
+          I'm a <strong>Frontend Developer</strong> from Leipzig, Germany
+          <span aria-hidden="true"> 🇩🇪</span>. And I'm in love with declarative
+          and component-driven frontends, CSS, design-systems, and
+          accessibility. I currently work on the open cloud platform for energy
+          supply companies at{" "}
           <a href="https://www.powercloud.de" className="org">
             powercloud GmbH
           </a>
