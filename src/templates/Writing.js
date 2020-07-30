@@ -4,6 +4,7 @@ import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import styles from "./Writing.module.css"
+import { Helmet } from "react-helmet"
 
 const MONTHS = [
   "January",
@@ -27,7 +28,7 @@ const format = dateString => {
 
 const WritingTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
-  const { previous, next } = pageContext
+  const { previous, next, slug } = pageContext
 
   return (
     <Layout>
@@ -35,6 +36,12 @@ const WritingTemplate = ({ data, pageContext }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Helmet>
+        <meta
+          name="twitter:image"
+          content={`https://eric-zieger.de${slug}twitter-card.png`}
+        ></meta>
+      </Helmet>
       <article className="h-entry">
         <div>
           <header>
@@ -42,7 +49,7 @@ const WritingTemplate = ({ data, pageContext }) => {
               {post.frontmatter.title}
             </h1>
             <div className={styles.meta}>
-              <a href="" className="u-url">
+              <a href={`https://eric-zieger.de${slug}`} className="u-url">
                 <time className="dt-published" datetime={post.frontmatter.date}>
                   {format(post.frontmatter.date)}
                 </time>
@@ -64,7 +71,7 @@ const WritingTemplate = ({ data, pageContext }) => {
                     {previous && (
                       <Link
                         className="link"
-                        to={"/writing" + previous.fields.slug}
+                        to={previous.fields.slug}
                         rel="prev"
                       >
                         <svg
@@ -88,11 +95,7 @@ const WritingTemplate = ({ data, pageContext }) => {
                   </li>
                   <li>
                     {next && (
-                      <Link
-                        className="link"
-                        to={"/writing" + next.fields.slug}
-                        rel="next"
-                      >
+                      <Link className="link" to={next.fields.slug} rel="next">
                         {next.frontmatter.title}{" "}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

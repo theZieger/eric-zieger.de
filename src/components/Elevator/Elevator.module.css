@@ -1,6 +1,5 @@
 .elevator {
   color: var(--color-on-dark, inherit);
-  
   clip-path: polygon(
     -1% 100%,
     -1% -1%,

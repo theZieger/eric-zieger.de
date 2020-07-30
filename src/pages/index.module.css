@@ -1,15 +1,21 @@
-.blob {
+.tilBlob,
+.writingBlob {
   position: absolute;
   width: 30rem;
   height: 30rem;
-  top: 50%;
+  top: 100%;
   right: 0;
   transform-origin: 50% 50%;
   color: var(--token-accent-light);
   transition: color 0.4s ease;
 }
 
-.blob ~ * {
+.tilBlob {
+  color: var(--token-brand-light);
+}
+
+.writingBlob ~ *,
+.tilBlob ~ * {
   position: relative;
   z-index: 1;
 }
@@ -43,6 +49,7 @@
   margin: 1rem 0;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
+  transition: box-shadow 0.4s ease;
 }
 
 @keyframes mymove {
@@ -60,15 +67,20 @@
   }
 }
 
-.card:hover a,
-.card:focus-within a {
-  color: var(--token-accent);
+.text {
+  max-width: 45ch;
+  margin-bottom: 0;
+}
+
+.card:hover  a,
+.card:focus-within  a {
   animation: mymove 0.5s ease-in-out infinite;
 }
 
-.card:hover .blob,
-.card:focus-within .blob {
-  color: var(--token-accent-lighter);
+
+.card:hover,
+.card:focus-within {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 12px 0px;
 }
 
 .link {
