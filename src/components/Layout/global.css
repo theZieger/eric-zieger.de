@@ -102,7 +102,7 @@ section article {
 }
 
 .link {
-  line-height: 1.3;
+  line-height: calc(1.45em - 4px);
   border-bottom: 2px solid var(--token-brand);
   background-size: 100% 200%;
 }
