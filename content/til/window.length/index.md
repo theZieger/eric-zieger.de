@@ -13,14 +13,14 @@ Most of the time, when dealing with vanilla JavaScript code, I try things out di
 Today I made a small mistake and accidentally called something similar to this:
 
 ```javascript
-myVariable-length
+myVariable - length
 ```
 
-And as I hit return on my keyboard, I already saw my foolish mistake. I did no valid property access but performed a calculation with a not defined variable called `length`. Until I saw the output of:
+And as I hit return on my keyboard, I already saw my foolish mistake. The property access I did was not valid but a calculation with a not defined variable called `length`. Then I saw the output:
 
 
 ```javascript
-myVariable-length
+myVariable - length
 -3
 ```
 
