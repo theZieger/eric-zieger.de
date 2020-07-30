@@ -44,9 +44,9 @@ module.exports = {
             options: {
               linkImagesToOriginal: false,
               maxWidth: 576,
-              quality: 70,
+              quality: 50,
               backgroundColor: "#10da75",
-              withWebp: { quality: 70 },
+              withWebp: { quality: 50 },
               tracedSVG: true,
               srcSetBreakpoints: [284, 324, 375, 532],
             },
