@@ -39,8 +39,12 @@ const WritingTemplate = ({ data, pageContext }) => {
       <Helmet>
         <meta
           name="twitter:image"
-          content={`https://eric-zieger.de${slug}twitter-card.png`}
-        ></meta>
+          content={`https://eric-zieger.de${slug}social-card.png`}
+        />
+        <meta
+          name="og:image"
+          content={`https://eric-zieger.de${slug}social-card.png`}
+        />
       </Helmet>
       <article className="h-entry">
         <div>

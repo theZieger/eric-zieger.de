@@ -1,5 +1,35 @@
+const fs = require(`fs`)
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const puppeteer = require("puppeteer")
+
+async function createShareImage(slug, title, excerpt) {
+  const folder = slug.split("/")[1]
+  if (!fs.existsSync("./static/" + folder)) {
+    fs.mkdirSync("./static/" + folder)
+  }
+  if (!fs.existsSync(`./static${slug}`)) {
+    fs.mkdirSync(`./static${slug}`)
+  }
+
+  const browser = await puppeteer.launch({
+    defaultViewport: {
+      width: 1200,
+      height: 630,
+    },
+  })
+  const page = await browser.newPage()
+  await page.goto(
+    `file://${__dirname}/social-card.html?slug=${slug}&title=${title}&excerpt=${excerpt}`,
+    { waitUntil: "networkidle0" }
+  )
+  await page.screenshot({
+    path: `./static${slug}social-card.png`,
+    type: "png",
+    omitBackground: true,
+  })
+  await browser.close()
+}
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -14,11 +44,13 @@ exports.createPages = async ({ graphql, actions }) => {
         ) {
           edges {
             node {
+              excerpt(pruneLength: 160)
               fields {
                 slug
               }
               frontmatter {
                 title
+                description
               }
             }
           }
@@ -33,6 +65,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blog posts pages.
   const posts = result.data.allMarkdownRemark.edges
+
+  for (let index = 0; index < posts.length; index++) {
+    const post = posts[index]
+    const slug = post.node.fields.slug
+    const title = post.node.frontmatter.title
+    const excerpt = post.node.frontmatter.description || post.node.excerpt
+    await createShareImage(slug, title, excerpt)
+  }
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
