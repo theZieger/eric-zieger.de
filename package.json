@@ -19,7 +19,7 @@
     "gatsby-remark-smartypants": "2.3.12",
     "gatsby-source-filesystem": "2.3.31",
     "gatsby-source-twitter": "3.2.2",
-    "gatsby-transformer-remark": "2.8.36",
+    "gatsby-transformer-remark": "2.8.37",
     "gatsby-transformer-sharp": "2.5.16",
     "preact": "10.5.3",
     "preact-render-to-string": "5.1.10",
