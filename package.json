@@ -10,7 +10,7 @@
     "gatsby-plugin-feed": "2.5.14",
     "gatsby-plugin-manifest": "2.4.34",
     "gatsby-plugin-offline": "3.2.31",
-    "gatsby-plugin-preact": "4.0.14",
+    "gatsby-plugin-preact": "4.0.15",
     "gatsby-plugin-react-helmet": "3.3.14",
     "gatsby-plugin-sharp": "2.6.39",
     "gatsby-remark-classes": "1.0.0",
