@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "2.3.36",
     "gatsby-source-twitter": "3.2.2",
     "gatsby-transformer-remark": "2.8.46",
-    "gatsby-transformer-sharp": "2.5.19",
+    "gatsby-transformer-sharp": "2.5.20",
     "preact": "10.5.5",
     "preact-render-to-string": "5.1.11",
     "prop-types": "15.7.2",
