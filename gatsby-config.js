@@ -46,7 +46,7 @@ module.exports = {
               maxWidth: 576,
               quality: 50,
               backgroundColor: "#10da75",
-              withWebp: { quality: 50 },
+              withWebp: true,
               tracedSVG: true,
               srcSetBreakpoints: [284, 324, 375, 532],
             },
