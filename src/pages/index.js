@@ -13,7 +13,7 @@ export default function Index({ data }) {
       <section>
         <div>
           <h2>Recent writings</h2>
-          <div className={styles.grid}>
+          <div>
             {posts.map(({ node: { frontmatter, fields, excerpt } }) => {
               const title = frontmatter.title
               const content = frontmatter.description || excerpt
