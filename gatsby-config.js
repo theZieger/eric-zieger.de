@@ -17,6 +17,22 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        https: true,
+        www: false,
+        SymLinksIfOwnerMatch: true,
+        host: 'eric-zieger.de',
+        ErrorDocument: `
+          ErrorDocument 404 /404.html
+        `,
+        custom: `
+            # This is a custom rule!
+            # This is a another custom rule!
+        `,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Eric Zieger (@thezieger) - Frontend Developer`,
