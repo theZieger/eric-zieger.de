@@ -19,18 +19,12 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg-site);
-}
-
-.full {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  background: #fff;
 }
 
 main {
-  flex-grow: 1;
   display: block;
+  background: var(--bg-site);
 }
 
 b,

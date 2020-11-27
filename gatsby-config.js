@@ -17,12 +17,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-plugin-htaccess',
+      resolve: "gatsby-plugin-htaccess",
       options: {
         https: true,
         www: false,
         SymLinksIfOwnerMatch: true,
-        host: 'eric-zieger.de',
+        host: "eric-zieger.de",
         ErrorDocument: `
           ErrorDocument 404 /404.html
         `,
