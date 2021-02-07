@@ -21,6 +21,9 @@
 
 .title {
   margin: 0;
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 .content > p:first-child > [class="gatsby-resp-image-background-image"] {
@@ -36,7 +39,7 @@
 }
 
 .content pre {
-  background: var(--token-darker);
+  background: var(--token-dark);
   color: var(--color-on-dark);
   padding: 1rem 1.5rem;
   overflow: auto;
@@ -65,6 +68,10 @@
   border-radius: 5px;
 }
 
+.content ul {
+  list-style: inside;
+}
+
 .icon {
   width: 1.25em;
   height: 1.25em;
@@ -76,5 +83,5 @@
 }
 
 [class="gatsby-resp-image-image"] {
-  filter: hue-rotate(666deg);
+  filter: hue-rotate(130deg);
 }

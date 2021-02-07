@@ -11,6 +11,17 @@
   --token-accent-lighter: rgba(218, 16, 16, 0.1);
 }
 
+/* vollkorn-italic - latin */
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+  url('/fonts/vollkorn-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('/fonts/vollkorn-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-display: swap;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   font: 1.125em / 1.45 sans-serif;
@@ -36,7 +47,6 @@ a {
   color: var(--color-link, inherit);
   text-decoration: none;
   display: inline-block;
-  padding: 0 2px;
   position: relative;
   overflow: hidden;
   vertical-align: bottom;
@@ -96,7 +106,7 @@ section article {
 }
 
 .link {
-  line-height: calc(1.45em - 4px);
+  line-height: calc(1.5em - 4px);
   border-bottom: 2px solid var(--token-brand);
   background-size: 100% 200%;
 }
@@ -112,3 +122,4 @@ section article {
   font-family: serif;
   text-align: right;
 }
+

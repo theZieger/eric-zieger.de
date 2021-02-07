@@ -2,6 +2,7 @@
 title: window.length
 date: "2020-07-29T22:55:12.346Z"
 description: "I mostly discover new things by mistake. `window.length` is one of those encounters."
+image: "./how-many-frames-are-there.jpg"
 ---
 
 ![A lot of image frames on a wall](./how-many-frames-are-there.jpg)

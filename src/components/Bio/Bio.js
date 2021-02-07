@@ -15,7 +15,7 @@ const Bio = () => {
     query BioQuery {
       avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
-          fixed(width: 55, height: 55) {
+          fixed(width: 55, height: 55, quality: 100) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -44,7 +44,7 @@ const Bio = () => {
         <a href="https://eric-zieger.de/" className="link p-author h-card">
           Eric Zieger
         </a>{" "}
-        (@thezieger) who is a{" "}
+        ({author.handle}) who is a{" "}
         <strong className="p-job-title">Frontend Developer</strong> currently
         working for{" "}
         <a className="link org" href="https://www.powercloud.de">

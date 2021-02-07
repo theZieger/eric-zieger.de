@@ -20,8 +20,10 @@
 }
 
 .title {
-  font-size: 1rem;
-  margin: 0 0 1.45em;
+  font-size: 1.25rem;
+  margin: 0 0 1.25em;
+  font-weight: 400;
+  font-family: Vollkorn, serif;
 }
 
 .column {

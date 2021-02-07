@@ -2,6 +2,7 @@
 title: Hello World!
 date: "2020-07-20T10:11:47.346Z"
 description: "Hey there. I think it is about time that we start talking to one another."
+image: "./hello-world.jpg"
 ---
 
 ![Hello World!](./hello-world.jpg)

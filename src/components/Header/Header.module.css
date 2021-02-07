@@ -1,5 +1,5 @@
 .header {
-  background: var(--token-dark);
+  background: var(--token-darker);
   position: relative;
   z-index: 1;
 

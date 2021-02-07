@@ -2,11 +2,17 @@
   display: flex;
   flex-wrap: nowrap;
   font-style: italic;
-  font-family: serif;
+  font-family: "Vollkorn", serif;
+  font-weight: 400;
   padding: 1rem 0;
   margin-bottom: 1rem;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.bio strong {
+  font-weight: 400;
 }
 
 .image {
