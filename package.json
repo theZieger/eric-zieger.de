@@ -18,7 +18,7 @@
     "gatsby-remark-images": "3.11.1",
     "gatsby-remark-smartypants": "2.10.0",
     "gatsby-source-filesystem": "2.11.1",
-    "gatsby-transformer-remark": "2.16.1",
+    "gatsby-transformer-remark": "3.0.0",
     "gatsby-transformer-sharp": "2.12.1",
     "preact": "10.5.12",
     "preact-render-to-string": "5.1.15",
