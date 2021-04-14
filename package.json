@@ -6,7 +6,7 @@
   "author": "Eric Ziegers <mail@eric-zieger.de>",
   "dependencies": {
     "gatsby": "3.2.1",
-    "gatsby-image": "3.2.0",
+    "gatsby-image": "3.3.0",
     "gatsby-plugin-htaccess": "1.4.0",
     "gatsby-plugin-manifest": "3.2.0",
     "gatsby-plugin-offline": "4.2.0",
