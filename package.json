@@ -19,7 +19,7 @@
     "gatsby-remark-smartypants": "3.2.0",
     "gatsby-source-filesystem": "3.2.0",
     "gatsby-transformer-remark": "3.2.0",
-    "gatsby-transformer-sharp": "3.2.0",
+    "gatsby-transformer-sharp": "3.3.0",
     "preact": "10.5.13",
     "preact-render-to-string": "5.1.19",
     "puppeteer": "8.0.0",
