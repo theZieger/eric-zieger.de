@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Eric Ziegers <mail@eric-zieger.de>",
   "dependencies": {
-    "gatsby": "3.3.1",
+    "gatsby": "3.5.0",
     "gatsby-image": "3.3.0",
     "gatsby-plugin-htaccess": "1.4.0",
     "gatsby-plugin-manifest": "3.3.0",
