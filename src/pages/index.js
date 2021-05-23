@@ -2,9 +2,21 @@ import React from "react"
 import Layout from "../components/Layout"
 import Elevator from "../components/Elevator"
 import { Link, graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
-import styles from "./index.module.css"
-import Image from "gatsby-image"
+import {
+  full,
+  mainTitle,
+  stack,
+  switcher,
+  card,
+  image,
+  atitle,
+  meta,
+  text,
+  link,
+  icon,
+} from "./index.module.css"
 
 export default function Index({ data }) {
   const posts = data.allMarkdownRemark.edges
@@ -12,33 +24,34 @@ export default function Index({ data }) {
     <Layout>
       <Elevator />
       <section>
-        <div className={styles.full}>
-          <h2 className={styles.mainTitle}>Recent writings</h2>
-          <div className={styles.stack + ' ' + styles.switcher}>
+        <div className={full}>
+          <h2 className={mainTitle}>Recent writings</h2>
+          <div className={stack + " " + switcher}>
             {posts.map(({ node: { frontmatter, fields, excerpt } }) => {
               const title = frontmatter.title
               const content = frontmatter.description || excerpt
-              const imageData = frontmatter.image.childImageSharp.fluid
+              const imageData =
+                frontmatter.image.childImageSharp.gatsbyImageData
 
               return (
-                <article className={styles.card} key={fields.slug}>
-                  <Image className={styles.image} fluid={imageData} />
+                <article className={card} key={fields.slug}>
+                  <GatsbyImage image={imageData} className={image} />
                   <header>
-                    <h3 className={styles.title}>{title}</h3>
-                    <div className={styles.meta}>
+                    <h3 className={atitle}>{title}</h3>
+                    <div className={meta}>
                       <small>{frontmatter.date}</small>
                     </div>
                   </header>
                   <p
-                    className={styles.text}
+                    className={text}
                     dangerouslySetInnerHTML={{
-                      __html: content
+                      __html: content,
                     }}
                   />
-                  <Link className={styles.link} to={fields.slug}>
+                  <Link className={link} to={fields.slug}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className={styles.icon}
+                      className={icon}
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="currentcolor"
@@ -64,13 +77,13 @@ export default function Index({ data }) {
 }
 
 export const pageQuery = graphql`
-  query {
+  {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
@@ -84,9 +97,13 @@ export const pageQuery = graphql`
             description
             image {
               childImageSharp {
-                fluid (maxWidth: 527, maxHeight: 108, background: "rgba(255,255,255,1)", quality: 40) {
-                  ...GatsbyImageSharpFluid
-                }
+                gatsbyImageData(
+                  width: 527
+                  height: 108
+                  backgroundColor: "rgba(255,255,255,1)"
+                  quality: 40
+                  layout: CONSTRAINED
+                )
               }
             }
           }
@@ -94,5 +111,4 @@ export const pageQuery = graphql`
       }
     }
   }
-
 `

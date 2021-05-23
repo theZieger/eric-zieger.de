@@ -1,12 +1,12 @@
 import React from "react"
 
-import styles from "./Elevator.module.css"
+import { elevator, title } from "./Elevator.module.css"
 
-export default () => {
+export default function Elevator() {
   return (
-    <section className={styles.elevator}>
+    <section className={elevator}>
       <div>
-        <h1 className={styles.title}>
+        <h1 className={title}>
           Hey, I'm Eric! <span aria-hidden="true">✌️</span>
         </h1>
         <p className="p-note">

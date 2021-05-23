@@ -5,17 +5,16 @@
     height: 3.5rem;
 }
 
-.title,
+.atitle,
 .main-title {
     font-family: "Vollkorn", serif;
     font-weight: 400;
 }
 
-.title {
+.atitle {
     margin: 0;
     line-height: 1.2;
     font-size: 1.5rem;
-
 }
 
 .main-title {

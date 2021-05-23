@@ -1,16 +1,16 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import styles from "./Header.module.css"
+import { header, homeLink, logo } from "./Header.module.css"
 
 const Header = () => (
-  <header className={"layout-block " + styles.header} role="banner">
+  <header className={"layout-block " + header} role="banner">
     <nav>
-      <Link className={styles.homeLink} to="/">
+      <Link className={homeLink} to="/">
         <img
           width="32"
           height="32"
-          className={styles.logo}
+          className={logo}
           src="/icons/icon-96x96.png"
           alt=""
         />

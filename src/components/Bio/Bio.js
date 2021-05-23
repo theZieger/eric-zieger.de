@@ -7,17 +7,15 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import styles from "./Bio.module.css"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { bio, image } from "./Bio.module.css"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
+      file(absolutePath: { regex: "/profile.png/" }) {
         childImageSharp {
-          fixed(width: 55, height: 55, quality: 100) {
-            ...GatsbyImageSharpFixed
-          }
+          gatsbyImageData(width: 100, height: 100, quality: 100, layout: FIXED)
         }
       }
       site {
@@ -33,11 +31,11 @@ const Bio = () => {
 
   const { author } = data.site.siteMetadata
   return (
-    <p className={styles.bio}>
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
+    <p className={bio}>
+      <GatsbyImage
+        image={data.file.childImageSharp.gatsbyImageData}
         alt={`Portrait of ${author.name} (${author.handle})`}
-        className={styles.image + " u-photo"}
+        className={image + " u-photo"}
       />
       <span>
         Written by{" "}

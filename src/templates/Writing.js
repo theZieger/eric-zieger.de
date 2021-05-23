@@ -1,9 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
-import styles from "./Writing.module.css"
+import Seo from "../components/SEO"
+import { content, footer, icon, meta, more, title } from "./Writing.module.css"
 import { Helmet } from "react-helmet"
 
 const MONTHS = [
@@ -32,7 +32,7 @@ const WritingTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
@@ -49,10 +49,8 @@ const WritingTemplate = ({ data, pageContext }) => {
       <article className="h-entry">
         <div>
           <header>
-            <h1 className={styles.title + " p-name"}>
-              {post.frontmatter.title}
-            </h1>
-            <div className={styles.meta}>
+            <h1 className={title + " p-name"}>{post.frontmatter.title}</h1>
+            <div className={meta}>
               <a href={`https://eric-zieger.de${slug}`} className="u-url">
                 <time className="dt-published" datetime={post.frontmatter.date}>
                   {format(post.frontmatter.date)}
@@ -62,15 +60,15 @@ const WritingTemplate = ({ data, pageContext }) => {
             </div>
           </header>
           <div
-            className={styles.content + " e-content"}
+            className={content + " e-content"}
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
-          <footer className={styles.footer}>
+          <footer className={footer}>
             <Bio />
 
             {(previous || next) && (
               <nav>
-                <ul className={styles.more}>
+                <ul className={more}>
                   <li>
                     {previous && (
                       <Link
@@ -80,7 +78,7 @@ const WritingTemplate = ({ data, pageContext }) => {
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className={styles.icon}
+                          className={icon}
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentcolor"
@@ -103,7 +101,7 @@ const WritingTemplate = ({ data, pageContext }) => {
                         {next.frontmatter.title}{" "}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className={styles.icon}
+                          className={icon}
                           viewBox="0 0 24 24"
                           stroke-width="1.5"
                           stroke="currentcolor"

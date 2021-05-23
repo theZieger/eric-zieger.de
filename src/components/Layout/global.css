@@ -4,8 +4,8 @@
   --token-darker: #121217;
   --color-on-dark: #e8e8e8;
   --token-brand: rgb(16, 218, 117);
-  --token-brand-light: rgb(16, 218, 117, 0.33);
-  --token-brand-lighter: rgb(16, 218, 117, 0.1);
+  --token-brand-light: rgb(16, 218, 117);
+  --token-brand-lighter: rgb(16, 218, 117);
   --token-accent: rgb(218, 16, 16);
   --token-accent-light: rgba(218, 16, 16, 0.33);
   --token-accent-lighter: rgba(218, 16, 16, 0.1);

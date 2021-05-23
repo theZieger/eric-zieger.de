@@ -12,9 +12,11 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-preact`,
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-htaccess",
@@ -66,11 +68,12 @@ module.exports = {
               quality: 50,
               backgroundColor: "#10da75",
               withWebp: true,
+              withAvif: true,
+              loading: "lazy",
               tracedSVG: true,
               srcSetBreakpoints: [284, 324, 375, 532],
             },
           },
-          `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           {
             resolve: `gatsby-remark-classes`,
