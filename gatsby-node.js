@@ -1,8 +1,9 @@
-const fs = require(`fs`)
+// const fs = require(`fs`)
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const puppeteer = require("puppeteer")
+// const puppeteer = require("puppeteer")
 
+/*
 async function createShareImage(browser, slug, title, excerpt) {
   const folder = slug.split("/")[1]
   if (!fs.existsSync("./static/" + folder)) {
@@ -24,6 +25,7 @@ async function createShareImage(browser, slug, title, excerpt) {
   })
   await page.close();
 }
+ */
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -60,6 +62,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog posts pages.
   const posts = result.data.allMarkdownRemark.edges
 
+  /*
   const browser = await puppeteer.launch({
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
     defaultViewport: {
@@ -77,6 +80,7 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   await browser.close();
+  */
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
