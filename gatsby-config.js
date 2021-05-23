@@ -68,7 +68,6 @@ module.exports = {
               quality: 50,
               backgroundColor: "#10da75",
               withWebp: true,
-              withAvif: true,
               loading: "lazy",
               tracedSVG: true,
               srcSetBreakpoints: [284, 324, 375, 532],
