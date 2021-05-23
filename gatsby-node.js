@@ -3,7 +3,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const puppeteer = require("puppeteer")
 
-async function createShareImage(slug, title, excerpt) {
+async function createShareImage(browser, slug, title, excerpt) {
   const folder = slug.split("/")[1]
   if (!fs.existsSync("./static/" + folder)) {
     fs.mkdirSync("./static/" + folder)
@@ -12,13 +12,6 @@ async function createShareImage(slug, title, excerpt) {
     fs.mkdirSync(`./static${slug}`)
   }
 
-  const browser = await puppeteer.launch({
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    defaultViewport: {
-      width: 1200,
-      height: 630,
-    },
-  })
   const page = await browser.newPage()
   await page.goto(
     `file://${__dirname}/social-card.html?slug=${slug}&title=${title}&excerpt=${excerpt}`,
@@ -29,7 +22,7 @@ async function createShareImage(slug, title, excerpt) {
     type: "png",
     omitBackground: true,
   })
-  await browser.close()
+  await page.close();
 }
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -67,13 +60,23 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create blog posts pages.
   const posts = result.data.allMarkdownRemark.edges
 
+  const browser = await puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    defaultViewport: {
+      width: 1200,
+      height: 630,
+    },
+  })
+
   for (let index = 0; index < posts.length; index++) {
     const post = posts[index]
     const slug = post.node.fields.slug
     const title = post.node.frontmatter.title
     const excerpt = post.node.frontmatter.description || post.node.excerpt
-    await createShareImage(slug, title, excerpt)
+    await createShareImage(browser, slug, title, excerpt)
   }
+
+  await browser.close();
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
