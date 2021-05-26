@@ -8,7 +8,7 @@
     "gatsby": "3.6.0",
     "gatsby-plugin-htaccess": "1.4.0",
     "gatsby-plugin-image": "^1.5.0",
-    "gatsby-plugin-manifest": "3.5.0",
+    "gatsby-plugin-manifest": "3.6.0",
     "gatsby-plugin-offline": "4.6.0",
     "gatsby-plugin-postcss": "^4.5.0",
     "gatsby-plugin-preact": "5.5.0",
