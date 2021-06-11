@@ -11,7 +11,7 @@
     "gatsby-plugin-manifest": "3.7.0",
     "gatsby-plugin-offline": "4.7.0",
     "gatsby-plugin-postcss": "^4.7.0",
-    "gatsby-plugin-preact": "5.7.0",
+    "gatsby-plugin-preact": "5.7.1",
     "gatsby-plugin-react-helmet": "4.7.0",
     "gatsby-plugin-sharp": "3.7.0",
     "gatsby-remark-classes": "1.0.0",
