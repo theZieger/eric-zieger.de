@@ -20,7 +20,7 @@
     "gatsby-source-filesystem": "3.7.1",
     "gatsby-transformer-remark": "4.4.1",
     "gatsby-transformer-sharp": "3.7.1",
-    "postcss": "8.3.2",
+    "postcss": "8.3.4",
     "preact": "10.5.13",
     "preact-render-to-string": "5.1.19",
     "puppeteer": "10.0.0",
