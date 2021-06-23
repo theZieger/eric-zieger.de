@@ -16,7 +16,7 @@
     "gatsby-plugin-sharp": "3.7.1",
     "gatsby-remark-classes": "1.0.0",
     "gatsby-remark-images": "5.4.1",
-    "gatsby-remark-smartypants": "4.4.1",
+    "gatsby-remark-smartypants": "4.5.0",
     "gatsby-source-filesystem": "3.7.1",
     "gatsby-transformer-remark": "4.4.1",
     "gatsby-transformer-sharp": "3.7.1",
