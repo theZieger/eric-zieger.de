@@ -13,7 +13,7 @@
     "gatsby-plugin-postcss": "4.7.1",
     "gatsby-plugin-preact": "5.7.1",
     "gatsby-plugin-react-helmet": "4.7.1",
-    "gatsby-plugin-sharp": "3.7.1",
+    "gatsby-plugin-sharp": "3.8.0",
     "gatsby-remark-classes": "1.0.0",
     "gatsby-remark-images": "5.4.1",
     "gatsby-remark-smartypants": "4.4.1",
