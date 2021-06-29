@@ -1,0 +1,27 @@
+name: Build, create share images and deploy to server
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Check out code
+        uses: actions/checkout@v2
+      - name: ✨ Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: 🔨 Build project
+        run: |
+          npm ci
+          npm run build
+      - name: 🚀 Publish page
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          local-dir: ./dist/
+          server-dir: /web/
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
