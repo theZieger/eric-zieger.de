@@ -10,4 +10,4 @@ updates:
     open-pull-requests-limit: 10
     # Check the npm registry for updates every day (weekdays)
     schedule:
-      interval: "live"
+      interval: "daily"
