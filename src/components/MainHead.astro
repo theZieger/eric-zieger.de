@@ -1,0 +1,52 @@
+---
+// props
+import './MainHead.css';
+
+const {
+    title = "Eric Zieger (@thezieger) - Frontend Developer",
+    description = "Frontend Developer and Media Designer from Leipzig, Deutschland.",
+    canonicalURL = "",
+    socialImage = ""
+} = Astro.props;
+---
+
+<!-- Common -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="snowpackjs/astro">
+<link rel="stylesheet" href="http://cdn.skypack.dev/prism-themes/themes/prism-night-owl.css">
+
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="sitemap" href="/sitemap.xml">
+
+<!-- SEO -->
+<link rel="canonical" href={canonicalURL}>
+
+<link rel="icon" href="/favicon-32x32.png?v=9e47e747d9c8a5bd8d1013848d4c3952" type="image/png" />
+<link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous">
+
+<link rel="webmention" href="https://webmention.io/eric-zieger.de/webmention">
+<link rel="pingback" href="https://webmention.io/eric-zieger.de/xmlrpc">
+
+<meta name="theme-color" content="#121217">
+<link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=9e47e747d9c8a5bd8d1013848d4c3952">
+<link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=9e47e747d9c8a5bd8d1013848d4c3952">
+<link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=9e47e747d9c8a5bd8d1013848d4c3952">
+<link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=9e47e747d9c8a5bd8d1013848d4c3952">
+<link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=9e47e747d9c8a5bd8d1013848d4c3952">
+<link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=9e47e747d9c8a5bd8d1013848d4c3952">
+<link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=9e47e747d9c8a5bd8d1013848d4c3952">
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=9e47e747d9c8a5bd8d1013848d4c3952">
+
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:type" content="website">
+<meta name="og:image" content={socialImage}>
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@thezieger">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:image" content={socialImage}>
+<meta name="twitter:description" content={description}>

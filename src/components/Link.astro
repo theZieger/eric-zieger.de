@@ -1,0 +1,12 @@
+---
+const {
+    href,
+    rel,
+    target,
+    className = 'text-brand-accent'
+} = Astro.props;
+---
+
+<a class={className + " hover:underline"} href={href} rel={rel} target={target}>
+    <slot />
+</a>

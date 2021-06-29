@@ -1,0 +1,16 @@
+---
+import Link from './Link.astro';
+
+const { 
+    photographer,
+    unsplash,
+    className = '',
+ } = Astro.props;
+
+---
+<div class={className + " relative"}>
+    <slot />
+    <div class="z-20 font-serif text-sm absolute bottom-0 right-0 bg-white px-2 py-0.5 opacity-80 hover:opacity-100 focus-within:opacity-100 rounded-tl-sm transition-opacity">
+        Photo by <Link className="text-gray-900" target="_blank" rel="noopener noreferrer" href={'https://unsplash.com' + unsplash}>{photographer}</Link>
+    </div>
+</div>

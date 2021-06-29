@@ -1,0 +1,20 @@
+---
+import ContentWrapper from './ContentWrapper.astro'
+import Link from './Link.astro'
+---
+
+<section class="clipped bg-gray-900 text-gray-100 p-6 pb-16">
+    <style>
+        .clipped {clip-path: polygon(-1% 100%,-1% -1%,100% -1%,100% 100%,100% calc(100% - 3vh));}
+    </style>
+    <ContentWrapper>
+        <h1 class="font-serif text-4xl text-center my-6">Hey, I'm Eric! <span aria-hidden="true">✌️</span></h1>
+        <p class="leading-relaxed my-3 text-lg">
+            I'm a <strong>Frontend Developer</strong> from Leipzig, Germany.
+            I'm in love with declarative and component-driven frontends, CSS, design-systems, and accessibility. 
+            I currently work on the open cloud platform for energy supply companies at 
+            <Link className="text-brand-green" href="https://www.powercloud.de">powercloud GmbH</Link>. Before that, I worked for 5 years at 
+            <Link className="text-brand-green" href="https://www.invia.de/">Invia Travel Germany GmbH</Link>.
+        </p>
+    </ContentWrapper>
+</section>

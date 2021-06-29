@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: calc(1em + 0.025vw);
+}
+
+.post-image {
+    filter: hue-rotate(130deg);
+}
+
+.sr-only {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+}
+
+@keyframes arrow-animation {
+    0% {
+        transform: translateX(0)
+    }
+
+    40% {
+        transform: translateX(-.2em)
+    }
+
+    75% {
+        transform: translateX(.2em)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+.arrow-animation:focus svg,
+.arrow-animation:hover svg {
+    animation: arrow-animation .5s ease-in-out infinite
+}

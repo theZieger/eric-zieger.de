@@ -1,0 +1,22 @@
+---
+import ArrowRight from "./ArrowRight"
+import ArrowLeft from "./ArrowLeft"
+import Link from "./Link"
+
+const { prev, next } = Astro.props;
+---
+
+<nav class="flex flex-row py-12">
+    <div class="w-1/2">
+        <Link href={prev}>
+            <ArrowLeft />
+            previous
+        </Link>
+    </div>
+    <div class="w-1/2 text-right">
+        <Link href={next}>
+            next
+            <ArrowRight />
+        </Link>
+    </div>
+</nav>

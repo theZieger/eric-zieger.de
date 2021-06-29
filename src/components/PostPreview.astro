@@ -1,0 +1,36 @@
+---
+import UnsplashWrapper from "./UnsplashWrapper";
+import ArrowRight from "./ArrowRight";
+
+const { post } = Astro.props;
+
+const {title, description, date, url, image, unsplash, photographer} = post;
+const readableDate = new Intl.DateTimeFormat('en-US').format(new Date(date));
+const optimizedImage = image.replace('.jpg', '.webp');
+---
+
+<article class="p-4 w-full lg:w-1/3 h-full">
+    <div class="rounded overflow-hidden bg-white shadow-md hover:shadow-lg focus-within:shadow-lg transition-shadow relative">
+        <UnsplashWrapper unsplash={unsplash} photographer={photographer}>
+            <picture>
+                <source media={`(max-width: 351px), (min-width: 1024px) and (max-width: 1279px)`} srcset={`/images/optimized/303/${optimizedImage}`} />
+                <source media={`(max-width: 437px), (min-width: 1280px) and (max-width: 1535px)`} srcset={`/images/optimized/389/${optimizedImage}`} />
+                <source media={`(max-width: 521px), (min-width: 1536px)`} srcset={`/images/optimized/473/${optimizedImage}`} />
+                <source media={`(max-width: 767px)`} srcset={`/images/optimized/591/${optimizedImage}`} />
+                <source media={`(max-width: 1023px)`} srcset={`/images/optimized/719/${optimizedImage}`} />
+                <img loading="lazy" class="post-image h-44 w-full object-cover object-center" src={'/images/' + image} alt="" />
+            </picture>
+        </UnsplashWrapper>
+        <div class="p-6">
+            <header>
+                <h1 class="font-serif text-2xl font-bold text-gray-900 mb-3">{title}</h1>
+                <time datetime={date} class="font-mono text-sm block mb-3">{readableDate}</time>
+            </header>
+            <p class="leading-relaxed mb-6">{description}</p>
+            <a href={url} class="text-brand-accent absolute z-10 focus:z-20 inset-0 focus:ring-4 ring-brand-accent ring-inset flex arrow-animation">
+                <span class="sr-only">Read "{title}"</span>
+                <span class="absolute bottom-6 right-6"><ArrowRight /></span>
+            </a>
+        </div>
+    </div>
+</article>

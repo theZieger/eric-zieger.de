@@ -1,0 +1,43 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Header from '../components/Header.astro'
+import Introduction from '../components/Introduction.astro'
+import Footer from '../components/Footer.astro'
+import PostPreview from '../components/PostPreview.astro'
+
+const title = 'Eric Zieger (@thezieger) - Frontend Developer';
+const description = 'Frontend Developer and Media Designer from Leipzig, Deutschland.';
+
+// collection
+// note: we want to show first 3 posts here, but we don’t want to paginate at /1, /2, /3, etc.
+// so we show a preview of posts here, but actually paginate from $posts.astro
+const allPosts = Astro.fetchContent('./posts/*.md');
+allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+const firstPage = allPosts.slice(0, 3);
+---
+
+<html lang="en">
+  <head>
+    <MainHead
+      title={title}
+      description={description}
+      canonicalURL={Astro.request.canonicalURL.href}
+    />
+  </head>
+  <body class="bg-gray-50 flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-grow">
+      <Introduction />
+      <section class="text-gray-600 body-font">
+        <div class="container p-6 pb-12 mx-auto">
+          <h2 class="font-serif text-4xl my-6">Recent writings</h2>
+
+          <div class="flex flex-wrap -m-4">
+            {firstPage.map((post, i, allPosts) => <PostPreview post={post} />)}
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>
