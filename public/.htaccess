@@ -550,5 +550,5 @@ FileETag None
     </Files>
     <FilesMatch "\.(jpg|webp)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
-    </Files>
+    </FilesMatch>
 </IfModule>
