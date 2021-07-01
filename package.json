@@ -6,10 +6,11 @@
     "images": "node ./scripts/images",
     "images:social": "node ./scripts/social-images",
     "start": "astro dev",
-    "build": "npm run images && npm run images:social && astro build"
+    "copy": "cp ./public/.htaccess ./dist/.htaccess",
+    "build": "npm run images && npm run images:social && astro build && npm run copy"
   },
   "devDependencies": {
-    "astro": "0.15.3",
+    "astro": "0.15.5",
     "front-matter": "4.0.2",
     "puppeteer": "10.1.0",
     "sharp": "0.28.3",
