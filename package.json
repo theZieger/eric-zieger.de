@@ -9,12 +9,10 @@
     "build": "npm run images && npm run images:social && astro build"
   },
   "devDependencies": {
-    "astro": "^0.15.3",
-    "front-matter": "^4.0.2",
-    "nodemon": "^2.0.9",
-    "puppeteer": "^10.1.0",
-    "sharp": "^0.28.3",
-    "slugify": "^1.5.3",
-    "tailwindcss": "^2.2.4"
+    "astro": "0.15.3",
+    "front-matter": "4.0.2",
+    "puppeteer": "10.1.0",
+    "sharp": "0.28.3",
+    "tailwindcss": "2.2.4"
   }
 }
