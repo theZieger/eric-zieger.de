@@ -548,4 +548,7 @@ FileETag None
     <Files sw.js>
         Header set Cache-Control "public, max-age=0, must-revalidate"
     </Files>
+    <FilesMatch "\.(jpg|webp)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </Files>
 </IfModule>
