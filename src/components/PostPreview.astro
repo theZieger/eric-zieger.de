@@ -13,11 +13,11 @@ const optimizedImage = image.replace('.jpg', '.webp');
     <div class="rounded overflow-hidden bg-white shadow-md hover:shadow-lg focus-within:shadow-lg transition-shadow relative">
         <UnsplashWrapper unsplash={unsplash} photographer={photographer}>
             <picture>
-                <source media={`(max-width: 351px), (min-width: 1024px) and (max-width: 1279px)`} srcset={`/images/optimized/303/${optimizedImage}`} />
-                <source media={`(max-width: 437px), (min-width: 1280px) and (max-width: 1535px)`} srcset={`/images/optimized/389/${optimizedImage}`} />
-                <source media={`(max-width: 521px), (min-width: 1536px)`} srcset={`/images/optimized/473/${optimizedImage}`} />
-                <source media={`(max-width: 767px)`} srcset={`/images/optimized/591/${optimizedImage}`} />
-                <source media={`(max-width: 1023px)`} srcset={`/images/optimized/719/${optimizedImage}`} />
+                <source media={`(max-width: 21.9375rem), (min-width: 64rem) and (max-width: 79.9375rem)`} srcset={`/images/optimized/303/${optimizedImage}`} />
+                <source media={`(max-width: 27.3125rem), (min-width: 80rem) and (max-width: 95.9375rem)`} srcset={`/images/optimized/389/${optimizedImage}`} />
+                <source media={`(max-width: 32.5625rem), (min-width: 96rem)`} srcset={`/images/optimized/473/${optimizedImage}`} />
+                <source media={`(max-width: 47.9375rem)`} srcset={`/images/optimized/591/${optimizedImage}`} />
+                <source media={`(max-width: 63.9375rem)`} srcset={`/images/optimized/719/${optimizedImage}`} />
                 <img loading="lazy" class="post-image h-44 w-full object-cover object-center" src={'/images/' + image} alt="" />
             </picture>
         </UnsplashWrapper>
@@ -33,4 +33,37 @@ const optimizedImage = image.replace('.jpg', '.webp');
             </a>
         </div>
     </div>
+    <style>
+        .sr-only {
+            height: 1px;
+            left: -10000px;
+            overflow: hidden;
+            position: absolute;
+            top: auto;
+            width: 1px;
+        }
+        
+        @keyframes arrow-animation {
+            0% {
+                transform: translateX(0)
+            }
+
+            40% {
+                transform: translateX(-.2em)
+            }
+
+            75% {
+                transform: translateX(.2em)
+            }
+
+            to {
+                transform: translateX(0)
+            }
+        }
+
+        .arrow-animation:focus svg,
+        .arrow-animation:hover svg {
+            animation: arrow-animation .5s ease-in-out infinite
+        }
+    </style>
 </article>

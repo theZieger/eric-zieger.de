@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.post-image {
+  filter: hue-rotate(130deg);
+}

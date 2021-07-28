@@ -24,24 +24,11 @@ const readableDate = new Intl.DateTimeFormat('en-US').format(new Date(date));
           /\//g, ''
         )}.png`}
     />
-    <style lang="scss">
-      .article {
-        :global(p) {
-          font-size: 1.1rem;
-          line-height: 1.5;
-          margin-top: 1.25em;
-          margin-bottom: 1.25em;
-        }
-        :global(ul) {
-          list-style: inside;
-          margin-left: .75em
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="/post.css" />
   </head>
   <body class="bg-gray-50 flex flex-col min-h-screen">
     <Header />
-    <main class="flex-grow mx-auto container max-w-screen-sm py-12 px-6">
+    <main class="flex-grow mx-auto max-w-2xl py-12 px-6">
       <h1 class="font-serif text-4xl font-bold text-gray-900 mb-3">{content.title}</h1>
       <time datetime={date} class="font-mono text-sm block mb-6">{readableDate}</time>
       <UnsplashWrapper unsplash={unsplash} photographer={photographer} className="md:-mx-16">
