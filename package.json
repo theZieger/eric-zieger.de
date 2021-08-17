@@ -13,7 +13,7 @@
     "astro": "0.18.13",
     "front-matter": "4.0.2",
     "puppeteer": "10.2.0",
-    "sharp": "0.28.3",
+    "sharp": "0.29.0",
     "tailwindcss": "2.2.7"
   }
 }
