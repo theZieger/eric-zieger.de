@@ -10,7 +10,7 @@
     "build": "npm run images && npm run images:social && astro build && npm run copy"
   },
   "devDependencies": {
-    "astro": "0.19.4",
+    "astro": "0.20.1",
     "front-matter": "4.0.2",
     "puppeteer": "10.2.0",
     "sharp": "0.29.0",
