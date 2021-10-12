@@ -18,10 +18,11 @@ jobs:
           npm ci
           npm run build
       - name: 🚀 Publish page
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           local-dir: ./dist/
           server-dir: /web/
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          dangerous-clean-slate: true
