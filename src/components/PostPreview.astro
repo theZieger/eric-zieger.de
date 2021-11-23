@@ -1,6 +1,6 @@
 ---
-import UnsplashWrapper from "./UnsplashWrapper";
-import ArrowRight from "./ArrowRight";
+import UnsplashWrapper from "./UnsplashWrapper.astro";
+import ArrowRight from "./ArrowRight.astro";
 
 const { post } = Astro.props;
 
@@ -42,7 +42,7 @@ const optimizedImage = image.replace('.jpg', '.webp');
             top: auto;
             width: 1px;
         }
-        
+
         @keyframes arrow-animation {
             0% {
                 transform: translateX(0)
