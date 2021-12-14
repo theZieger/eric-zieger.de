@@ -5,8 +5,6 @@ import Footer from '../components/Footer.astro';
 import UnsplashWrapper from '../components/UnsplashWrapper.astro';
 import ShortBio from '../components/ShortBio.astro';
 import Pagination from '../components/Pagination.astro';
-import '../global.css'
-import './post.css'
 
 const { content } = Astro.props;
 
@@ -26,6 +24,8 @@ const readableDate = new Intl.DateTimeFormat('en-US').format(new Date(date));
           /\//g, ''
         )}.png`}
     />
+  <link rel="stylesheet" type="text/css" href={Astro.resolve('../global.css')} />
+  <link rel="stylesheet" type="text/css" href={Astro.resolve('./post.css')} />
   </head>
   <body class="bg-gray-50 flex flex-col min-h-screen">
     <Header />

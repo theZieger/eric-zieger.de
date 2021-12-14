@@ -4,7 +4,6 @@ import Header from '../components/Header.astro'
 import Introduction from '../components/Introduction.astro'
 import Footer from '../components/Footer.astro'
 import PostPreview from '../components/PostPreview.astro'
-import '../global.css'
 
 const title = 'Eric Zieger (@thezieger) - Frontend Developer';
 const description = 'Frontend Developer and Media Designer from Leipzig, Deutschland.';
@@ -24,6 +23,7 @@ const firstPage = allPosts.slice(0, 3);
       description={description}
       canonicalURL={Astro.request.canonicalURL.href}
     />
+    <link rel="stylesheet" type="text/css" href={Astro.resolve('../global.css')} />
   </head>
   <body class="bg-gray-50 flex flex-col min-h-screen">
     <Header />
