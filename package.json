@@ -1,6 +1,6 @@
 {
-  "name": "@astrojs/example-blog",
-  "version": "0.0.1",
+  "name": "@thezieger/website",
+  "version": "6.6.6",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -9,7 +9,7 @@
     "images": "node ./scripts/images",
     "images:social": "node ./scripts/social-images",
     "copy": "cp ./public/.htaccess ./dist/.htaccess",
-    "build": "npm run images && npm run images:social && astro build && npm run copy"
+    "build": "npm run images && npm run images:social && astro build"
   },
   "devDependencies": {
     "astro": "0.22.19",

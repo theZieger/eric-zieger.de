@@ -23,7 +23,6 @@ const firstPage = allPosts.slice(0, 3);
       description={description}
       canonicalURL={Astro.request.canonicalURL.href}
     />
-    <link rel="stylesheet" type="text/css" href={Astro.resolve('../global.css')} />
   </head>
   <body class="bg-gray-50 flex flex-col min-h-screen">
     <Header />
