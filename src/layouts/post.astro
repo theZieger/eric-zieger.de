@@ -4,19 +4,18 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import UnsplashWrapper from '../components/UnsplashWrapper.astro';
 import ShortBio from '../components/ShortBio.astro';
-import Pagination from '../components/Pagination.astro';
 
 const { content } = Astro.props;
 
-const { title, date, image, unsplash, photographer, url } = content;
+const { title, date, image, unsplash, photographer, description } = content;
 const readableDate = new Intl.DateTimeFormat('en-US').format(new Date(date));
 ---
 
 <html lang="en">
   <head>
     <MainHead
-      title={content.title}
-      description={content.description}
+      title={title}
+      description={description}
       canonicalURL={Astro.request.canonicalURL.href}
       socialImage={`/images/social/${Astro.request.canonicalURL.href.replace(
         'https://eric-zieger.de/posts', ''
@@ -30,7 +29,7 @@ const readableDate = new Intl.DateTimeFormat('en-US').format(new Date(date));
   <body class="bg-gray-50 flex flex-col min-h-screen">
     <Header />
     <main class="flex-grow mx-auto max-w-2xl py-12 px-6">
-      <h1 class="font-serif text-4xl font-bold text-gray-900 mb-3">{content.title}</h1>
+      <h1 class="font-serif text-4xl font-bold text-gray-900 mb-3">{title}</h1>
       <time datetime={date} class="font-mono text-sm block mb-6">{readableDate}</time>
       <UnsplashWrapper unsplash={unsplash} photographer={photographer} className="md:-mx-16">
         <img loading="lazy" class="post-image w-full object-cover object-center" src={'/images/optimized/719/' + image.replace('.jpg', '.webp')} alt="" />
