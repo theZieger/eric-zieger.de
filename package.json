@@ -12,7 +12,7 @@
     "build": "npm run images && npm run images:social && astro build"
   },
   "devDependencies": {
-    "astro": "0.23.3",
+    "astro": "0.23.6",
     "autoprefixer": "10.4.2",
     "front-matter": "4.0.2",
     "postcss": "8.4.7",
