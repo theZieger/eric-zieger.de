@@ -1,3 +1,18 @@
-<div class="mx-auto max-w-2xl">
+---
+const {
+    narrow
+} = Astro.props;
+---
+
+<div class={narrow ? 'narrow': ''}>
     <slot />
 </div>
+<style>
+    div {
+        margin: 0 auto;
+        max-width: 60rem;
+    }
+    .narrow {
+        max-width: 40rem;
+    }
+</style>

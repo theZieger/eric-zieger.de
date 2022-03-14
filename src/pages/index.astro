@@ -1,9 +1,12 @@
 ---
 import MainHead from '../components/MainHead.astro';
+import Logo from '../components/Logo.astro'
+import Link from '../components/Link.astro'
 import Header from '../components/Header.astro'
-import Introduction from '../components/Introduction.astro'
 import Footer from '../components/Footer.astro'
 import PostPreview from '../components/PostPreview.astro'
+import Section from '../components/Section.astro'
+import ContentWrapper from '../components/ContentWrapper.astro'
 
 const title = 'Eric Zieger (@thezieger) - Frontend Developer';
 const description = 'Frontend Developer and Media Designer from Leipzig, Deutschland.';
@@ -21,9 +24,30 @@ allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
     />
   </head>
   <body class="bg-gray-50 flex flex-col min-h-screen">
-    <Header />
+    <Header>
+      <ContentWrapper narrow>
+        <Link unstyled href="/">
+          <Logo />
+        </Link>
+      </ContentWrapper>
+    </Header>
     <main class="flex-grow">
-      <Introduction />
+      <Section>
+        <ContentWrapper narrow>
+          <h1>Hey, I'm Eric! <span aria-hidden="true">✌️</span></h1>
+          <div>
+            <p>
+              I'm a <strong>Frontend Developer</strong> from Leipzig, Germany.
+              I love to work on declarative and component-driven user interfaces, Cascading Style Sheets, design-systems, and accessibility.
+              Currently I'm working with <Link href="https://www.camao-tec.com">CAMAO TEC - The Experience Company</Link>.
+            </p>
+            <p>
+              Before that, I worked 1.5 years with <Link href="https://power.cloud/en/">powercloud GmbH</Link> - the enabler of the digital energy transition and
+              over 4.5 years with <Link href="https://www.invia.de/en/">Invia Travel Germany GmbH</Link> the pan-European market leader in online travel marketing.
+            </p>
+          </div>
+        </ContentWrapper>
+      </Section>
       <section class="text-gray-600 body-font">
         <div class="container p-6 pb-12 mx-auto">
           <h2 class="font-serif text-4xl my-6">Recent writings</h2>

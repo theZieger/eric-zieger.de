@@ -1,0 +1,42 @@
+---
+import fs from 'node:fs/promises';
+import { Code } from 'astro/components';
+
+import MainHead from '../components/MainHead.astro';
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import ContentWrapper from '../components/ContentWrapper.astro'
+
+const title = 'UI Components';
+const description = 'All the components I use to build the interface of this very page.';
+
+const collection = [];
+const files = await fs.readdir(new URL('../components', import.meta.url));
+
+for (const file of files) {
+    const title = file;
+    const code = await fs.readFile(new URL('../components/' + file, import.meta.url), 'utf-8')
+    collection.push({title,code});
+}
+---
+
+<html lang="en">
+  <head>
+    <MainHead
+      title={title}
+      description={description}
+      canonicalURL={Astro.request.canonicalURL.href}
+    />
+  </head>
+  <body class="bg-gray-50 flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-grow">
+
+        <ContentWrapper>
+            <h1>Components</h1>
+            {collection.map(({title, code}) => <div><h2>{title}</h2><Code code={code} lang="astro" /></div>)}
+        </ContentWrapper>
+    </main>
+    <Footer />
+  </body>
+</html>

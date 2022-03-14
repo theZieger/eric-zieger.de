@@ -1,9 +1,9 @@
----
-import Logo from './Logo.astro';
----
-
-<header class="flex-grow-0 bg-gray-900 text-white p-6" role="banner">
-    <nav class="mx-auto max-w-xl">
-        <Logo />
-    </nav>
+<header role="banner">
+    <slot />
 </header>
+<style>
+    header {
+        background: rgb(var(--background) / .05);
+        padding: 1rem;
+    }
+</style>

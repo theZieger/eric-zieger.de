@@ -3,8 +3,48 @@ const {
     href,
     rel,
     target,
-    className = 'text-brand-accent'
+    unstyled
 } = Astro.props;
 ---
 
-<a class={className + " hover:underline"} href={href} rel={rel} target={target}><slot /></a>
+<a class={unstyled ? '': 'styled'} href={href} rel={rel} target={target}><span><slot /></span></a>
+<style>
+    span {
+        mix-blend-mode: difference;
+    }
+    .styled {
+        color: rgb(var(--link));
+        text-decoration: none;
+        position: relative;
+        transition: background-color .2s ease;
+    }
+    .styled::after {
+        content: "";
+        width: calc(100% + 4px);
+        height: 1px;
+        background: rgb(var(--link));
+        position: absolute;
+        bottom: 0;
+        right: -2px;
+        transition: all .1s ease;
+        z-index: -1;
+    }
+    .styled:focus::after,
+    .styled:hover::after {
+        width: 4px;
+        height: 4px;
+        animation: blink .4s infinite .1s;
+        z-index: 1;
+    }
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>

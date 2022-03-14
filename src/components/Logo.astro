@@ -1,4 +1,22 @@
-<a class="inline-block font-serif lowercase text-2xl" href="/">
-    <img width="32" height="32" class="inline-block rounded-full" src="/icons/icon-96x96.png" alt="">
-    Eric Zieger
-</a>
+<div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="32" height="32">
+        <circle cx="200" cy="200" r="200"></circle>
+        <path fill="#141414" d="M224 64c-57 8-90 75-57 114 6 7 5 9-5 13-52 26-72 101-36 137 27 27 85 23 124-9 18-14 34-37 29-42-3-2-5-1-10 4-18 21-48 33-71 29-45-8-28-91 25-119 8-4 8-6-1-12-15-9-23-26-21-47 2-31 26-54 46-44 13 6 14 28 2 44-5 7-5 10 2 13 16 9 35-10 35-35s-16-42-42-45l-20-1"/>
+    </svg>
+    <span>Eric Zieger</span>
+</div>
+<style>
+    div {
+        font: var(--text-large)/1.5 var(--serif);
+        text-transform: lowercase;
+        color: rgb(var(--text));
+        display: inline-block;
+    }
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    circle {
+        fill: rgba(var(--brand));
+    }
+</style>
