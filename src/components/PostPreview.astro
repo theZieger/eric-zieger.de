@@ -2,9 +2,9 @@
 import UnsplashWrapper from "./UnsplashWrapper.astro";
 import ArrowRight from "./ArrowRight.astro";
 
-const { post } = Astro.props;
+const { post, url } = Astro.props;
 
-const {title, description, date, url, image, unsplash, photographer} = post;
+const {title, description, date, image, unsplash, photographer} = post;
 const readableDate = new Intl.DateTimeFormat('en-US').format(new Date(date));
 const optimizedImage = image.replace('.jpg', '.webp');
 ---

@@ -8,8 +8,8 @@ import PostPreview from '../components/PostPreview.astro'
 const title = 'Eric Zieger (@thezieger) - Frontend Developer';
 const description = 'Frontend Developer and Media Designer from Leipzig, Deutschland.';
 
-const allPosts = Astro.fetchContent('./posts/*.md');
-allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+const allPosts = await Astro.glob('./posts/*.md');
+allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
 ---
 
 <html lang="en">
@@ -17,7 +17,7 @@ allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
     <MainHead
       title={title}
       description={description}
-      canonicalURL={Astro.request.canonicalURL.href}
+      canonicalURL={Astro.canonicalURL.href}
     />
   </head>
   <body class="bg-gray-50 flex flex-col min-h-screen">
@@ -29,7 +29,7 @@ allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
           <h2 class="font-serif text-4xl my-6">Recent writings</h2>
 
           <div class="flex flex-wrap -m-4">
-            {allPosts.map((post) => <PostPreview post={post} />)}
+            {allPosts.map((post) => <PostPreview post={post.frontmatter} url={post.url} />)}
           </div>
         </div>
       </section>

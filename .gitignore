@@ -1,5 +1,6 @@
 # build output
 dist
+public/images/optimized/
 
 # dependencies
 node_modules/
