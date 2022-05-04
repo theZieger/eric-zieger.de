@@ -5,7 +5,7 @@ date: 2020-07-29 22:55
 image: how-many-frames-are-there.jpg
 description: I mostly discover new things by mistake. `window.length` is one of those encounters.
 photographer: Jonny Caspari
-unsplash: \@jonnysplsh
+unsplash: /@jonnysplsh
 ---
 
 Most of the time, when dealing with vanilla JavaScript code, I try things out directly in the browser. I just open the console within my favorite developer tools and start poking around until I gain whatever I searched for.
