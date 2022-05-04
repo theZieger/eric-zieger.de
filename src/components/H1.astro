@@ -1,0 +1,7 @@
+---
+const { className } = Astro.props;
+---
+
+<h1 class={`font-serif mb-4 text-4xl text-inherit ${className}`}>
+    <slot />
+</h1>

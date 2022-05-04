@@ -3,8 +3,9 @@ const {
     href,
     rel,
     target,
+    hreflang,
     className = 'text-brand-accent'
 } = Astro.props;
 ---
 
-<a class={className + " hover:underline"} href={href} rel={rel} target={target}><slot /></a>
+<a class={className + " hover:underline"} href={href} rel={rel} target={target} hreflang={hreflang}><slot /></a>

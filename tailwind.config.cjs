@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         "brand-green": "#10da75",
         "brand-accent": "#ac162c",
+        twitter: "#55acee",
       },
     },
   },

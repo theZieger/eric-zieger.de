@@ -1,0 +1,13 @@
+---
+import SingleTweet from './SingleTweet.astro';
+const {data, includes, errors, referencedTweets} = Astro.props;
+---
+<article class="relative flex bg-white mb-3 p-3 pr-10">
+    <SingleTweet isOriginal errors={errors} data={data} includes={includes}>
+        {referencedTweets?.map(ref => {
+            return (<div class="relative flex border-brand-green border-l-8 mb-3 pl-4 py-2 pr-12 text-base bg-gray-100 rounded">
+                <SingleTweet {...ref} />
+            </div>)
+        })}
+    </SingleTweet>
+</article>

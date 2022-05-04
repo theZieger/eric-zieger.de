@@ -1,6 +1,7 @@
 ---
 import UnsplashWrapper from "./UnsplashWrapper.astro";
 import ArrowRight from "./ArrowRight.astro";
+import H3 from "./H3.astro";
 
 const { post, url } = Astro.props;
 
@@ -23,10 +24,10 @@ const optimizedImage = image.replace('.jpg', '.webp');
         </UnsplashWrapper>
         <div class="p-6">
             <header>
-                <h1 class="font-serif text-2xl font-bold text-gray-900 mb-3">{title}</h1>
-                <time datetime={date} class="font-mono text-sm block mb-3">{readableDate}</time>
+                <H3>{title}</H3>
+                <time datetime={date} class="font-mono block mb-3">{readableDate}</time>
             </header>
-            <p class="leading-relaxed mb-6">{description}</p>
+            <p class="mb-6">{description}</p>
             <a href={url} class="text-brand-accent absolute z-10 focus:z-20 inset-0 focus:ring-4 ring-brand-accent ring-inset flex arrow-animation">
                 <span class="sr-only">Read "{title}"</span>
                 <span class="absolute bottom-6 right-6"><ArrowRight /></span>

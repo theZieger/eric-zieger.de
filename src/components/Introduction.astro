@@ -1,6 +1,7 @@
 ---
 import ContentWrapper from './ContentWrapper.astro'
 import Link from './Link.astro'
+import H1 from './H1.astro'
 ---
 
 <section class="clipped bg-gray-900 text-gray-100 p-6 pb-16">
@@ -8,8 +9,8 @@ import Link from './Link.astro'
         .clipped {clip-path: polygon(-1% 100%,-1% -1%,100% -1%,100% 100%,100% calc(100% - 3vh));}
     </style>
     <ContentWrapper>
-        <h1 class="font-serif text-4xl text-center my-6">Hey, I'm Eric! <span aria-hidden="true">✌️</span></h1>
-        <div class="leading-relaxed text-lg">
+        <H1 className="text-center">Hey, I'm Eric! <span aria-hidden="true">✌️</span></H1>
+        <div class="">
             <p>
                 I'm a <strong>Frontend Developer</strong> from Leipzig, Germany.
                 I love to work on declarative and component-driven user interfaces, Cascading Style Sheets, design-systems, and accessibility.

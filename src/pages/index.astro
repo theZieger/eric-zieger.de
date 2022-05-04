@@ -4,6 +4,7 @@ import Header from '../components/Header.astro'
 import Introduction from '../components/Introduction.astro'
 import Footer from '../components/Footer.astro'
 import PostPreview from '../components/PostPreview.astro'
+import H2 from '../components/H2.astro';
 
 const title = 'Eric Zieger (@thezieger) - Frontend Developer';
 const description = 'Frontend Developer and Media Designer from Leipzig, Deutschland.';
@@ -20,14 +21,13 @@ allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.fron
       canonicalURL={Astro.canonicalURL.href}
     />
   </head>
-  <body class="bg-gray-50 flex flex-col min-h-screen">
+  <body class="bg-gray-50 flex flex-col min-h-screen text-lg">
     <Header />
     <main class="flex-grow">
       <Introduction />
       <section class="text-gray-600 body-font">
         <div class="container p-6 pb-12 mx-auto">
-          <h2 class="font-serif text-4xl my-6">Recent writings</h2>
-
+          <H2>Recent writings</H2>
           <div class="flex flex-wrap -m-4">
             {allPosts.map((post) => <PostPreview post={post.frontmatter} url={post.url} />)}
           </div>

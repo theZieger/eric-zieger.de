@@ -1,0 +1,106 @@
+---
+import likes from "../../silos/twitter/like.json"
+import Layout from '../../layouts/like.astro';
+import fs from 'fs/promises';
+import { sleep } from '../../utils/sleep';
+
+const { page } = Astro.props;
+const hashtags = {};
+likes.forEach((tweet) => {
+  if (tweet?.like?.item?.data?.entities?.hashtags) {
+    tweet.like.item.data.entities.hashtags.forEach(hashtag => {
+      if (hashtags[hashtag.tag]) {
+        hashtags[hashtag.tag] = hashtags[hashtag.tag] + 1;
+      } else {
+        hashtags[hashtag.tag] = 1;
+      }
+    })
+  }
+});
+const finalHashtags = {}
+for (const key in hashtags) {
+  if (Object.prototype.hasOwnProperty.call(hashtags, key)) {
+    const count = hashtags[key];
+    if (count > 5) {
+      finalHashtags[key] = count
+    }
+  }
+}
+
+export async function getStaticPaths({ paginate }) {
+
+  const lastCachedLike = likes[0].like.tweetId;
+  const r = await fetch("https://api.twitter.com/2/users/591203629/liked_tweets", {
+    headers: {
+      "Authorization": `Bearer ${import.meta.env.TWITTER_BEARER}`
+    }
+  });
+  const data = await r.json();
+  let withPrependedNewLikes = [];
+  if (data.data) {
+
+    const index = data.data.findIndex((x) => x.id === lastCachedLike);
+    const abc = data.data.splice(0, index).map(x=> ({like: {tweetId: x.id}}))
+    withPrependedNewLikes = withPrependedNewLikes.concat(
+       abc
+      );
+  }
+  withPrependedNewLikes = withPrependedNewLikes.concat(likes);
+
+  const getTweet = async (id) => {
+    await sleep(3100);
+    const response = await fetch("https://api.twitter.com/2/tweets/" + id +
+      "?media.fields=duration_ms,height,media_key,preview_image_url,type,url,width,alt_text,public_metrics" +
+      "&expansions=attachments.poll_ids,attachments.media_keys,author_id,entities.mentions.username,geo.place_id,in_reply_to_user_id,referenced_tweets.id,referenced_tweets.id.author_id" +
+      "&place.fields=contained_within,country,country_code,full_name,geo,id,name,place_type" +
+      "&poll.fields=duration_minutes,end_datetime,id,options,voting_status" +
+      "&tweet.fields=attachments,author_id,context_annotations,conversation_id,created_at,entities,geo,id,in_reply_to_user_id,lang,public_metrics,possibly_sensitive,referenced_tweets,reply_settings,source,text,withheld" +
+      "&user.fields=created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld", {
+      headers: {
+        "Authorization": `Bearer ${import.meta.env.TWITTER_BEARER}`
+      }
+    });
+    if (!response.ok) {
+      throw Error(JSON.stringify({id, statusText: response.statusText}));
+    }
+    return await response.json();
+  }
+
+  try {
+    for (const item of withPrependedNewLikes) {
+      const { like } = item;
+      if (like.item) continue;
+
+      const likedTweet = await getTweet(like.tweetId);
+
+      if (likedTweet?.data?.referenced_tweets) {
+        likedTweet.referencedTweets = [];
+
+        for (const referencedTweet of likedTweet.data.referenced_tweets) {
+          likedTweet.referencedTweets.push(await getTweet(referencedTweet.id)) ;
+        }
+      }
+
+      like.item = likedTweet
+    }
+  } catch (error) {
+    console.log(error);
+    await fs.writeFile(
+      new URL("../../silos/twitter/like.json", import.meta.url),
+      JSON.stringify(withPrependedNewLikes, null, 2)
+    );
+  }
+
+  await fs.writeFile(
+    new URL("../../silos/twitter/like.json", import.meta.url),
+    JSON.stringify(withPrependedNewLikes, null, 2)
+  );
+
+  return paginate(withPrependedNewLikes.filter(tweet => {
+    return !!tweet.like.item.data;
+  }).sort((a,b) => {
+    return a.like.item?.data?.created_at > b.like.item?.data?.created_at ? -1 : 1
+  }), { pageSize: 200 });
+}
+---
+<Layout likes={page} hashtags={finalHashtags} />

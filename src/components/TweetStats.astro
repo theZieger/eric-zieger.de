@@ -1,0 +1,25 @@
+{isOriginal && <ul class="flex">
+                    <li class="mr-8">
+                        <svg class="inline-block text-gray-700 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+                            <title>replies</title>
+                            <path stroke="none" d="M573 421c-23 0-41 18-41 40s18 40 41 40c21 0 39-18 39-40s-18-40-39-40zm-280 0c-23 0-41 18-41 40s18 40 41 40c21 0 39-18 39-40s-18-40-39-40z"/>
+                            <path stroke="none" d="M894 345a344 344 0 0 0-189-130 367 367 0 0 0-565 468l1 133 1 9c6 17 24 26 40 21l127-40c34 12 68 19 103 21h-1c89 65 206 84 313 49l127 41 10 2c18 0 32-14 32-32V753c88-120 90-285 1-408zM323 735l-12-5-99 31-1-104-8-9a296 296 0 1 1 120 87zm505-17-8 10 1 104-98-33-12 5c-56 21-116 23-171 7a367 367 0 0 0 233-485h1a271 271 0 0 1 54 392z"/>
+                            <path stroke="none" d="M433 421c-23 0-41 18-41 40s18 40 41 40c21 0 39-18 39-40s-18-40-39-40z"/>
+                        </svg>
+                        {data.public_metrics.reply_count}
+                    </li>
+                    <li class="mr-8">
+                        <svg class="inline-block text-gray-700 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width="0"  viewBox="0 0 1024 1024">
+                            <title>retweets</title>
+                            <path stroke="none" d="M136 552h64c4 0 8-4 8-8V289h528v72l2 5a8 8 0 0 0 12 2l143-113c4-5 4-10 0-13L750 130a8 8 0 0 0-5-2c-5 0-9 4-9 8v73H200c-40 0-72 32-72 72v263c0 4 4 8 8 8zm752-80h-64c-4 0-8 4-8 8v255H288v-72l-2-6a8 8 0 0 0-12-1L131 769c-4 5-4 10 0 13l143 112 6 2c4 0 8-4 8-8v-73h537c39 0 71-32 71-72V480c0-4-4-8-8-8z"/>
+                        </svg>
+                        {data.public_metrics.retweet_count}
+                    </li>
+                    <li class="mr-8">
+                        <svg class="text-red-500 inline text-gray-700 w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+                            <title>likes</title>
+                            <path stroke="none" d="M923 284a260 260 0 0 0-57-83 264 264 0 0 0-84-56 265 265 0 0 0-102-20 267 267 0 0 0-168 59 261 261 0 0 0-168-59 265 265 0 0 0-186 76 258 258 0 0 0-57 83c-14 32-21 66-21 102 0 33 7 68 20 103 12 29 28 60 49 91 32 49 77 100 133 151 93 86 185 145 189 148l24 15c10 7 24 7 34 0l24-15c4-3 96-62 189-148 56-51 101-102 133-151 21-31 37-62 49-91 13-35 20-70 20-103 0-36-7-70-21-102z"/>
+                        </svg>
+                        {data.public_metrics.like_count}
+                    </li>
+                </ul>}
