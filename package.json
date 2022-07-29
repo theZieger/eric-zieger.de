@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "astro": "0.26.1",
-    "autoprefixer": "10.4.7",
+    "autoprefixer": "10.4.8",
     "front-matter": "4.0.2",
     "postcss": "8.4.14",
     "puppeteer": "15.4.0",
