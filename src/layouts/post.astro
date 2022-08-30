@@ -47,7 +47,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       <h1 class="font-serif text-4xl font-bold text-gray-900 mb-3">{title}</h1>
       <time datetime={date} class="font-mono text-sm block mb-6">{readableDate}</time>
       <UnsplashWrapper unsplash={unsplash} photographer={photographer} className="md:-mx-16">
-        <img loading="lazy" class="post-image w-full object-cover object-center" src={'/images/optimized/719/' + image.replace('.jpg', '.webp')} alt="" />
+        <img class="post-image w-full object-cover object-center" src={'/images/optimized/719/' + image.replace('.jpg', '.webp')} alt="" />
       </UnsplashWrapper>
       <div class="article">
         <slot />
