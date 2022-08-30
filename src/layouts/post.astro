@@ -6,9 +6,9 @@ import UnsplashWrapper from '../components/UnsplashWrapper.astro';
 import ShortBio from '../components/ShortBio.astro';
 
 const { content } = Astro.props;
-
 const { title, date, image, unsplash, photographer, description } = content;
 const readableDate = new Intl.DateTimeFormat('en-US').format(new Date(date));
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en">
@@ -16,14 +16,10 @@ const readableDate = new Intl.DateTimeFormat('en-US').format(new Date(date));
     <MainHead
       title={title}
       description={description}
-      canonicalURL={Astro.canonicalURL.href}
-      socialImage={`/images/social/${Astro.canonicalURL.href.replace(
-        'https://eric-zieger.de/posts', ''
-        ).replace(
-          /\//g, ''
-        )}.png`}
+      canonicalURL={canonicalURL}
+      socialImage={`/images/social${Astro.url.pathname.substring(6, Astro.url.pathname.length-1)}`}
     />
-    <style global>
+    <style is:global>
       .article p {
         font-size: 1.1rem;
         line-height: 1.5;

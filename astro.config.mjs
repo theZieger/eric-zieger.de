@@ -3,4 +3,7 @@ export default {
   markdown: {
     render: ["@astrojs/markdown-remark"],
   },
+  build: {
+    format: 'directory'
+  }
 };

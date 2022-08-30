@@ -7,9 +7,9 @@ import PostPreview from '../components/PostPreview.astro'
 
 const title = 'Eric Zieger (@thezieger) - Frontend Developer';
 const description = 'Frontend Developer and Media Designer from Leipzig, Deutschland.';
-
 const allPosts = await Astro.glob('./posts/*.md');
 allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime());
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en">
@@ -17,7 +17,7 @@ allPosts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.fron
     <MainHead
       title={title}
       description={description}
-      canonicalURL={Astro.canonicalURL.href}
+      canonicalURL={canonicalURL}
     />
   </head>
   <body class="bg-gray-50 flex flex-col min-h-screen">
