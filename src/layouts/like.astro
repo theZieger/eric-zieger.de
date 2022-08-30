@@ -12,8 +12,8 @@ const { likes, hashtags} = Astro.props;
 <html lang="en">
   <head>
     <MainHead
-      title={`Micro-Blog`}
-      description={`Micro-Blog`}
+      title={`Tweets I liked`}
+      description={`Tweets I liked `}
       canonicalURL={Astro.canonicalURL.href}
     />
   </head>
@@ -21,7 +21,7 @@ const { likes, hashtags} = Astro.props;
     <Header />
     <div class="container mx-auto flex flex-col lg:flex-row mt-3 relative">
         <main class="w-full lg:w-1/2 mb-4 p-3">
-            <H1>Micro-Blog <span class="float-right">Page {likes.currentPage}</span></H1>
+            <H1>Tweets I liked <span class="float-right text-lg">Page {likes.currentPage}/{likes.lastPage}</span></H1>
             {likes.data.map(({like: {item}}) => {
                 return <Tweet {...item} />;
             })}
@@ -32,9 +32,8 @@ const { likes, hashtags} = Astro.props;
                     href={likes.url.prev}
                 >Previous</a> : <a
                     class="flex items-center px-4 py-2 text-gray-600 bg-gray-100 rounded"
-                    href={likes.url.prev}
                 >Previous</a>}
-                <span href="#" class="px-4 py-2 text-gray-700">
+                <span class="px-4 py-2 text-gray-700">
                     Total number of pages: {Math.ceil(likes.total / 25)}
                 </span>
                 {likes.url.next ? <a
@@ -42,13 +41,12 @@ const { likes, hashtags} = Astro.props;
                     href={likes.url.next}
                 >Next</a> : <a
                     class="flex items-center px-4 py-2 text-gray-600 bg-gray-100 rounded"
-                    href={likes.url.next}
                 >Next</a>}
             </nav>
         </main>
-        <aside class="w-full lg:w-1/4 p-3 md:pl-4 md:mt-12">
+        <aside class="w-full lg:w-1/4 p-3 md:pl-4 md:mt-14" aria-labelledby="whotofollow">
             <div class="bg-white p-3 mb-3 rounded">
-                <H2>Who to follow</H2>
+                <H2 id="whotofollow">Who to follow</H2>
                 <ul>
                     {Array.from(
                             likes.data.reduce((prev, {like: {item: {data, includes}}}) => {
@@ -65,7 +63,9 @@ const { likes, hashtags} = Astro.props;
                                     <a class="block mt-3 hover:text-brand-accent focus:text-brand-accent" href={`https://twitter.com/${user.username}`}>
                                         <span class="font-bold mr-1 underline">{user.name}</span>
                                         @{user.username}
-                                        {user.verified && <svg xmlns="http://www.w3.org/2000/svg" class="inline-block relative h-4 w-4 bottom-0.5" fill="currentColor" stroke="currentColor" stroke-width="0" viewBox="0 0 24 24"><path fill="none" stroke="none" d="M0 0h24v24H0z"/><path stroke="none" d="m23 12-2-3V6l-4-1-2-3-3 1-3-1-2 3-4 1v3l-2 3 2 3v3l4 1 2 4 3-2 3 1 2-3 4-1v-3l2-3zm-13 5-4-4 2-2 2 3 6-6 1 1-7 8z"/></svg>}
+                                        {user.verified && <svg xmlns="http://www.w3.org/2000/svg" class="text-twitter inline-block relative h-4 w-4 bottom-0.5" fill="currentColor" stroke="currentColor" stroke-width="0" viewBox="0 0 24 24">
+                                            <title>verified account</title>
+                                            <path fill="none" stroke="none" d="M0 0h24v24H0z"/><path stroke="none" d="m23 12-2-3V6l-4-1-2-3-3 1-3-1-2 3-4 1v3l-2 3 2 3v3l4 1 2 4 3-2 3 1 2-3 4-1v-3l2-3zm-13 5-4-4 2-2 2 3 6-6 1 1-7 8z"/></svg>}
                                     </a>
                                     <div set:html={user.description} />
                                 </li>
@@ -75,9 +75,9 @@ const { likes, hashtags} = Astro.props;
                 </ul>
             </div>
         </aside>
-        <aside class="w-full lg:w-1/4 p-3 md:pl-4 md:mt-12">
+        <aside class="w-full lg:w-1/4 p-3 md:pl-4 md:mt-14" aria-labelledby="usedhashtags">
             <div class="bg-white p-3 mb-3 rounded">
-                <H2>Hashtags</H2>
+                <H2 id="usedhashtags">Hashtags of tweets I liked</H2>
                 <p class="mb-4">Tweets I liked (overall) used those hashtags.</p>
                 {Object.keys(hashtags).sort((a,b) => hashtags[b] - hashtags[a]).map((key) => (
                     <div class="flex justify-between relative">

@@ -100,7 +100,7 @@ export async function getStaticPaths({ paginate }) {
     return !!tweet.like.item.data;
   }).sort((a,b) => {
     return a.like.item?.data?.created_at > b.like.item?.data?.created_at ? -1 : 1
-  }), { pageSize: 200 });
+  }), { pageSize: 50 });
 }
 ---
 <Layout likes={page} hashtags={finalHashtags} />

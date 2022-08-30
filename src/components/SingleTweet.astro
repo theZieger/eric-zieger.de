@@ -2,6 +2,7 @@
 const {data, includes, isOriginal, errors} = Astro.props
 const author = includes?.users?.find((user)=> user.id === data.author_id) ?? {};
 const readableDate = (date) => new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(date));
+const fromMe = author.username === "thezieger" || author.username === "the_Zieger";
 ---
 {errors ? (
     <div class="flex-auto">
@@ -22,39 +23,51 @@ const readableDate = (date) => new Intl.DateTimeFormat('en-US', { dateStyle: 'me
         </div>
     </div>
 ) : (
-    <div class="flex-auto">
-        <div class="flex-column justify-between mb-1">
-            <div class="text-grey-dark">
-                <span class="text-black font-bold">{author.name}</span>
-                <a class="hover:text-brand-accent focus:text-brand-accent underline" href={`https://twitter.com/${author.username}`}>@{author.username}</a>
-                &middot; <time datetime={data.created_at}>{readableDate(data.created_at)}</time>
-            </div>
-        </div>
-        <div>
-            {isOriginal && <a href={`https://twitter.com/${author.username}/status/${data.id}`} class="absolute p-2 top-0 right-0 text-gray-200 hover:text-brand-accent focus:text-brand-accent underline">
-                <span class="sr-only">open original tweet on twitter</span>
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
-                    <path stroke="none" d="M928 254c-31 14-64 23-98 27a170 170 0 0 0 75-94 337 337 0 0 1-108 41 170 170 0 0 0-125-54 170 170 0 0 0-166 210c-142-8-268-75-352-179a169 169 0 0 0-23 86c0 60 30 112 76 142a172 172 0 0 1-77-21v2c0 83 58 151 136 167a181 181 0 0 1-44 6c-12 0-22-1-33-3 22 68 85 117 160 119a342 342 0 0 1-253 71c76 48 165 76 262 76 313 0 485-260 485-485v-23c33-24 62-54 85-88z"/>
+    <>
+        {fromMe && <div class="flex-none w-14">
+            <img class="rounded-full w-12 h-12" src="/images/profile.webp" alt="Portrait of Eric (@thezieger)" />
+        </div>}
+        {(!fromMe && isOriginal) && <div class="flex-none w-14">
+            <div class="rounded-full w-12 h-12 p-2">
+                <svg class="text-red-500 inline w-8 h-8" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" stroke="currentColor" stroke-width="0" viewBox="0 0 512 512">
+                    <path stroke="none" d="M462 63c-54-47-136-39-186 13l-20 21-20-21C186 24 105 16 50 63c-63 53-66 149-10 208l193 199c13 13 33 13 46 0l193-199c56-59 53-155-10-208z"/>
                 </svg>
-            </a>}
-            <div class={data.possibly_sensitive ? "blur-md": ""}>
-                <div lang={data.lang === "und" ? "": data.lang}>
-                    {data.text.split("\n").filter(text => Boolean(text)).map(text => <p set:html={text} />)}
-                </div>
-                {includes.media?.length > 0 && (
-                    <div class={`mb-2 grid rounded border border-gray-200 overflow-hidden ${includes.media?.length > 1 ? "grid-cols-2" : ""}`}>
-                        {includes.media.map(({url, width, height, type, preview_image_url}, index, arr) => {
-                            if (["animated_gif", "photo"].includes(type)) {
-                                const span = (index === arr.length - 1 && arr.length % 2 === 1);
-                                return <img class={"w-full object-cover max-h-80 " + (span ? "col-span-2" : "")} loading="lazy" width={width} height={height} src={url ?? preview_image_url} alt="" class="border border-solid border-grey-light rounded" />
-                            }
-                            return null;
-                        })}
-                    </div>
-                )}
             </div>
-            {isOriginal && <div class="mt-2 italic">{data.in_reply_to_user_id && 'in reply to:'}</div>}
-            <slot />
+        </div>}
+        <div class="flex-auto">
+            <div class="flex-column justify-between mb-1">
+                <div class="text-grey-dark">
+                    <span class="text-black font-bold">{author.name}</span>
+                    <a class="hover:text-brand-accent focus:text-brand-accent underline" href={`https://twitter.com/${author.username}`}>@{author.username}</a>
+                    &middot; <time datetime={data.created_at}>{readableDate(data.created_at)}</time>
+                </div>
+            </div>
+            <div>
+                {isOriginal && <a href={`https://twitter.com/${author.username}/status/${data.id}`} class="absolute p-2 top-0 right-0 text-twitter opacity-60 hover:opacity-100 focus:opacity-100 transition-colors">
+                    <span class="sr-only">tweet of {author.name} on twitter</span>
+                    <svg class="w-6 h-6" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+                        <path stroke="none" d="M928 254c-31 14-64 23-98 27a170 170 0 0 0 75-94 337 337 0 0 1-108 41 170 170 0 0 0-125-54 170 170 0 0 0-166 210c-142-8-268-75-352-179a169 169 0 0 0-23 86c0 60 30 112 76 142a172 172 0 0 1-77-21v2c0 83 58 151 136 167a181 181 0 0 1-44 6c-12 0-22-1-33-3 22 68 85 117 160 119a342 342 0 0 1-253 71c76 48 165 76 262 76 313 0 485-260 485-485v-23c33-24 62-54 85-88z"/>
+                    </svg>
+                </a>}
+                <div class={data.possibly_sensitive ? "blur-md": ""}>
+                    <div lang={data.lang === "und" ? "": data.lang}>
+                        <p set:html={data.text} />
+                    </div>
+                    {includes.media?.filter(({type}) => ["animated_gif", "photo", "video"].includes(type))?.length > 0 && (
+                        <div class={`mb-2 grid rounded border border-gray-200 overflow-hidden ${(includes.media?.length > 1 ? "grid-cols-2" : "")}`}>
+                            {includes.media.map(({url, width, height, type, preview_image_url}, index, arr) => {
+                                if (["animated_gif", "photo", "video"].includes(type)) {
+                                    const span = (index === arr.length - 1 && arr.length % 2 === 1);
+                                    return <img class={"w-full object-cover max-h-80 " + (span ? "col-span-2" : "")} loading="lazy" width={width} height={height} src={url ?? preview_image_url} alt="" class="border border-solid border-grey-light rounded" />
+                                }
+                                return null;
+                            })}
+                        </div>
+                    )}
+                </div>
+                {isOriginal && <div class="mt-2 italic">{data.in_reply_to_user_id && 'in reply to:'}</div>}
+                <slot />
+            </div>
         </div>
-    </div>
+    </>
 )}
