@@ -305,6 +305,19 @@ AddDefaultCharset utf-8
     RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
 </IfModule>
 
+# ----------------------------------------------------------------------
+# | Retired site                                                       |
+# ----------------------------------------------------------------------
+
+# The old posts are gone; send any unknown path to the landing page.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ / [R=301,L]
+</IfModule>
+
 # ######################################################################
 # # SECURITY                                                           #
 # ######################################################################
